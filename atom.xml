@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-08T11:34:55.104Z</updated>
+  <updated>2021-03-08T11:44:21.001Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2021/03/08/blog-%E9%87%8D%E5%BB%BA/"/>
     <id>http://example.com/2021/03/08/blog-%E9%87%8D%E5%BB%BA/</id>
     <published>2021-03-08T11:27:17.000Z</published>
-    <updated>2021-03-08T11:34:55.104Z</updated>
+    <updated>2021-03-08T11:44:21.001Z</updated>
     
     <content type="html"><![CDATA[<p>​        到了今天，第二次重建的差不多了，我才发现，上一次的三个文章被我误删了。</p>]]></content>
     
@@ -37,9 +37,9 @@
     <category term="hexo" scheme="http://example.com/categories/hexo/"/>
     
     
-    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    <category term="-hexo" scheme="http://example.com/tags/hexo/"/>
     
-    <category term="经验" scheme="http://example.com/tags/%E7%BB%8F%E9%AA%8C/"/>
+    <category term="-经验" scheme="http://example.com/tags/%E7%BB%8F%E9%AA%8C/"/>
     
   </entry>
   
