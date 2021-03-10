@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-09T01:10:45.926Z</updated>
+  <updated>2021-03-10T15:29:06.294Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>3月C语言二级(2)</title>
+    <link href="http://example.com/2021/03/10/3%E6%9C%88C%E8%AF%AD%E8%A8%80%E4%BA%8C%E7%BA%A7-2/"/>
+    <id>http://example.com/2021/03/10/3%E6%9C%88C%E8%AF%AD%E8%A8%80%E4%BA%8C%E7%BA%A7-2/</id>
+    <published>2021-03-10T15:03:46.000Z</published>
+    <updated>2021-03-10T15:29:06.294Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="4什么是字符常量"><a href="#4什么是字符常量" class="headerlink" title="4什么是字符常量"></a>4什么是字符常量</h3><p>单引号括起来，中间只有一个字符。“a”,’abc’都是不对的</p><h3 id="5什么是字符串常量"><a href="#5什么是字符串常量" class="headerlink" title="5什么是字符串常量"></a>5什么是字符串常量</h3><p>双引号括起来，中间由若干字符和转义字符组成。</p><p>例如：“abc” “acb\n”</p><h3 id="6字符计算"><a href="#6字符计算" class="headerlink" title="6字符计算"></a>6字符计算</h3><p>‘B’ - ‘A’ = 1</p><p>‘a’ - ‘A’ = 32</p><h2 id="2字符变量"><a href="#2字符变量" class="headerlink" title="2字符变量"></a>2字符变量</h2><h3 id="1定义形式：-char-变量名-值"><a href="#1定义形式：-char-变量名-值" class="headerlink" title="1定义形式： char 变量名[=值]"></a>1定义形式： char 变量名[=值]</h3><p>例如：</p><p>char a = ‘a’;</p><p>char a = 97;</p><h2 id="3字符的输入输出"><a href="#3字符的输入输出" class="headerlink" title="3字符的输入输出"></a>3字符的输入输出</h2><p>printf中应用格式控制符%c在相应位是输出字符。]</p><p>scanf中应用格式控制符%c接收字符</p><p>注意：</p><p>​    <strong>在scanf中要一次输入完全部字符，中间不要按tab,空格，回车，因为tab，空格、回车，也是字符，会被接收</strong></p><hr><p>字符输出：putchar(字符)</p><p>字符输入：变量= getchar();</p><p>注意：<br>空格、tab、回车会被接收</p><h2 id="4程序举例"><a href="#4程序举例" class="headerlink" title="4程序举例"></a>4程序举例</h2><p><strong>重点算法 字母大小写转换</strong></p><p>例1：把从终端输入的小写字母转换成大写字母，其他字符不变</p><p>分析：</p><p>1小写字母转大写需要减去32</p><p>2如何判断小写字母，在’a’到’Z’之间的字符</p><p><img src="3%E6%9C%88C%E8%AF%AD%E8%A8%80%E4%BA%8C%E7%BA%A7-2.assets/image-20210310200349872.png" alt="image-20210310200349872"></p><p>例2：统计字符中大写字母和小写字母的个数</p><img src="C:/Users/xuanxuan/Desktop/3月c语言二级考试.assets/image-20210310200513256.png" alt="image-20210310200513256" style="zoom:200%;" /><h1 id="第七章-函数"><a href="#第七章-函数" class="headerlink" title="第七章 函数"></a>第七章 函数</h1><p>大纲分析</p><p>1库函数的正确调用</p><p>2函数的定义方法</p><p>3函数的类型和返回值</p><p>4形式参数与实在参数，参数值的传递</p><p>5函数的正确调用，嵌套调用，递归调用。</p><p>6局部变量和全局变量</p><p>7变量的存储类别（自动，静态，寄存器，外部）</p><p>变量的作用域和生存期</p><h2 id="1库函数"><a href="#1库函数" class="headerlink" title="1库函数"></a>1库函数</h2><h3 id="1c语言是由函数组成的"><a href="#1c语言是由函数组成的" class="headerlink" title="1c语言是由函数组成的"></a>1c语言是由函数组成的</h3><p>从main()函数开始，在main()函数结束</p><h3 id="2标准库函数的引入"><a href="#2标准库函数的引入" class="headerlink" title="2标准库函数的引入"></a>2标准库函数的引入</h3><p>通过命令行的形式#include&lt;库函数头文件&gt;</p><p>或者#include”库函数头文件”</p><h3 id="3标准库函数的调用形式"><a href="#3标准库函数的调用形式" class="headerlink" title="3标准库函数的调用形式"></a>3标准库函数的调用形式</h3><p>函数名(参数表)</p><p>例如：</p><p> y = sqrt(13);——开平方</p><h3 id="3常用数学公式"><a href="#3常用数学公式" class="headerlink" title="3常用数学公式"></a>3常用数学公式</h3><p><img src="3%E6%9C%88C%E8%AF%AD%E8%A8%80%E4%BA%8C%E7%BA%A7-2.assets/image-20210310201107634.png" alt="image-20210310201107634"></p><p>#include&lt;math.h&gt;</p><h2 id="2函数的定义和返回值"><a href="#2函数的定义和返回值" class="headerlink" title="2函数的定义和返回值"></a>2函数的定义和返回值</h2><h3 id="1用户自定义函数的一般形式"><a href="#1用户自定义函数的一般形式" class="headerlink" title="1用户自定义函数的一般形式"></a>1用户自定义函数的一般形式</h3><p>函数返回值的类型名 函数名（类型名 形参1，</p><p>类型名 形参2,…….） 函数的首部</p><p>{</p><p>说明部分</p><p>语句部分                    //函数体</p><p>}</p><p><strong>注意：</strong></p><p>1函数名及形参由用户定义的标识符组成</p><p>2同一程序中函数名必须唯一</p><p>3形参名字在同一函数中命名唯一</p><p>4不能在函数内部定义函数</p><p>5如果不指定返回值类型，返回值为int型</p><p>6函数调用前必须先定义（说明）</p><p>7无返回值，在函数返回类型处，用void</p><hr><h3 id="2返回值"><a href="#2返回值" class="headerlink" title="2返回值"></a>2返回值</h3><p>函数返回值通过return语句返回，形式：return表达式；</p><p>一个函数中允许有多条return,但是只能有一条执行</p><p>例</p><p><img src="3%E6%9C%88C%E8%AF%AD%E8%A8%80%E4%BA%8C%E7%BA%A7-2.assets/image-20210310210717411.png" alt="image-20210310210717411"></p><h2 id="3函数的调用"><a href="#3函数的调用" class="headerlink" title="3函数的调用"></a>3函数的调用</h2><h3 id="1调用方法"><a href="#1调用方法" class="headerlink" title="1调用方法"></a>1调用方法</h3><p>1函数名（实在参数表）</p><p>2函数名（）无实参情况下</p><p><img src="3%E6%9C%88C%E8%AF%AD%E8%A8%80%E4%BA%8C%E7%BA%A7-2.assets/image-20210310210839305.png" alt="image-20210310210839305"></p><h2 id="4函数的说明"><a href="#4函数的说明" class="headerlink" title="4函数的说明"></a>4函数的说明</h2><p>函数的调用原则</p><p>先定义，后调用。如果函数在调用之后，除返回值是int和char型的，都需要在程序之前进行说明</p><p>说明形式：</p><p>类型名 函数名（参数类型1，参数类型2）；</p><p>说明值：main()函数之外，main()函数之中</p><p>例：<br>double add(double,double);</p><h2 id="5函数调用之间的数据传递"><a href="#5函数调用之间的数据传递" class="headerlink" title="5函数调用之间的数据传递"></a>5函数调用之间的数据传递</h2><p>函数调用中，实参的数据和形参对应传递</p><p>两种传递方式</p><p>1值传递</p><p>只传送值，实参不做改变</p><p>2地址传递</p><p>传送值，实参被改变</p><p>例</p><p><img src="3%E6%9C%88C%E8%AF%AD%E8%A8%80%E4%BA%8C%E7%BA%A7-2.assets/image-20210310211747377.png" alt="image-20210310211747377"></p><h2 id="6程序距离"><a href="#6程序距离" class="headerlink" title="6程序距离"></a>6程序距离</h2><p><img src="3%E6%9C%88C%E8%AF%AD%E8%A8%80%E4%BA%8C%E7%BA%A7-2.assets/image-20210310211820461.png" alt="image-20210310211820461"></p><p><img src="3%E6%9C%88C%E8%AF%AD%E8%A8%80%E4%BA%8C%E7%BA%A7-2.assets/image-20210310211916480.png" alt="image-20210310211916480"></p><h1 id="第八章-地址和指针"><a href="#第八章-地址和指针" class="headerlink" title="第八章 地址和指针"></a>第八章 地址和指针</h1><p>  大纲分析</p><p>1变量的地址和指针</p><p>2指针变量的定义和指针变量的基类型</p><p>3给指针变量赋值</p><p>4对指针变量的操作</p><p>5函数之间地址值的传递</p><h2 id="1变量的地址和指针"><a href="#1变量的地址和指针" class="headerlink" title="1变量的地址和指针"></a>1变量的地址和指针</h2><p>计算机的内存是以字节为单位的一片连续的存储空间，每一个字节都有一个编号，这个编号就成为了内存地址。</p><p>每个变量的地址是指该变量所占存储的单元的第一个字节的地址</p><p>回忆：<br>计算机的存储点位</p><p>二进制的位bit</p><p><img src="3%E6%9C%88C%E8%AF%AD%E8%A8%80%E4%BA%8C%E7%BA%A7-2.assets/image-20210310212657371.png" alt="image-20210310212657371"></p><p>一种特殊的变量</p><p>这种变量只是用来存放内存地址的，起名为指针变量</p><p>假设定义了一个只存地址的变量p</p><p>把变量a的地址赋予指针变量p</p><p>则指针变量p的值为1245052</p><p>当访问变量a时，访问的是什么？5</p><p>当访问指针变量P时，访问的是什么？1245052</p><hr><p>当访问变量时，为“直接存取（直接访问）”我们也可以通过指针变量间接的访问该地址中原来的值。</p><p>此时成为”间接存取（间接访问）“</p><h2 id="2指针变量的定义和指针变量的"><a href="#2指针变量的定义和指针变量的" class="headerlink" title="2指针变量的定义和指针变量的"></a>2指针变量的定义和指针变量的</h2><p>定义指针变量的一般形式如下：<br>类型名 指针变量名</p><p>或</p><p>类型名 <em>指针变量名1，</em>指针变量名2,…；</p><p><img src="3%E6%9C%88C%E8%AF%AD%E8%A8%80%E4%BA%8C%E7%BA%A7-2.assets/image-20210310224241889.png" alt="image-20210310224241889"></p><p><img src="3%E6%9C%88C%E8%AF%AD%E8%A8%80%E4%BA%8C%E7%BA%A7-2.assets/image-20210310224315129.png" alt="image-20210310224315129"></p><h2 id="3给指针变量赋值"><a href="#3给指针变量赋值" class="headerlink" title="3给指针变量赋值"></a>3给指针变量赋值</h2><p><img src="3%E6%9C%88C%E8%AF%AD%E8%A8%80%E4%BA%8C%E7%BA%A7-2.assets/image-20210310224519420.png" alt="image-20210310224519420"></p><hr><p>给指针变量赋地址值之外，还可以给指针变量赋一个特殊的值，该值为’’空’’值</p><p><img src="3%E6%9C%88C%E8%AF%AD%E8%A8%80%E4%BA%8C%E7%BA%A7-2.assets/image-20210310224850845.png" alt="image-20210310224850845"></p><p><strong>注意：</strong></p><p>此时，指针变量p中不是没有值，而是有一个’’空’’值。</p><h2 id="4对指针变量的操作"><a href="#4对指针变量的操作" class="headerlink" title="4对指针变量的操作"></a>4对指针变量的操作</h2><p>通过指针来引用一个存储单元，”间址运算符”</p><p><img src="3%E6%9C%88C%E8%AF%AD%E8%A8%80%E4%BA%8C%E7%BA%A7-2.assets/image-20210310225724159.png" alt="image-20210310225724159"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;4什么是字符常量&quot;&gt;&lt;a href=&quot;#4什么是字符常量&quot; class=&quot;headerlink&quot; title=&quot;4什么是字符常量&quot;&gt;&lt;/a&gt;4什么是字符常量&lt;/h3&gt;&lt;p&gt;单引号括起来，中间只有一个字符。“a”,’abc’都是不对的&lt;/p&gt;
+&lt;h3 id=&quot;5什么</summary>
+      
+    
+    
+    
+    <category term="计算机" scheme="http://example.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+    <category term="-C语言" scheme="http://example.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="-计算机" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="-二级" scheme="http://example.com/tags/%E4%BA%8C%E7%BA%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>3月C语言二级</title>
@@ -37,11 +66,11 @@
     <category term="计算机" scheme="http://example.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
     
-    <category term="-二级" scheme="http://example.com/tags/%E4%BA%8C%E7%BA%A7/"/>
+    <category term="-C语言" scheme="http://example.com/tags/C%E8%AF%AD%E8%A8%80/"/>
     
     <category term="-计算机" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
-    <category term="-C语言" scheme="http://example.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    <category term="-二级" scheme="http://example.com/tags/%E4%BA%8C%E7%BA%A7/"/>
     
   </entry>
   
