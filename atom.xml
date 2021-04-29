@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-29T12:04:51.705Z</updated>
+  <updated>2021-04-29T12:17:41.464Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2021/04/29/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
     <id>http://example.com/2021/04/29/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/</id>
     <published>2021-04-29T11:55:53.000Z</published>
-    <updated>2021-04-29T12:04:51.705Z</updated>
+    <updated>2021-04-29T12:17:41.464Z</updated>
     
     <content type="html"><![CDATA[<hr><p>推荐视频——<a href="https://www.bilibili.com/video/BV1Hy4y1t7ij">关于二叉树，你该了解这些！| 二叉树理论基础一网打尽，二叉树的种类、二叉树的存储方式、二叉树节点定义、二叉树的遍历顺序_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</a></p><p>理论基础，这些都是我们平时刷题应该掌握的内容。</p><p>把基础打牢了，有了逻辑基础，学的才会更好一些。</p><hr><h1 id="1-二叉树的种类"><a href="#1-二叉树的种类" class="headerlink" title="1.二叉树的种类"></a>1.二叉树的种类</h1><h2 id="1-满二叉树"><a href="#1-满二叉树" class="headerlink" title="1.满二叉树:"></a>1.满二叉树:</h2><ul><li>在一棵二叉树中，如果所有分支结点都存在左子树和右子树，并且所有叶子都在同一层上，这样的二叉树叫做满二叉树。</li><li>结点数量2^k-1</li><li><img src="/images/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.assets/image-20210429175608363.png" alt="image-20210429175608363"></li></ul><h2 id="2-完全二叉树"><a href="#2-完全二叉树" class="headerlink" title="2.完全二叉树"></a>2.完全二叉树</h2><ul><li>除了底层以外，其它层都是满的，底层是从左到右连续的。</li><li>这个是二叉树</li><li><img src="/images/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.assets/image-20210429180224698.png" alt="image-20210429180224698"></li><li>这个就不是二叉树，底层不连续。</li><li><img src="/images/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.assets/image-20210429180259535.png" alt="image-20210429180259535"></li></ul><hr><p><strong>满二叉树一定是一棵完全二叉树，但完全而二叉树不一定是满的。</strong></p><hr><h2 id="3-二叉搜索树"><a href="#3-二叉搜索树" class="headerlink" title="3.二叉搜索树"></a>3.二叉搜索树</h2><ul><li><p>在它里面的结点顺序，左子树的所有结点都小于中间结点，右子树的所有结点都大于中间结点。</p></li><li><p><img src="/images/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.assets/image-20210429181442803-1619691288466.png" alt="image-20210429181442803"></p></li><li><p>二叉搜索树对结点的布局是没有要求的，元素有顺序就可以。</p></li><li><p>平衡二叉搜索树</p><ul><li>左子树和右子树的高度差不能超过1。</li></ul></li></ul><h1 id="2-二叉树的存储方式"><a href="#2-二叉树的存储方式" class="headerlink" title="2.二叉树的存储方式"></a>2.二叉树的存储方式</h1><h2 id="1-顺序存储"><a href="#1-顺序存储" class="headerlink" title="1.顺序存储"></a>1.顺序存储</h2><p><img src="/images/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.assets/image-20210429184344211.png" alt="image-20210429184344211"></p><p>用这个字符数组来保存二叉树。</p><p><img src="/images/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.assets/image-20210429184437352.png" alt="image-20210429184437352"></p><p>*<em>2</em>i+1——左孩子，2 <em>i+2——右孩子。</em>*</p><h2 id="2-链式存储"><a href="#2-链式存储" class="headerlink" title="2.链式存储"></a>2.链式存储</h2><p>一般用的都是链式存储。</p><p><img src="/images/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.assets/image-20210429185353229.png" alt="image-20210429185353229"></p><h1 id="3-二叉树的遍历"><a href="#3-二叉树的遍历" class="headerlink" title="3.二叉树的遍历"></a>3.二叉树的遍历</h1><hr><p><strong>扩展：</strong></p><ul><li>深度优先搜索：一般都是用递归的方式来实现的，前序遍历，中序遍历，后序遍历，都是深度优先搜索。(迭代法也可以实现前中后序，非递归的方式。)</li><li>广度优先搜索：一层一层的去遍历，或者是一圈一圈的去遍历。层序遍历就是广度优先搜索的一种。</li></ul><hr><p><img src="/images/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.assets/image-20210429193726478.png" alt="image-20210429193726478"></p><p>前序遍历：<strong>中左右。</strong>5412678</p><p>中序遍历：左中右。4125768</p><p>后序遍历：左右中。1247865</p><h1 id="4-二叉树结点的定义"><a href="#4-二叉树结点的定义" class="headerlink" title="4.二叉树结点的定义"></a>4.二叉树结点的定义</h1><p><strong>将二叉树理解为一个链表就会简单很多。</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">   <span class="keyword">int</span> val;<span class="comment">//放数值</span></span><br><span class="line">   TreeNode* left;</span><br><span class="line">   TreeNode* right;</span><br><span class="line">    <span class="comment">//实现一个构造函数，在new一个结点的时候，方便对其进行初始化。</span></span><br><span class="line">   TreeNode(t):val:t,left(<span class="literal">NULL</span>),right(<span class="literal">NULL</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -34,7 +34,7 @@
     
     
     
-    <category term="-数据结构" scheme="http://example.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数据结构" scheme="http://example.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
     <category term="-树" scheme="http://example.com/tags/%E6%A0%91/"/>
