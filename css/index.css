@@ -3226,7 +3226,7 @@ blockquote footer cite:before {
 }
 #page-header #site_social_icons .social-icon {
   margin: 0 0.5rem;
-  color: var(--light-grey);
+  color: var(--black);
   text-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.15);
   font-size: 1.43em;
   cursor: pointer;
@@ -3240,7 +3240,7 @@ blockquote footer cite:before {
 #page-header #scroll-down .scroll-down-effects {
   position: relative;
   width: 100%;
-  color: var(--light-grey);
+  color: var(--black);
   font-size: 30px;
 }
 #page-header.not-home-page {
