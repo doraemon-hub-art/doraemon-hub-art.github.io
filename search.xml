@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>LeetCode刷题(3)【链表】环形链表</title>
+      <link href="2021/05/27/LeetCode%E5%88%B7%E9%A2%98(3)%E3%80%90%E9%93%BE%E8%A1%A8%E3%80%91%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/"/>
+      <url>2021/05/27/LeetCode%E5%88%B7%E9%A2%98(3)%E3%80%90%E9%93%BE%E8%A1%A8%E3%80%91%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</url>
+      
+        <content type="html"><![CDATA[<p><strong>环形链表</strong></p><p><a href="https://leetcode-cn.com/problems/linked-list-cycle/">141. 环形链表 - 力扣（LeetCode） (leetcode-cn.com)</a></p><p>什么是链表带环：链表的最后一个元素不指向空而指向前面的某个结点。</p><p>思路：<strong>快慢指针</strong>，慢指针走一步，快指针走两步，二者先后 进入环内进行追逐，最终会在某个点相遇。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct ListNode *next;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">hasCycle</span><span class="params">(struct ListNode *head)</span> </span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">slow</span> =</span> head;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">fast</span> =</span> head;</span><br><span class="line">    <span class="keyword">while</span>(fast &amp;&amp; fast-&gt;next)</span><br><span class="line">    &#123;</span><br><span class="line">        slow = slow-&gt;next;</span><br><span class="line">        fast = fast-&gt;next-&gt;next;</span><br><span class="line">        <span class="keyword">if</span>(slow == fast)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>扩展：</strong></p><p>请证明：</p><p>**(1)**slow和fast一定会在环里面相遇呢？有没有可能永远追不上？</p><p>当slow 走1步，fast走2步时，<strong>一定可以</strong>追上。</p><p>若slow和fast已经进入环中，追逐已经开始了，假设他们之间的距离是N,slow走1步，fast走2步，二者的距离每次缩减1，N,N-1,N-2,……0,直到相遇。</p><p>**(2)**slow一次走1步，fast一次走3不行不行？4不行不行？    </p><p><strong>不一定可以追上，甚至有可能会进入死循环。</strong>我比你快不一定追上，因为存在错过。若开始追逐，假设二者距离为N，假设slow走1步，fast走3步，距离每次缩减2，N,N-2,N-4,N-6……。如果N是偶数最后会减到0，如果N是偶数则减到-1，距离为0代表相遇，距离为-1代表反超了，进入新的追逐，他们之间的距离是 C-1(假设C 是环的长度)，如果C-1是偶数，就可以追上，如果C-1是奇数，就永远追不上，因为是奇数的时候又像开始那样反超，距离又是C-1，就永远追不上。</p><p>其他fast步数同理。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -数据结构 </tag>
+            
+            <tag> -链表 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode刷题(2)【链表】合并链表&amp;返回中间链表</title>
       <link href="2021/05/26/LeetCode%E5%88%B7%E9%A2%98(2)%E3%80%90%E9%93%BE%E8%A1%A8%E3%80%91%E5%90%88%E5%B9%B6%E9%93%BE%E8%A1%A8&amp;%E8%BF%94%E5%9B%9E%E4%B8%AD%E9%97%B4%E9%93%BE%E8%A1%A8/"/>
       <url>2021/05/26/LeetCode%E5%88%B7%E9%A2%98(2)%E3%80%90%E9%93%BE%E8%A1%A8%E3%80%91%E5%90%88%E5%B9%B6%E9%93%BE%E8%A1%A8&amp;%E8%BF%94%E5%9B%9E%E4%B8%AD%E9%97%B4%E9%93%BE%E8%A1%A8/</url>
