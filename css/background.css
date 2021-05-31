@@ -1,3 +1,4 @@
 #web_bg {
-  background: linear-gradient(to right bottom, rgb(0, 255, 240), rgb(92, 159, 247) 40%, rgb(211, 34, 255) 80%);
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
+
