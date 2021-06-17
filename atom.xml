@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-17T11:20:59.664Z</updated>
+  <updated>2021-06-17T11:22:57.193Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2021/06/17/Hexo-Butterfly%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6/"/>
     <id>http://example.com/2021/06/17/Hexo-Butterfly%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6/</id>
     <published>2021-06-17T11:18:33.000Z</published>
-    <updated>2021-06-17T11:20:59.664Z</updated>
+    <updated>2021-06-17T11:22:57.193Z</updated>
     
     <content type="html"><![CDATA[<p><strong>我的小站</strong>——<a href="http://doraemon2.xyz/">半生瓜のblog</a></p><p><strong>感谢糖果屋Akilar老哥的帮助</strong>——<a href="https://akilar.top/">Akilarの糖果屋</a></p><h1 id="Hexo-Butterfly添加天气插件"><a href="#Hexo-Butterfly添加天气插件" class="headerlink" title="Hexo-Butterfly添加天气插件"></a><strong>Hexo-Butterfly添加天气插件</strong></h1><p><strong>效果如图所示</strong>：<img src="/images/Hexo-Butterfly%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6.assets/image-20210617185624577.png" alt="image-20210617185624577"></p><p>就是JS插件的字体大小我不会调，稍微有一点瑕疵，不过影响不大。</p><p>我用的是心知天气的天气插件(其他天气插件同理)。</p><p><strong>首先</strong>，先到心知天气的官网注册一个账号——<a href="https://www.seniverse.com/">心知天气</a>。</p><p>登录，申请一个免费版，然后在产品的下拉栏中选择天气插件，然后点击立即免费使用。</p><p><strong>然后</strong>，在下面选择显示参数。</p><p><img src="/images/Hexo-Butterfly%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6.assets/image-20210617190318207.png" alt="image-20210617190318207"></p><p><strong>点击生成代码并复制</strong>。</p><p><strong>打开主题文件目录</strong></p><p><img src="/images/Hexo-Butterfly%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6.assets/image-20210617190559552.png" alt="image-20210617190559552"></p><p>打开<strong>nav.pug</strong></p><p>将下面这行代码放入合适的位置</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;tp-weather-widget&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p><strong>例如</strong>:</p><p><img src="Hexo-Butterfly%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6.assets/image-20210617190804513.png" alt="image-20210617190804513"></p><p><strong>保存并关闭</strong></p><p><strong>接着</strong>，在此路径下创建一个JS文件，名称随意。</p><p><img src="/images/Hexo-Butterfly%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6.assets/image-20210617190908876.png" alt="image-20210617190908876"></p><p><strong>打开</strong>，将刚才复制代码中的 <script></script>中间的内容粘贴进去。</p><p>就是将下图中画横线的代码删除。</p><p><img src="/images/Hexo-Butterfly%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6.assets/image-20210617191118038.png" alt="image-20210617191118038"></p><p><strong>保存并关闭</strong></p><p><strong>最后</strong>，找到主题配置文件_config.yml</p><p><strong>打开</strong>，在<strong>inject</strong>处引入刚才创建的JS文件(注意文件名称)。</p><p><img src="Hexo-Butterfly%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6.assets/image-20210617191324806.png" alt="image-20210617191324806"></p><p><strong>保存并退出</strong></p><p><strong>hexo clean&amp;&amp;hexo g&amp;&amp;hexo d即可完成</strong></p>]]></content>
     
@@ -34,7 +34,7 @@
     
     
     
-    <category term="-Hexo" scheme="http://example.com/categories/Hexo/"/>
+    <category term="Hexo" scheme="http://example.com/categories/Hexo/"/>
     
     
     <category term="-Hexo" scheme="http://example.com/tags/Hexo/"/>
