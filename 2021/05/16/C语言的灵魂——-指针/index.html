@@ -1,0 +1,527 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C语言的灵魂——-指针 | 半生瓜のblog</title><meta name="keywords" content="-C语言,-指针"><meta name="author" content="Do2eM0N"><meta name="copyright" content="Do2eM0N"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="相关视频——强烈推荐【强烈推荐】4小时彻底掌握C指针 - 顶尖程序员图文讲解 - UP主亲自翻译校对 (已完结)_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili  在学习这个之前，你需要了解函数、循环、数组等C语言知识  指针基本介绍 计算机的每一个字节都有一个地址。 int a,当代码运行的时候，计算机会在内存中开辟一些空间给a。分配多少空间，取决有具体的数据类型。  指针是一个变量，他存">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言的灵魂——-指针">
+<meta property="og:url" content="http://example.com/2021/05/16/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88/index.html">
+<meta property="og:site_name" content="半生瓜のblog">
+<meta property="og:description" content="相关视频——强烈推荐【强烈推荐】4小时彻底掌握C指针 - 顶尖程序员图文讲解 - UP主亲自翻译校对 (已完结)_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili  在学习这个之前，你需要了解函数、循环、数组等C语言知识  指针基本介绍 计算机的每一个字节都有一个地址。 int a,当代码运行的时候，计算机会在内存中开辟一些空间给a。分配多少空间，取决有具体的数据类型。  指针是一个变量，他存">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/zhizhen.png">
+<meta property="article:published_time" content="2021-05-16T12:00:28.000Z">
+<meta property="article:modified_time" content="2021-05-17T11:20:48.687Z">
+<meta property="article:author" content="Do2eM0N">
+<meta property="article:tag" content="-C语言">
+<meta property="article:tag" content="-指针">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/zhizhen.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2021/05/16/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4bd5c0d5704ac1dd90d20a471e6a167a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-05-17 19:20:48'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><link rel="stylesheet" href="/css/xiaotubiao.css"><link rel="stylesheet" href="/css/dibujianbian.css"><link rel="stylesheet" href="/css/toumingdu.css"><link rel="stylesheet" href="/css/hua.css"><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="半生瓜のblog" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/pkq3.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">47</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fa fa-comments"></i><span> 说说</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/zhizhen.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">半生瓜のblog<div id="tp-weather-widget"></div></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fa fa-comments"></i><span> 说说</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">C语言的灵魂——-指针</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-05-16T12:00:28.000Z" title="发表于 2021-05-16 20:00:28">2021-05-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-05-17T11:20:48.687Z" title="更新于 2021-05-17 19:20:48">2021-05-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/C%E8%AF%AD%E8%A8%80/">C语言</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="C语言的灵魂——-指针"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><hr>
+<p>相关视频——强烈推荐<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1bo4y1Z7xf?p=1">【强烈推荐】4小时彻底掌握C指针 - 顶尖程序员图文讲解 - UP主亲自翻译校对 (已完结)_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</a></p>
+<hr>
+<p>在学习这个之前，你需要了解函数、循环、数组等C语言知识</p>
+<hr>
+<h1 id="指针基本介绍"><a href="#指针基本介绍" class="headerlink" title="指针基本介绍"></a>指针基本介绍</h1><hr>
+<p>计算机的每一个字节都有一个地址。</p>
+<p>int a,当代码运行的时候，计算机会在内存中开辟一些空间给a。分配多少空间，取决有具体的数据类型。</p>
+<hr>
+<p>指针是一个变量，他存放这另一个变量的地址。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;	</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">10</span>;<span class="comment">//定义一个整型变零a</span></span><br><span class="line">    <span class="keyword">int</span>* p;<span class="comment">//定义一个指针变量p</span></span><br><span class="line">    p = &amp;a;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>p是一个指针变量，换句话说p是一个可以存放整型变量地址的变量。</p>
+<p>&amp;叫做取地址符，放在一个变量的前面，我们就得到了那个变量的地址，它返回一个指针，指向那个特定的变量。</p>
+<p>*叫做解引用操作符，操作指针所指向的那个地址的内容（值）。</p>
+<h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//下面的结果是什么？</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,*p);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,&amp;a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,p;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,&amp;p);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,a);<span class="comment">//a的值</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,*p);<span class="comment">//a的值</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,&amp;a);<span class="comment">//a的地址</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,p;<span class="comment">//a的地址</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,&amp;p);<span class="comment">//p的地址</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>int* a;意味着指向整型的指针然后写出变量名。</p>
+<h2 id="指针的算数运算"><a href="#指针的算数运算" class="headerlink" title="指针的算数运算"></a>指针的算数运算</h2><p>步长：与是指向什么类型的指针有关系，就是走一步能跨过几个字节的距离。</p>
+<p>下面两个输出，相差4个字节。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;	</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">	<span class="keyword">int</span>* p;</span><br><span class="line">	p = &amp;a;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, p);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, p+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里输出的是一个垃圾值，因为我们根本就没有对这个地址分配一个整型变量，所以解引用会出现一个随机值（垃圾值）。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,*(p+<span class="number">1</span>));</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="指针的类型"><a href="#指针的类型" class="headerlink" title="指针的类型"></a>指针的类型</h1><p>指针是强类型的，你需要一个特定类型的指针变量来存放特定类型变量的地址，</p>
+<p>例如对于int*来说，你就需要一个指向整型类型的指针，来存放整型数据的地址。</p>
+<p><strong>为什么指针是强类型的？</strong></p>
+<p><strong>因为，</strong>我们不仅使用指针来存储内存地址，同时也用来解引用他所存储的地址所对应的内容，这样我们就能访问并且修改这些地址对应的值了。</p>
+<p><strong>不同</strong>的数据有不同的大小，例如整型在内存中占四个字节，字符型占一个字节。</p>
+<p>假设int a = 1021;</p>
+<p>在内存中占4个字节，32个比特位，如图：</p>
+<p><img src="/images/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88.assets/image-20210511175536148.png" alt="image-20210511175536148"></p>
+<p>​    </p>
+<p>其中，最左边的位来表示符号位，0为正，1位负，剩下的32位来存储值。</p>
+<p>现在声明一个整型指针来指向a,</p>
+<p>int* p = &a;</p>
+<p>现在打印p——printf（”%d\n”,p）;</p>
+<p>得到的结果200，也就是说该整型变量在内存中的起始地址是200。</p>
+<p>现在打印p所指向地址所对应的值——pintf(“%d\n”,*p);</p>
+<p>从200开始，int类型占4个字节，到203，提取这个整型的值，得到的结果1025。</p>
+<p><strong>代码示例：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;	</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">1025</span>;</span><br><span class="line">	<span class="keyword">int</span>* p;</span><br><span class="line">	p = &amp;a;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;整型所占字节数是%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;p所指向的地址是%d\np所指向的地址对应的值是%d\n&quot;</span>,p,*p);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<p><img src="/images/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88.assets/image-20210511185807926.png" alt="image-20210511185807926"></p>
+<p><strong>接着我们在上面的基础上生命一个字符型指针,并且将整型指针的值赋给该字符型指针。</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>* p0;</span><br><span class="line">p0 = p;</span><br></pre></td></tr></table></figure>
+
+<p>这会提示一个编译错误，因为p0是一个字符型指针，而p是一个整型指针。</p>
+<p><strong>下面我们进行强制类型转换,并进行输出。</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p0  = (<span class="keyword">char</span>*)p;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;字符型所占的字节数是%d\n&quot;</span>, <span class="keyword">sizeof</span>(<span class="keyword">char</span>));</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;p0所指向的地址是%d\np0所在指向的地址对应的值是%d\n&quot;</span>, p0, *p0);</span><br></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<p><img src="/images/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88.assets/image-20210511190049581.png" alt="image-20210511190049581"></p>
+<p>我们发现所对应的内存地址变了，因为程序在每次运行的时候，都会重新为变量分配内存地址。</p>
+<p>这里p0所指向的地址所对应的值也变了，我们发现跟p并不一样，这是为什么呢？</p>
+<p>同上面的图，这是1025作为整型在内存中的分部，整型在内存中占4个字节，32个比特位，而我们这里将他强制存进了字符型指针中，字符型在内存中占1个字节，8个比特位，</p>
+<p><img src="/images/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88.assets/image-20210511190200850.png" alt="image-20210511190200850"></p>
+<p>所以只获得了最左边的一个字节，也就是1。</p>
+<p><img src="/images/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88.assets/image-20210511190512584.png" alt="image-20210511190512584"></p>
+<h2 id="算数运算"><a href="#算数运算" class="headerlink" title="算数运算"></a>算数运算</h2><p>这里我们再次进行指针的算数运算，将p0+1获得新地址，并且对他进行解引用得到该地址所对应的值。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;p0+1所指向的地址是%d\np0+1所指向的地址对应的值是%d\n&quot;</span>, p0+<span class="number">1</span>, *(p0+<span class="number">1</span>));</span><br></pre></td></tr></table></figure>
+
+<p>结果如下图表示。</p>
+<p><img src="/images/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88.assets/image-20210511191001194.png" alt="image-20210511191001194"></p>
+<p>因为char类型所占字节数是1，所以步长(+1跳过的字节数)是1，该地址所对应的值是，</p>
+<p><img src="/images/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88.assets/image-20210511191301868.png" alt="image-20210511191301868"></p>
+<p>二进制转化为十进制表示得4(0*2^0+0 *2^1+ 1 * 2^2 = 4)。</p>
+<hr>
+<p>进制转化忘了的同学可以来看一下我的这篇笔记——<a target="_blank" rel="noopener" href="http://doraemon2.xyz/2021/03/08/%E8%BF%9B%E5%88%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/">进制之间的转换 | 半生瓜のblog (doraemon2.xyz)</a></p>
+<hr>
+<h2 id="void空指针"><a href="#void空指针" class="headerlink" title="void空指针"></a>void空指针</h2><p>现在我们讨论一种通用的指针类型，它不针对某个特定的数据类型，这种类型的指针被称为void类型的指针，我们使用void来声明这种特定的指针类型。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span>* p1;p1 = p;</span><br></pre></td></tr></table></figure>
+
+<p>这里我们不需要显式的类型转换,p1 = p是合法的，不会有编译错误。</p>
+<p>但是它没有映射到特定的类型，所以我们不能对它进行解引用，*p1是违法的。</p>
+<p>我们只能打印出地址。（p0+1也是不行的，也会有编译错误）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,p1);</span><br></pre></td></tr></table></figure>
+
+<h1 id="指向指针的指针"><a href="#指向指针的指针" class="headerlink" title="指向指针的指针"></a>指向指针的指针</h1><p>直接上代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;int main(void)&#123;		int x = 5;	int* p = &amp;x;	*p = 6;	int** q = &amp;p;	int*** r = &amp;q;	return 0; &#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p><strong>接下来让我们打印一些东西</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, *p);<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,*q);<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,*(*q));<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,*(*r));<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,*(*(*r)));</span><br></pre></td></tr></table></figure>
+
+<p><strong>结果：</strong></p>
+<p><img src="/images/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88.assets/image-20210511200806837.png" alt="image-20210511200806837"></p>
+<p><strong>解释：</strong></p>
+<p><strong>第一次没读懂一定要多读几次。</strong></p>
+<p>​    p存的是x的地址，对x进行解引用得到x的值。<br>​    q存的是p的地址，p存的是x的地址,对q进行解引用得到x的地址，再进行一次解引用就是通过x的地址寻找对应的值，那就是x的值。</p>
+<p>​    r存的是q的地址，q存的是p的地址，第一次解引用操作就是通过q的地址找到q所存的p的地址，p存的是x的地址，再对r进行一次解引用操作，就是p的地址里面存的是x的地址，结果得到x的地址，再对r进行一次解引用操作，就是通过x的地址寻找对应的值，那就是x的值。</p>
+<p><strong>我们通过三级指针可以直接修改x的值</strong></p>
+<p>就是通过对指针变量的解引用来修改对应地址所对应值。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">***r = <span class="number">10</span>;<span class="comment">//此时x的值由5变成了10</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**q = *p + <span class="number">2</span>;<span class="comment">//此时x的值由10变成了12</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="函数传值-amp-传-址-引用"><a href="#函数传值-amp-传-址-引用" class="headerlink" title="函数传值&amp;传(址)引用"></a>函数传值&amp;传(址)引用</h1><p>函数与指针。</p>
+<p><strong>传值。</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;void Increment(int a)&#123;	a += 1;&#125;int main(void)&#123;	int a = 10;	Increment(a);	printf(&quot;a = %d\n&quot;, a);	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>我们发现值并没有改变，我们打印下两个地址看一下，</p>
+<p><img src="/images/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88.assets/image-20210512111430844.png" alt="image-20210512111430844"></p>
+<p>是两个<strong>不同的内存空间</strong>，所以值没被修改。</p>
+<p><strong>解释：</strong></p>
+<p>main()是主调函数，Increment()是被调函数，当我们在主调函数中调用其他函数时，这个参数叫做实参，这个被调函数的参数叫做形参，实参会被映射到形参，当这个函数被调用的时候，主函数中的实参’a’会被映射到Increment函数的形参’a’里面，当我们进行这样的调用的时候，基本上就是把一个变量拷贝到另一个变量，这种形式的函数掉用也被称为，<strong>传值调用。</strong></p>
+<p>如果修改成功的话，这两个应该是一个地址，<strong>引出传(址)引用。</strong></p>
+<p><strong>传(址)引用，只需要一点点的修改。</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;void Increment(int* a)&#123;	*a = *a + 1;&#125;int main(void)&#123;	int a = 10;	Increment(&amp;a);	printf(&quot;%d\n&quot;,a);	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p><strong>解释：</strong></p>
+<p>这样的函数调用不是传值，而是将变量的地址传了过去，我们可以引用这个变量，解引用并且进行一些操作，这就是传(址)引用，传(址)引用可以节省很多内存空间，相比之下引用所占的内存也会小得多，避免复杂的数据类型的拷贝，可以让我们节省内存。</p>
+<h1 id="指针和数组"><a href="#指针和数组" class="headerlink" title="指针和数组"></a>指针和数组</h1><p>二者之间有很强的联系。</p>
+<p><strong>数组名就是一个指针。</strong></p>
+<p> 如果使用数组名,会得到一个指向数组首元素的指针。</p>
+<p><strong>例如：</strong></p>
+<p>int* p = a；我们甚至都不需要在a前写&amp;。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;int main(void)&#123;	int a[] = &#123; 1,2,3,4,5,6 &#125;;	int* p = a;	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>如果我们打印a，会得到数组a的首元素地址。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,a);</span><br></pre></td></tr></table></figure>
+
+<p>如果对它解引用会得到他首元素的值，1。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,*a);</span><br></pre></td></tr></table></figure>
+
+<p>如果打印a+1,则会打印数组a第二个元素的地址。</p>
+<p>同理对他解引用也会得到该地址所对应的元素值。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,a);</span><br></pre></td></tr></table></figure>
+
+<p>完整代码示例：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;int main(void)&#123;	int a[] = &#123; 1,2,3,4,5,6 &#125;;	printf(&quot;%d\n&quot;,a );//首元素地址	printf(&quot;%d\n&quot;,&amp;a );//首元素地址	printf(&quot;%d\n&quot;,*a );//首元素	printf(&quot;%d\n&quot;,a[0]);//首元素	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="/images/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88.assets/image-20210512204028411.png" alt="image-20210512204028411"></p>
+<p>需要注意的是，当把数组名字作为指针的时候，不能对它进行自增操作，会报错。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[] = &#123; <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span> &#125;;	<span class="keyword">int</span>* p = a;	p++;<span class="comment">//可以	a++;//不可以</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="数组作为函数参数"><a href="#数组作为函数参数" class="headerlink" title="数组作为函数参数"></a>数组作为函数参数</h2><p>数组作为函数参数传入。</p>
+<p><strong>代码示例：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;int SumOfElement(int a[],int size)&#123;	int sum = 0;	for (int i = 0; i &lt; size; i++)	&#123;		sum += a[i];	&#125;	return sum;&#125;int main(void)&#123;	int a[] = &#123; 1,2,3,4,5,6 &#125;;	//得到数组中元素个数	int size = sizeof(a) / sizeof(a[0]);	int Sum = SumOfElement(a,size);	printf(&quot;%d\n&quot;, Sum);//得到结果21	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>现在我们将求元素个数的代码放入SumOfElement函数中。代码如下，我们发现此时结果变成了1。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;int SumOfElement(int a[])&#123;	int sum = 0;	int size = sizeof(a) / sizeof(a[0]);	for (int i = 0; i &lt; size; i++)	&#123;		sum += a[i];	&#125;	return sum;&#125;int main(void)&#123;	int a[] = &#123; 1,2,3,4,5,6 &#125;;	int Sum = SumOfElement(a);	printf(&quot;%d\n&quot;, Sum);	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p>​    <img src="/images/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88.assets/image-20210512205738054.png" alt="image-20210512205738054"></p>
+<p><strong>这是为什么呢？</strong></p>
+<p>当编译器看到数组作为函数参数的时候，他不会拷贝整个数组，而是仅仅创建一个同名的指针，我们这里就是创建了一个整型指针，编译器只是拷贝了主调函数的数组首元素地址。</p>
+<p>不管你在被调函数的参数中写int a[],还是int *a,结果都是一样的，它都只是一个整形指针而已。</p>
+<p>这里我们不是拷贝变量的值，而仅仅拷贝了一个变量的地址，所以这里是传(址)引用，这个很有意义，因为数组可以很大， 每次拷贝整个数组没有意义，他会消耗大量的内存，一次对于数组来说不使用传值引用，而是传(址)引用。</p>
+<p>这就是为什么我们这次数组的结果是1了， 因为被调函数中的a是个整型指针，而在主函数中a是一个数组。</p>
+<p>所以计算数组元素个数的代码，还是应该放到主函数中。</p>
+<hr>
+<h2 id="指针和字符数组"><a href="#指针和字符数组" class="headerlink" title="指针和字符数组"></a>指针和字符数组</h2><p><strong>字符数组</strong></p>
+<p>在C语言中为了更高效的操作字符串，我们需要理解一些事情，</p>
+<p>我们如何把字符串存入和字符数组，</p>
+<p>为了能够在字符数组中存储字符串，首要的需求就是字符数组必须要足够大，大到能够容纳字符串，字符数组的大小要大于等于字符的数量+1，</p>
+<p>C语言的字符串必须以null结尾，这就是为什么我们需要一个额外的空间，是用来存放null的。</p>
+<p><strong>代码示例：</strong></p>
+<p>错误例子</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;int main(void)&#123;		char c[4];	c[0] = &#x27;N&#x27;;	c[1] = &#x27;S&#x27;;	c[2] = &#x27;S&#x27;;	c[3] = &#x27;B&#x27;;	printf(&quot;%s\n&quot;, c);	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>我们发现字母后面出现了几个乱码，这是因为我们破坏了printf的默认规则,也就是字符串必须是以null结尾吧，这就是发生<strong>未定义</strong>行为的原因。</p>
+<p><strong>下面我们进行一下修改</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;int main(void)&#123;		char c[5];	c[0] = &#x27;N&#x27;;	c[1] = &#x27;S&#x27;;	c[2] = &#x27;S&#x27;;	c[3] = &#x27;B&#x27;;	c[4] = &#x27;\0&#x27;;	printf(&quot;%s\n&quot;, c);	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>结果就正常了</p>
+<p><img src="/images/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88.assets/image-20210513123554138.png" alt="image-20210513123554138"></p>
+<p><strong>其他的字符操作函数也同样需要遵守这个固定，以null为结尾。</strong></p>
+<p>写在同一行，系统会隐式的自动添加null为结尾</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c[<span class="number">5</span>] = <span class="string">&quot;NSSB&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p> 不声明字符数组的个数也是可以的，系统会自动分配对应的字节数，例如</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c[] = <span class="string">&quot;ABCD&quot;</span>;<span class="keyword">sizeof</span>(c);<span class="comment">//sizeof的结果就是5，它刚好同来存放ABCDstrlen(c);//长度是4，不包括null</span></span><br></pre></td></tr></table></figure>
+
+<p>如果我们这么声明，代码如下，这时我们需要显式的声明它的结束。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c[<span class="number">5</span>] = &#123;<span class="string">&#x27;A&#x27;</span>，<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;D&#x27;</span>,<span class="string">&#x27;\0&#x27;</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>引入指针</strong></p>
+<p>声明一个字符数组和一个字符指针。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c1[<span class="number">5</span>] = <span class="string">&quot;hello&quot;</span>;<span class="keyword">char</span>* c2;</span><br></pre></td></tr></table></figure>
+
+<p>我们使用这个数组的名字和这个字符指针的名字放到等式中是成立的。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">但是，将换个位置，    c1 = c2;是非法的</span><br></pre></td></tr></table></figure>
+
+<p>c2中存的就是字符数组c1中首元素的地址(同上面的整型数组)。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c2 =c1;</span><br></pre></td></tr></table></figure>
+
+<p>解引用操作同上面的数组。</p>
+<p><strong>代码示例：打印数组中的所有元素。</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;void print(char* c)&#123;	int  i = 0;	//*(c+i)同理	while (c[i] != &#x27;\0&#x27;)	&#123;		printf(&quot;%c&quot;, c[i]);		i++;	&#125;&#125;int main(void)&#123;		char c[20] = &quot;ABCDEF&quot;;	print(c);	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">char</span>* c)</span></span>&#123;	<span class="keyword">while</span> (*c!= <span class="string">&#x27;\0&#x27;</span>)	&#123;		<span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, *c);		c++;	&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>解释</strong>：此时的字符数组就是一个指针，存的就是元素的地址，从首元素开始只要不是null就进入循环，然后元素地址进行自增，因为是字符型指针，所以步长就是1，遍历每个元素，直到null。</p>
+<h2 id="指针和二维数组"><a href="#指针和二维数组" class="headerlink" title="指针和二维数组"></a>指针和二维数组</h2><p>简单复习一下什么是多维数组。</p>
+<p><strong>就是在数组中储存数组。</strong></p>
+<p>学习此部分之前，可以再复习一下上面指针和一维数组。</p>
+<p><strong>个人理解</strong>：<strong>当多维数组名被当做指针的时候，多维数组就是指向指针的指针。</strong></p>
+<p><strong>代码示例：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;int main(void)&#123;		int B[2][3] = &#123; &#123;1,2,3&#125;,&#123;4,5,6,&#125; &#125;;	int(*p)[3] = B;	//打印首元素地址B[0][0]	printf(&quot;%d\n&quot;, &amp;B[0][0]);	printf(&quot;%d\n&quot;,B );	printf(&quot;%d\n&quot;,p );	printf(&quot;%d\n&quot;,*B );	printf(&quot;%d\n&quot;,*p);	return  0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p><strong>为什么我这么说呢？</strong></p>
+<p><strong>对比理解</strong></p>
+<p> 就是，一个二级指针，存的是一个一级指针的地址（首元素地址），然后再对该一级指针的地址进行解引用，得到该一级指针所存地址的值。</p>
+<p><strong>例如：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,**B);<span class="comment">//当数组名被作为指针的时候，B和*B意思一样。</span></span><br></pre></td></tr></table></figure>
+
+<p>当二维数组的数组B被当成指针的时候，他里面存的是B [0] [0]的地址，再对他进行解引用得到的是对应的值，1。</p>
+<p>（<strong>（同上）</strong>因为直接使用数组名会返回该数组的首元素的指针，是二维数组中的第一个一维数组的首元素地址，然后对这个首元素进行解引用操作，得到的是第一个元素的值。）</p>
+<p><strong>不同点：</strong></p>
+<p>B返回一个指向一个一维数组的指针，而*B返回一个指向整型的指针，当我们只是打印地址的时候，一维数组B[0]和B[0]的首元素的起始地址是一样的，所以打印的地址是相同的，指针类型会在你尝试解引用时或者尝试做指针算术的时候起作用。</p>
+<hr>
+<p>B [I] [J]可以写成 *（B[i]+j）  或者 *( *(B +i)+j )。—就是把B[i]写成 *(B+i)</p>
+<p><strong>解释：</strong>直接用 数组名返回一个指向首元素的指针，（该二维数组中对应的哪个一维数组）,然后+j是对应一位数组中的，跳过的元素个数，也就是往后跳过几个字节，得到新的元素地址，最后，解引用得到该元素的值。</p>
+<h2 id="指针和多维数组"><a href="#指针和多维数组" class="headerlink" title="指针和多维数组"></a>指针和多维数组</h2><p>（如何理解多维数组，最左边的维数就是一共划分了几块，第二位就是在每一块中继续分为几块，依次类推。）</p>
+<p>（定义多维数组的指针的时候，后面的参数是该数组除去一个参数的几个参数）</p>
+<p>多维数组-例如：三维数组就是二维数组的数组。     </p>
+<p><strong>代码示例：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;int main(void)&#123;		int C[3][2][2] = &#123; &#123;&#123;1,2&#125;,&#123;3,4&#125;&#125;,&#123;&#123;5,6&#125;,&#123;7,8&#125;&#125;,&#123;&#123;9,10&#125;,&#123;10,11&#125;&#125; &#125;;	int (*p)[2][2] = C;	//首元素地址	printf(&quot;%d\n&quot;, &amp;C[0][0][0]);	printf(&quot;%d\n&quot;,p);	printf(&quot;%d\n&quot;, *p);	printf(&quot;%d\n&quot;, C[0]);	//打印首元素	printf(&quot;%d\n&quot;, C[0][0][0]);	printf(&quot;%d\n&quot;, ***p);	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>同上面指针和二维数组</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C[i][j][k] = *(C[i][j]+k) = *(*(C[i][j]+k))</span><br></pre></td></tr></table></figure>
+
+<p>如果你已经理解了，请问下面这个结果是多少？</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, *(C[<span class="number">0</span>][<span class="number">1</span>] + <span class="number">1</span>));<span class="comment">//结果是4，上面示例中的代码。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="多维数组作为参数传给函数"><a href="#多维数组作为参数传给函数" class="headerlink" title="多维数组作为参数传给函数"></a><strong>多维数组作为参数传给函数</strong></h2><p> （是几维数组,使用数组名作为指针就返回几维度-1的指针）</p>
+<p>（例如：一维数组返回指向整型的指针，二维数组返回指向一维数组的指针，三维数组返回指二维数组的指针……）</p>
+<p>多维数组作为函数参数的时候，数组的第一个维度可以省略，但是其余的维度需要指定。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;void Func (int (*C)[2][2])&#123;&#125;int main(void)&#123;		int C[3][2][2] = &#123;&#123;&#123;1,2&#125;,&#123;3,4&#125;&#125;,&#123;&#123;5,6&#125;,&#123;7,8&#125;&#125;,&#123;&#123;9,10&#125;,&#123;10,11&#125;&#125; &#125;;	Func(C);	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<h1 id="指针和动态内存"><a href="#指针和动态内存" class="headerlink" title="指针和动态内存"></a>指针和动态内存</h1><hr>
+<p>内存是机器中很关键的资源。</p>
+<p>也可以看看我的这篇笔记——<a target="_blank" rel="noopener" href="http://doraemon2.xyz/2021/04/22/C%E8%AF%AD%E8%A8%80%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%BC%80%E8%BE%9F/">C语言动态内存开辟 | 半生瓜のblog (doraemon2.xyz)</a></p>
+<hr>
+<p><strong>相关函数：</strong></p>
+<p>堆上分配内存的相关函数malloc calloc realloc</p>
+<p>释放内存free</p>
+<hr>
+<h2 id="malloc"><a href="#malloc" class="headerlink" title="malloc"></a><strong>malloc</strong></h2><p><strong>malloc</strong>返回一个void指针，这个指针指向了分配给我们的内存块的第一个字节的地址。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span>*p = <span class="built_in">malloc</span>(n*<span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br></pre></td></tr></table></figure>
+
+<p>我们不能解引用一个void指针，通常需要将它<strong>转化为一个特定类型的指针</strong>，然后再使用它。</p>
+<p>因为malloc只是个通用的函数，在堆上分配一些内存，它并不关心你用这块内存存什么，它只是简单返回指向开辟出来的内存起始地址的指针。</p>
+<p>为了使用这块内存我们需要进行<strong>指针类型转换</strong>。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span>* p = (<span class="keyword">int</span> *)<span class="built_in">malloc</span>(n*<span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br></pre></td></tr></table></figure>
+
+<p>动态内存的操作都是基于指针的，你拥有一个基地址指针。</p>
+<hr>
+<h2 id="calloc"><a href="#calloc" class="headerlink" title="calloc"></a><strong>calloc</strong></h2><p><strong>calloc</strong> 和malloc类似，callo也是返回一个void型指针， 但是calloc接收两个参数，第一个参数是特定的元素数量，第二个参数是类型的大小。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> *p = (<span class="keyword">int</span> *)<span class="built_in">calloc</span>(<span class="number">3</span>,<span class="keyword">sizeof</span>(<span class="keyword">int</span>))</span><br></pre></td></tr></table></figure>
+
+<p>还有一个区别是，calloc在分配完内存之后会对其进行初始化，而malloc不会。</p>
+<h2 id="realloc"><a href="#realloc" class="headerlink" title="realloc"></a><strong>realloc</strong></h2><p>如果你有一块内存，动态分配的内存，你想修改内存块的大小，那你就可以使用realloc，realloc接收两个参数，第一个参数是指向已分配内存的起始地址的指针，第二个参数是新的内存块的大小。</p>
+<p><strong>如果去掉第一个参数，那么他和malloc是一样的效果</strong></p>
+<p>这时会创建一个空的内存块，而不会从之前的内存块拷贝任何数据。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *b = (<span class="keyword">int</span> *)<span class="built_in">realloc</span>(<span class="literal">NULL</span>,n*<span class="keyword">sizeof</span>(<span class="keyword">int</span>)); </span><br></pre></td></tr></table></figure>
+
+<p> <strong>第二个参数是0,那么他和free是一样的效果</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *b = (<span class="keyword">int</span>*)<span class="built_in">realloc</span>(A,<span class="number">0</span>);<span class="comment">//将A释放 = free(A)</span></span><br></pre></td></tr></table></figure>
+
+<p>reallo可能会有多种场景</p>
+<ul>
+<li>比如我们想要的新内存块可能比原来的内存要大，这种情况下机器可能会创建一块新的内存然后把原来的值拷贝过去，然后释放之前的内存，如果之前的那块内存的相邻处，还有还有连续的内存可用，那么可能会直接扩展之前的那块内存。</li>
+</ul>
+<h2 id="free"><a href="#free" class="headerlink" title="free"></a>free</h2><p>free()将开辟出来的内存空间释放。</p>
+<h2 id="代码示例-1"><a href="#代码示例-1" class="headerlink" title="代码示例"></a><strong>代码示例</strong></h2><p>数组的个数不能是个变量，这时候我们就能用到动态内存开辟</p>
+<p><strong>创建一个大小为n的数组</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;#include&lt;stdlib.h&gt;int main(void)&#123;		int n = 0;	scanf(&quot;%d&quot;, &amp;n);	int* p = (int*)malloc(n * sizeof(int));    //int* p = (int *)calloc(n,sizeof(int));    //修改开辟内存大小    int* p1 = realloc(p,2*n*sizeof(int));	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h2><p>这种情况是由于不正确的使用动态内存引起的。</p>
+<p><strong>内存泄漏就是在堆上增长垃圾。</strong></p>
+<p>不正确的动态内存(堆)的使用引起。由于程序中已动态分配的没有释放，造成的系统内存浪费，导致系统运行减慢或者崩溃。——百度百科。</p>
+<h1 id="函数返回指针"><a href="#函数返回指针" class="headerlink" title="函数返回指针"></a>函数返回指针</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;int* Add(int* a,int* b)&#123;	int c = *a + *b;	return &amp;c;&#125;int main(void)&#123;		int a = 3;	int b = 5;	int* z = Add(&amp;a,&amp;b);    	printf(&quot;%d\n&quot;, *z);	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>加入一个简单的函数并且调用之后，我们发现程序运行错误</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;void Print()&#123;	printf(&quot;Hello world\n&quot;);&#125;int* Add(int* a,int* b)&#123;	int c = *a + *b;	return &amp;c;&#125;int main(void)&#123;		int a = 3;	int b = 5;	int* z = Add(&amp;a,&amp;b);	Print();	printf(&quot;%d\n&quot;, *z);	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>如图：</p>
+<p><img src="/images/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88.assets/image-20210515211156453.png" alt="image-20210515211156453"></p>
+<p><strong>这是为什么呢？</strong></p>
+<p>栈，先进后出，先进的被压倒栈底， 当Add函数调用完成，返回一个指向结果的指针（地址），然后内存被释放，所指向的地址对应的值就是个垃圾值，尽管他指向这个地址，但是他的值是不能被保证的，因为内存被释放了，为后面的函数分配空间。</p>
+<p>之后为Print函数分配栈空间，覆盖之前的空间。</p>
+<hr>
+<p>如果我们尝试将返回一个被调函数的局部变量给主函数，就像我们要返回一个Add函数的局部变量给main函数，当被调函数结束控制返回给主函数的时候，那块内存已经释放了，因此从栈顶向上传参数是可以的。</p>
+<p>但是，</p>
+<p>从栈顶向下传一个局部变量或者一个局部变量的地址是不可以的，</p>
+<p>那么，什么情况下我们想要从函数返回一个指针呢？</p>
+<p>如果我们在堆上有一个内存地址或者，在全局区有一个变量，那么我们就可以安全地返回他们的地址，因为堆上分配内存需要显示释放，由我们来控制他的释放。</p>
+<hr>
+<p>修改后的代码</p>
+<p>malloc是在堆上开辟的空间不会被显式的释放。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;#include&lt;stdlib.h&gt;void Print()&#123;	printf(&quot;Hello world\n&quot;);&#125;int* Add(int* a,int* b)&#123;		int* c = (int*)malloc(sizeof(int));	*c = *a + *b;	return c;&#125;int main(void)&#123;		int a = 3;	int b = 5;	int* z = Add(&amp;a,&amp;b);	Print();	printf(&quot;%d\n&quot;, *z);	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>因此，从函数返回指针的时候，我们需要小心它的作用范围，我们必须保证地址没有被重用（用来存储其他东西），以及那个地址的数据没有被清除。</p>
+<h2 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h2><p>用来存储函数的地址</p>
+<p>它指向或引用内存中的数据，这里的数据未必一定指变量，也可以是常量。</p>
+<p>可以使用这样的指针来解引用和执行函数。</p>
+<p>当我们说函数指针存放函数地址的时候， 我们是在说函数指针存放了函数在内存中的起始地址或者入口点。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;int Add(int a, int b)&#123;	return a + b;&#125;int main(void)&#123;		int c = 0;    //函数返回类型 参数类型 参数类型	int (*p)(int, int);	p = &amp;Add;//不使用&amp;也可以，只使用函数名会返回函数的地址    		//p = Add;    		//p(2,3)	c = (*p)(2, 3);	printf(&quot;%d\n&quot;, c);	return 0;&#125;  </span></span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;void Print()&#123;	printf(&quot;Hello&quot;);&#125;int main(void)&#123;		void (*p)();	p = Print;	p();	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h2><p>函数指针可以被用来作为函数参数，接收函数指针的这个函数，可以回调函数指针所指向的那个函数，</p>
+<p><strong>就是一个函数作为参数传递给另外一个函数。</strong></p>
+<p>格式-返回类型(*函数名)(参数类型，参数类型，……)</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;int compare(int a, int b)&#123;	if (a &gt; b)		return 1;	else		return -1;&#125;void maopaoSort(int *a,int n,int(*compare)(int,int))&#123;	int temp = 0;	for (int i = 0; i &lt; n; i++)	&#123;		for (int j = 0; j &lt; n - 1; j++)		&#123;			if (compare(a[j] ,a[j+1])&gt;0)			&#123;				temp = a[j];				a[j] = a[j + 1];				a[j + 1] = temp;			&#125;		&#125;	&#125;&#125;int main(void)&#123;		int a[5] = &#123; 2,5,4,8,9 &#125;;	maopaoSort(a, 5,compare);	for (int i = 0; i &lt; 5; i++)	&#123;		printf(&quot;%d &quot;, a[i]);	&#125;	return  0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>可以根据情况的不同写不同的回调函数</p>
+<p>例如：比较绝对值后的大小，升序排列</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">absSort</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>&#123;	<span class="keyword">if</span> (<span class="built_in">abs</span>(a) &gt; <span class="built_in">abs</span>(b))		<span class="keyword">return</span> <span class="number">1</span>;	<span class="keyword">else</span>		<span class="keyword">return</span> <span class="number">-1</span>;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>调用库函数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;#include&lt;stdlib.h&gt;int compare(const void*a,const void* b)&#123;		int A = *((int*)a);		int B = *((int*)b);		return A - B;//值越大排名越高&#125;int main(void)&#123;		int a[5] = &#123; 5,-6,-2,3,7 &#125;;	qsort(a,5,sizeof(int),compare);	for (int i = 0; i &lt; 5; i++)	&#123;		printf(&quot;%d &quot;,a[i]);	&#125;	return 0;&#125;</span></span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88.assets/image-20210516122128095.png" alt="image-20210516122128095"></p>
+<p>qsort能对任何数组进行排序，不仅仅是整形数组。只是你需要给出比较逻辑。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Do2eM0N</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2021/05/16/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88/">http://example.com/2021/05/16/C%E8%AF%AD%E8%A8%80%E7%9A%84%E7%81%B5%E9%AD%82%E2%80%94%E2%80%94-%E6%8C%87%E9%92%88/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">半生瓜のblog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">-C语言</a><a class="post-meta__tags" href="/tags/%E6%8C%87%E9%92%88/">-指针</a></div><div class="post_share"><div class="social-share" data-image="/img/zhizhen.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BA%8C%E7%BA%A7%E8%80%83%E8%AF%95%E5%85%AC%E5%85%B1%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E9%83%A8%E5%88%86%E2%80%94%E2%80%94-%E6%95%B0%E6%8D%AE%E5%BA%93/"><img class="prev-cover" src="/img/shujuku.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">计算机二级考试公共基础知识部分——-数据库</div></div></a></div><div class="next-post pull-right"><a href="/2021/05/09/%E5%88%9D%E8%AF%86EasyX%E5%9B%BE%E5%BD%A2%E7%BC%96%E7%A8%8B/"><img class="next-cover" src="/img/EasyX.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">初识EasyX图形编程</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/03/10/3月C语言二级-2/" title="3月C语言二级(2)"><img class="cover" src="/img/cerji.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-10</div><div class="title">3月C语言二级(2)</div></div></a></div><div><a href="/2021/03/15/C二级错题积累-1/" title="C二级错题积累(1)"><img class="cover" src="/img/cerji.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-15</div><div class="title">C二级错题积累(1)</div></div></a></div><div><a href="/2021/03/15/C二级错题积累-2/" title="C二级错题积累(2)"><img class="cover" src="/img/cerji.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-15</div><div class="title">C二级错题积累(2)</div></div></a></div><div><a href="/2021/03/16/C二级错题积累-3/" title="C二级错题积累(3)"><img class="cover" src="/img/cerji.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-16</div><div class="title">C二级错题积累(3)</div></div></a></div><div><a href="/2021/03/18/C二级错题积累-5/" title="C二级错题积累(5)"><img class="cover" src="/img/cerji.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-18</div><div class="title">C二级错题积累(5)</div></div></a></div><div><a href="/2021/03/17/C二级错题积累-4/" title="C二级错题积累(4)"><img class="cover" src="/img/cerji.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-17</div><div class="title">C二级错题积累(4)</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/pkq3.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Do2eM0N</div><div class="author-info__description">一个靠着墙壁 晒太阳的过客</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">47</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/94657270"><i class="iconfont icon-bilibili"></i><span>关注我一下吧</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=Mzg2MDU1ODAzNg==&amp;scene=124&amp;uin=&amp;key=&amp;devicetype=Windows+10+x64&amp;version=63010043&amp;lang=zh_CN&amp;a8scene=7&amp;fontgear=2" target="_blank" title="我的微信公众号"><i class="iconfont icon-weixin"></i></a><a class="social-icon" href="https://github.com/doraemon-hub-art" target="_blank" title="Github"><i class="iconfont icon-github-fill"></i></a><a class="social-icon" href="https://y.qq.com/portal/profile.html#stat=y_new.top.user_pic" target="_blank" title="QQ音乐"><i class="iconfont icon-QQMusic"></i></a><a class="social-icon" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1660219734&amp;site=qqq&amp;menu=yes" target="_blank" title="QQ"><i class="iconfont icon-a-qq"></i></a><a class="social-icon" href="https://blog.csdn.net/qq_51604330?spm=1000.2115.3001.5343" target="_blank" title="我的CSDN博客"><i class="iconfont icon-csdn"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎来访，网站正在建设中。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">指针基本介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.1.</span> <span class="toc-text">代码示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E7%9A%84%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97"><span class="toc-number">1.2.</span> <span class="toc-text">指针的算数运算</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">指针的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97"><span class="toc-number">2.1.</span> <span class="toc-text">算数运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#void%E7%A9%BA%E6%8C%87%E9%92%88"><span class="toc-number">2.2.</span> <span class="toc-text">void空指针</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%87%E5%90%91%E6%8C%87%E9%92%88%E7%9A%84%E6%8C%87%E9%92%88"><span class="toc-number">3.</span> <span class="toc-text">指向指针的指针</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E4%BC%A0%E5%80%BC-amp-%E4%BC%A0-%E5%9D%80-%E5%BC%95%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">函数传值&amp;传(址)引用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E5%92%8C%E6%95%B0%E7%BB%84"><span class="toc-number">5.</span> <span class="toc-text">指针和数组</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0"><span class="toc-number">5.1.</span> <span class="toc-text">数组作为函数参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E5%92%8C%E5%AD%97%E7%AC%A6%E6%95%B0%E7%BB%84"><span class="toc-number">5.2.</span> <span class="toc-text">指针和字符数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E5%92%8C%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-number">5.3.</span> <span class="toc-text">指针和二维数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E5%92%8C%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-number">5.4.</span> <span class="toc-text">指针和多维数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0%E4%BC%A0%E7%BB%99%E5%87%BD%E6%95%B0"><span class="toc-number">5.5.</span> <span class="toc-text">多维数组作为参数传给函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E5%92%8C%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98"><span class="toc-number">6.</span> <span class="toc-text">指针和动态内存</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#malloc"><span class="toc-number">6.1.</span> <span class="toc-text">malloc</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#calloc"><span class="toc-number">6.2.</span> <span class="toc-text">calloc</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#realloc"><span class="toc-number">6.3.</span> <span class="toc-text">realloc</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#free"><span class="toc-number">6.4.</span> <span class="toc-text">free</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B-1"><span class="toc-number">6.5.</span> <span class="toc-text">代码示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F"><span class="toc-number">6.6.</span> <span class="toc-text">内存泄漏</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E6%8C%87%E9%92%88"><span class="toc-number">7.</span> <span class="toc-text">函数返回指针</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88"><span class="toc-number">7.1.</span> <span class="toc-text">函数指针</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0"><span class="toc-number">7.2.</span> <span class="toc-text">回调函数</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/06/16/%E3%80%90%E6%A0%91%E3%80%91%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91(C%E8%AF%AD%E8%A8%80)/" title="【树】之二叉树(C语言)"><img src="/img/realtree.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【树】之二叉树(C语言)"/></a><div class="content"><a class="title" href="/2021/06/16/%E3%80%90%E6%A0%91%E3%80%91%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91(C%E8%AF%AD%E8%A8%80)/" title="【树】之二叉树(C语言)">【树】之二叉树(C语言)</a><time datetime="2021-06-16T04:57:39.000Z" title="发表于 2021-06-16 12:57:39">2021-06-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/14/LeetCode%E5%88%B7%E9%A2%98(8)%E3%80%90%E6%A0%88&amp;%E9%98%9F%E5%88%97%E3%80%91%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97(C%E8%AF%AD%E8%A8%80)/" title="LeetCode刷题(8)【栈&amp;队列】用栈实现队列(C语言)"><img src="/img/leetcode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode刷题(8)【栈&amp;队列】用栈实现队列(C语言)"/></a><div class="content"><a class="title" href="/2021/06/14/LeetCode%E5%88%B7%E9%A2%98(8)%E3%80%90%E6%A0%88&amp;%E9%98%9F%E5%88%97%E3%80%91%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97(C%E8%AF%AD%E8%A8%80)/" title="LeetCode刷题(8)【栈&amp;队列】用栈实现队列(C语言)">LeetCode刷题(8)【栈&amp;队列】用栈实现队列(C语言)</a><time datetime="2021-06-14T10:05:19.000Z" title="发表于 2021-06-14 18:05:19">2021-06-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/11/LeetCode%E5%88%B7%E9%A2%98(7)%E3%80%90%E6%A0%88&amp;%E9%98%9F%E5%88%97%E3%80%91%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88(C%E8%AF%AD%E8%A8%80)/" title="LeetCode刷题(7)【栈&amp;队列】用队列实现栈(C语言)"><img src="/img/leetcode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode刷题(7)【栈&amp;队列】用队列实现栈(C语言)"/></a><div class="content"><a class="title" href="/2021/06/11/LeetCode%E5%88%B7%E9%A2%98(7)%E3%80%90%E6%A0%88&amp;%E9%98%9F%E5%88%97%E3%80%91%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88(C%E8%AF%AD%E8%A8%80)/" title="LeetCode刷题(7)【栈&amp;队列】用队列实现栈(C语言)">LeetCode刷题(7)【栈&amp;队列】用队列实现栈(C语言)</a><time datetime="2021-06-11T11:41:18.000Z" title="发表于 2021-06-11 19:41:18">2021-06-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/10/%E5%A6%82%E6%9E%9C%E4%BD%A0%E5%87%86%E5%A4%87%E5%AD%A6%E4%B9%A0C++,%E5%B9%B6%E4%B8%94%E6%9C%89C%E8%AF%AD%E8%A8%80%E7%9A%84%E5%9F%BA%E7%A1%80%EF%BC%8C%E6%88%91%E5%B8%8C%E6%9C%9B%E4%BD%A0%E8%83%BD%E7%AE%80%E5%8D%95%E7%9A%84%E8%BF%87%E4%B8%80%E9%81%8D%E7%9F%A5%E8%AF%86%E7%82%B9%E3%80%82/" title="如果你准备学习C++,并且有C语言的基础，我希望你能简单的过一遍知识点。"><img src="/img/c++.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如果你准备学习C++,并且有C语言的基础，我希望你能简单的过一遍知识点。"/></a><div class="content"><a class="title" href="/2021/06/10/%E5%A6%82%E6%9E%9C%E4%BD%A0%E5%87%86%E5%A4%87%E5%AD%A6%E4%B9%A0C++,%E5%B9%B6%E4%B8%94%E6%9C%89C%E8%AF%AD%E8%A8%80%E7%9A%84%E5%9F%BA%E7%A1%80%EF%BC%8C%E6%88%91%E5%B8%8C%E6%9C%9B%E4%BD%A0%E8%83%BD%E7%AE%80%E5%8D%95%E7%9A%84%E8%BF%87%E4%B8%80%E9%81%8D%E7%9F%A5%E8%AF%86%E7%82%B9%E3%80%82/" title="如果你准备学习C++,并且有C语言的基础，我希望你能简单的过一遍知识点。">如果你准备学习C++,并且有C语言的基础，我希望你能简单的过一遍知识点。</a><time datetime="2021-06-10T12:10:43.000Z" title="发表于 2021-06-10 20:10:43">2021-06-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/09/LeetCode%E5%88%B7%E9%A2%98(6)%E3%80%90%E6%A0%88%E3%80%91%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7(C%E8%AF%AD%E8%A8%80)/" title="LeetCode刷题(6)【栈】有效的括号(C语言)"><img src="/img/leetcode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode刷题(6)【栈】有效的括号(C语言)"/></a><div class="content"><a class="title" href="/2021/06/09/LeetCode%E5%88%B7%E9%A2%98(6)%E3%80%90%E6%A0%88%E3%80%91%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7(C%E8%AF%AD%E8%A8%80)/" title="LeetCode刷题(6)【栈】有效的括号(C语言)">LeetCode刷题(6)【栈】有效的括号(C语言)</a><time datetime="2021-06-09T12:46:18.000Z" title="发表于 2021-06-09 20:46:18">2021-06-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Do2eM0N</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><br>
+<img src="https://static.dy208.cn/o_1dfilp8ruo521thr1hvf18ji17soa.png">
+<a href="https://beian.miit.gov.cn/#/Integrated/recordQuery"  style="color:#f72b07" target="_blank">京ICP备2021006139号</a></div><div class="footer_custom_text">欢迎来访</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script src="/js/nobanner.js"></script><script src="/js/weather.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><script>(function(d, w, c) {
+    w.ChatraID = '6KqzuZGb38hQrA6f6';
+    var s = d.createElement('script');
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+    };
+    s.async = true;
+    s.src = 'https://call.chatra.io/chatra.js';
+    if (d.head) d.head.appendChild(s);
+})(document, window, 'Chatra');
+
+if (true) {
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      Chatra('openChat')
+    });
+  }
+  chatBtnFn()
+} else {
+  if (true) {
+    function chatBtnHide () {
+      Chatra('hide')
+    }
+    function chatBtnShow () {
+      Chatra('show')
+    }
+  }
+}</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start -->
+  <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?doraemon-hub-art";
+            var git_color =['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'];
+            var git_user ="doraemon-hub-art";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><!-- hexo injector body_end end --></body></html>
