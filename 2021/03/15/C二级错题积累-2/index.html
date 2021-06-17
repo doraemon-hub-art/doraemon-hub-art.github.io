@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C二级错题积累(2) | 半生瓜のblog</title><meta name="keywords" content="-C语言,-计算机,-二级,-笔记"><meta name="author" content="Do2eM0N"><meta name="copyright" content="Do2eM0N"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="要是用外存储器中的信息，应先将其调入内存储器。  进制是程序的执行过程。  循环队列是队列的一种顺序存储结构。  栈先进后出，队列先进先出。  结构化程序的基本结构有：顺序结构、选择（分支）结构和重复（循环结构）。  软件是指与计算机系统操作有关的计算机程序、规程、规则，以及可能有的文件、文档及数据。  在数据库中存储的是数据以及数据之间的联系。  关系模式是用来记录用户数据的二维表。  在一C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C二级错题积累(2)">
+<meta property="og:url" content="http://example.com/2021/03/15/C%E4%BA%8C%E7%BA%A7%E9%94%99%E9%A2%98%E7%A7%AF%E7%B4%AF-2/index.html">
+<meta property="og:site_name" content="半生瓜のblog">
+<meta property="og:description" content="要是用外存储器中的信息，应先将其调入内存储器。  进制是程序的执行过程。  循环队列是队列的一种顺序存储结构。  栈先进后出，队列先进先出。  结构化程序的基本结构有：顺序结构、选择（分支）结构和重复（循环结构）。  软件是指与计算机系统操作有关的计算机程序、规程、规则，以及可能有的文件、文档及数据。  在数据库中存储的是数据以及数据之间的联系。  关系模式是用来记录用户数据的二维表。  在一C">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/cerji.png">
+<meta property="article:published_time" content="2021-03-15T14:44:57.000Z">
+<meta property="article:modified_time" content="2021-03-15T14:45:45.134Z">
+<meta property="article:author" content="Do2eM0N">
+<meta property="article:tag" content="-C语言">
+<meta property="article:tag" content="-计算机">
+<meta property="article:tag" content="-二级">
+<meta property="article:tag" content="-笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/cerji.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2021/03/15/C%E4%BA%8C%E7%BA%A7%E9%94%99%E9%A2%98%E7%A7%AF%E7%B4%AF-2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4bd5c0d5704ac1dd90d20a471e6a167a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-03-15 22:45:45'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><link rel="stylesheet" href="/css/xiaotubiao.css"><link rel="stylesheet" href="/css/dibujianbian.css"><link rel="stylesheet" href="/css/toumingdu.css"><link rel="stylesheet" href="/css/hua.css"><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="半生瓜のblog" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/pkq3.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">47</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fa fa-comments"></i><span> 说说</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/cerji.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/"><div id="tp-weather-widget"></div>半生瓜のblog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fa fa-comments"></i><span> 说说</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">C二级错题积累(2)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-03-15T14:44:57.000Z" title="发表于 2021-03-15 22:44:57">2021-03-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-03-15T14:45:45.134Z" title="更新于 2021-03-15 22:45:45">2021-03-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="C二级错题积累(2)"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><ol>
+<li><p>要是用外存储器中的信息，应先将其调入内存储器。</p>
+</li>
+<li><p>进制是程序的执行过程。</p>
+</li>
+<li><p>循环队列是队列的一种顺序存储结构。</p>
+</li>
+<li><p>栈先进后出，队列先进先出。</p>
+</li>
+<li><p>结构化程序的基本结构有：顺序结构、选择（分支）结构和重复（循环结构）。</p>
+</li>
+<li><p>软件是指与计算机系统操作有关的计算机程序、规程、规则，以及可能有的文件、文档及数据。</p>
+</li>
+<li><p>在数据库中存储的是数据以及数据之间的联系。</p>
+</li>
+<li><p>关系模式是用来记录用户数据的二维表。</p>
+</li>
+<li><p>在一C语言程序中可以进行多种算法的实现，对算法的个数没有规定。</p>
+</li>
+<li><p>C语言中标识符由字母、下划线、数字组成，且开头必须是字母或下划线。</p>
+</li>
+<li><p>赋值运算符的优先级高于逗号运算符的优先级。</p>
+</li>
+<li><p>数组定义后，不可以对数组整体赋值。</p>
+</li>
+<li><p>全局变量的作用域是从声明处到文件的结束。</p>
+</li>
+<li><p>关键字typedef的作用只是将C语言中的已有的数据类型作了置换，并不是增加新的类型。</p>
+</li>
+<li><p>当对文件的读（写）操作完成之后，必须将他关闭，否则可能导致数据丢失。</p>
+</li>
+<li><p>选择中打开一个已存在的文件并进行了写操作后，原有文件中的全部数据不一定被覆盖，也可以对源文件进行追加操作等。</p>
+</li>
+<li><p>选项中在一个程序中当对文件进行了写操作后，不用先关闭该文件然后再打开，才能读到第一个数据，可以用fseek()函数进行重新定位即可。</p>
+</li>
+<li><p>C语言中的文件可以进行随机读写。</p>
+</li>
+<li><p>在计算机中，运算器的基本功能是继续宁算数和逻辑运算。</p>
+</li>
+<li><p>理论上计算机虚拟内存最大容量取决于计算机地址位数。</p>
+</li>
+<li><p>线性表链式存储结构的特点是，用一组不连续的存储单元存储线性表中的各个元素。线性链表的存储单元是任意的，即各数据结点取得存储序列可以是连续的，也可以是不连续的。循环链表采链式存储结构，因此存储空间也可以是不连续的。</p>
+</li>
+<li><p>二叉树的性质，对任何一棵二叉树，度为0的结点（即叶子结点）总是比度为2的结点多一个。</p>
+</li>
+<li><p>对象是由描述该对象属性的数据以及可以对这些数据施加的所有操作封装在一起构成的统一体。</p>
+</li>
+<li><p>软件应首先满足用户的功能需求。</p>
+</li>
+<li><p>数据库管理系统的主要功能包括：数据模式定义、数据存取的物理构建、数据操纵、数据完整性、安全性的定义与检查、数据库的并发控制与故障恢复、数据的服务。</p>
+</li>
+<li><p>关系模式进行规范化的目的是使关系结构更加合理，消除存储异常，使数据冗余尽量小，便于插入、删除和更新等操作。</p>
+</li>
+<li><p>使用顺序、选择、循环三种基本结构构成的程序可以解决所有问题，而不只是解决简单问题。</p>
+</li>
+<li><p>C语言是一种结构化程序设计语言。</p>
+</li>
+<li><p>程序化程序设计提倡模块化的设计方法。</p>
+</li>
+<li><p>在C语言中整型常量可以用十进制、八进制和十六进制等进制形式表示，但不包括二进制。</p>
+</li>
+<li><p>C语言中标识符由字母、数字、下划线、组成，另外关键字不能作为标识符。</p>
+</li>
+<li><p>算数运算符+的优先级高于- =，且- = 的结合方向为自右向左。</p>
+</li>
+<li><p>default语句在switch语句中可以省略。</p>
+</li>
+<li><p>宏替换没有数据类型限制。</p>
+</li>
+<li><p>宏定义卸载函数的花括号外边，作用域为其后的程序，通常在文件的最开头。</p>
+</li>
+<li><p>宏名一般用大写，但不是必须用大写。</p>
+</li>
+<li><p>计算机完成一条指令所花费的时间称为一个执行周期。</p>
+</li>
+<li><p>人工管理阶段没有专门的软件对数据进行管理。</p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Do2eM0N</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2021/03/15/C%E4%BA%8C%E7%BA%A7%E9%94%99%E9%A2%98%E7%A7%AF%E7%B4%AF-2/">http://example.com/2021/03/15/C%E4%BA%8C%E7%BA%A7%E9%94%99%E9%A2%98%E7%A7%AF%E7%B4%AF-2/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">半生瓜のblog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/C%E8%AF%AD%E8%A8%80/">-C语言</a><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/">-计算机</a><a class="post-meta__tags" href="/tags/%E4%BA%8C%E7%BA%A7/">-二级</a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">-笔记</a></div><div class="post_share"><div class="social-share" data-image="/img/cerji.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/03/16/C%E4%BA%8C%E7%BA%A7%E9%94%99%E9%A2%98%E7%A7%AF%E7%B4%AF-3/"><img class="prev-cover" src="/img/cerji.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">C二级错题积累(3)</div></div></a></div><div class="next-post pull-right"><a href="/2021/03/15/C%E4%BA%8C%E7%BA%A7%E9%94%99%E9%A2%98%E7%A7%AF%E7%B4%AF-1/"><img class="next-cover" src="/img/cerji.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">C二级错题积累(1)</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/03/15/C二级错题积累-1/" title="C二级错题积累(1)"><img class="cover" src="/img/cerji.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-15</div><div class="title">C二级错题积累(1)</div></div></a></div><div><a href="/2021/03/16/C二级错题积累-3/" title="C二级错题积累(3)"><img class="cover" src="/img/cerji.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-16</div><div class="title">C二级错题积累(3)</div></div></a></div><div><a href="/2021/03/17/C二级错题积累-4/" title="C二级错题积累(4)"><img class="cover" src="/img/cerji.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-17</div><div class="title">C二级错题积累(4)</div></div></a></div><div><a href="/2021/03/18/C二级错题积累-5/" title="C二级错题积累(5)"><img class="cover" src="/img/cerji.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-18</div><div class="title">C二级错题积累(5)</div></div></a></div><div><a href="/2021/03/10/3月C语言二级-2/" title="3月C语言二级(2)"><img class="cover" src="/img/cerji.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-10</div><div class="title">3月C语言二级(2)</div></div></a></div><div><a href="/2021/03/09/C语言二级/" title="3月C语言二级"><img class="cover" src="/img/cerji.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-09</div><div class="title">3月C语言二级</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/pkq3.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Do2eM0N</div><div class="author-info__description">一个靠着墙壁 晒太阳的过客</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">47</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/94657270"><i class="iconfont icon-bilibili"></i><span>关注我一下吧</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=Mzg2MDU1ODAzNg==&amp;scene=124&amp;uin=&amp;key=&amp;devicetype=Windows+10+x64&amp;version=63010043&amp;lang=zh_CN&amp;a8scene=7&amp;fontgear=2" target="_blank" title="我的微信公众号"><i class="iconfont icon-weixin"></i></a><a class="social-icon" href="https://github.com/doraemon-hub-art" target="_blank" title="Github"><i class="iconfont icon-github-fill"></i></a><a class="social-icon" href="https://y.qq.com/portal/profile.html#stat=y_new.top.user_pic" target="_blank" title="QQ音乐"><i class="iconfont icon-QQMusic"></i></a><a class="social-icon" href="https://wpa.qq.com/msgrd?v=3&amp;uin=1660219734&amp;site=qqq&amp;menu=yes" target="_blank" title="QQ"><i class="iconfont icon-a-qq"></i></a><a class="social-icon" href="https://blog.csdn.net/qq_51604330?spm=1000.2115.3001.5343" target="_blank" title="我的CSDN博客"><i class="iconfont icon-csdn"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎来访，网站正在建设中。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/06/16/%E3%80%90%E6%A0%91%E3%80%91%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91(C%E8%AF%AD%E8%A8%80)/" title="【树】之二叉树(C语言)"><img src="/img/realtree.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【树】之二叉树(C语言)"/></a><div class="content"><a class="title" href="/2021/06/16/%E3%80%90%E6%A0%91%E3%80%91%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%A0%91(C%E8%AF%AD%E8%A8%80)/" title="【树】之二叉树(C语言)">【树】之二叉树(C语言)</a><time datetime="2021-06-16T04:57:39.000Z" title="发表于 2021-06-16 12:57:39">2021-06-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/14/LeetCode%E5%88%B7%E9%A2%98(8)%E3%80%90%E6%A0%88&amp;%E9%98%9F%E5%88%97%E3%80%91%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97(C%E8%AF%AD%E8%A8%80)/" title="LeetCode刷题(8)【栈&amp;队列】用栈实现队列(C语言)"><img src="/img/leetcode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode刷题(8)【栈&amp;队列】用栈实现队列(C语言)"/></a><div class="content"><a class="title" href="/2021/06/14/LeetCode%E5%88%B7%E9%A2%98(8)%E3%80%90%E6%A0%88&amp;%E9%98%9F%E5%88%97%E3%80%91%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97(C%E8%AF%AD%E8%A8%80)/" title="LeetCode刷题(8)【栈&amp;队列】用栈实现队列(C语言)">LeetCode刷题(8)【栈&amp;队列】用栈实现队列(C语言)</a><time datetime="2021-06-14T10:05:19.000Z" title="发表于 2021-06-14 18:05:19">2021-06-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/11/LeetCode%E5%88%B7%E9%A2%98(7)%E3%80%90%E6%A0%88&amp;%E9%98%9F%E5%88%97%E3%80%91%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88(C%E8%AF%AD%E8%A8%80)/" title="LeetCode刷题(7)【栈&amp;队列】用队列实现栈(C语言)"><img src="/img/leetcode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode刷题(7)【栈&amp;队列】用队列实现栈(C语言)"/></a><div class="content"><a class="title" href="/2021/06/11/LeetCode%E5%88%B7%E9%A2%98(7)%E3%80%90%E6%A0%88&amp;%E9%98%9F%E5%88%97%E3%80%91%E7%94%A8%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88(C%E8%AF%AD%E8%A8%80)/" title="LeetCode刷题(7)【栈&amp;队列】用队列实现栈(C语言)">LeetCode刷题(7)【栈&amp;队列】用队列实现栈(C语言)</a><time datetime="2021-06-11T11:41:18.000Z" title="发表于 2021-06-11 19:41:18">2021-06-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/10/%E5%A6%82%E6%9E%9C%E4%BD%A0%E5%87%86%E5%A4%87%E5%AD%A6%E4%B9%A0C++,%E5%B9%B6%E4%B8%94%E6%9C%89C%E8%AF%AD%E8%A8%80%E7%9A%84%E5%9F%BA%E7%A1%80%EF%BC%8C%E6%88%91%E5%B8%8C%E6%9C%9B%E4%BD%A0%E8%83%BD%E7%AE%80%E5%8D%95%E7%9A%84%E8%BF%87%E4%B8%80%E9%81%8D%E7%9F%A5%E8%AF%86%E7%82%B9%E3%80%82/" title="如果你准备学习C++,并且有C语言的基础，我希望你能简单的过一遍知识点。"><img src="/img/c++.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如果你准备学习C++,并且有C语言的基础，我希望你能简单的过一遍知识点。"/></a><div class="content"><a class="title" href="/2021/06/10/%E5%A6%82%E6%9E%9C%E4%BD%A0%E5%87%86%E5%A4%87%E5%AD%A6%E4%B9%A0C++,%E5%B9%B6%E4%B8%94%E6%9C%89C%E8%AF%AD%E8%A8%80%E7%9A%84%E5%9F%BA%E7%A1%80%EF%BC%8C%E6%88%91%E5%B8%8C%E6%9C%9B%E4%BD%A0%E8%83%BD%E7%AE%80%E5%8D%95%E7%9A%84%E8%BF%87%E4%B8%80%E9%81%8D%E7%9F%A5%E8%AF%86%E7%82%B9%E3%80%82/" title="如果你准备学习C++,并且有C语言的基础，我希望你能简单的过一遍知识点。">如果你准备学习C++,并且有C语言的基础，我希望你能简单的过一遍知识点。</a><time datetime="2021-06-10T12:10:43.000Z" title="发表于 2021-06-10 20:10:43">2021-06-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/09/LeetCode%E5%88%B7%E9%A2%98(6)%E3%80%90%E6%A0%88%E3%80%91%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7(C%E8%AF%AD%E8%A8%80)/" title="LeetCode刷题(6)【栈】有效的括号(C语言)"><img src="/img/leetcode.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode刷题(6)【栈】有效的括号(C语言)"/></a><div class="content"><a class="title" href="/2021/06/09/LeetCode%E5%88%B7%E9%A2%98(6)%E3%80%90%E6%A0%88%E3%80%91%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7(C%E8%AF%AD%E8%A8%80)/" title="LeetCode刷题(6)【栈】有效的括号(C语言)">LeetCode刷题(6)【栈】有效的括号(C语言)</a><time datetime="2021-06-09T12:46:18.000Z" title="发表于 2021-06-09 20:46:18">2021-06-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Do2eM0N</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><br>
+<img src="https://static.dy208.cn/o_1dfilp8ruo521thr1hvf18ji17soa.png">
+<a href="https://beian.miit.gov.cn/#/Integrated/recordQuery"  style="color:#f72b07" target="_blank">京ICP备2021006139号</a></div><div class="footer_custom_text">欢迎来访</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script src="/js/nobanner.js"></script><script src="/js/weather.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><script>(function(d, w, c) {
+    w.ChatraID = '6KqzuZGb38hQrA6f6';
+    var s = d.createElement('script');
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+    };
+    s.async = true;
+    s.src = 'https://call.chatra.io/chatra.js';
+    if (d.head) d.head.appendChild(s);
+})(document, window, 'Chatra');
+
+if (true) {
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      Chatra('openChat')
+    });
+  }
+  chatBtnFn()
+} else {
+  if (true) {
+    function chatBtnHide () {
+      Chatra('hide')
+    }
+    function chatBtnShow () {
+      Chatra('show')
+    }
+  }
+}</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start -->
+  <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?doraemon-hub-art";
+            var git_color =['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'];
+            var git_user ="doraemon-hub-art";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><!-- hexo injector body_end end --></body></html>
