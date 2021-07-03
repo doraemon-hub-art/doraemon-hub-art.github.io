@@ -3630,6 +3630,9 @@ _:future,
   font-size: 0.78em;
   cursor: pointer;
 }
+#page-header a {
+  color: #000;
+}
 #pagination {
   overflow: hidden;
   margin-top: 1rem;
