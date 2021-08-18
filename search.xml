@@ -4,6 +4,61 @@
   
     
     <entry>
+      <title>sb</title>
+      <link href="2021/08/18/sb-1/"/>
+      <url>2021/08/18/sb-1/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>sb</title>
+      <link href="2021/08/18/sb/"/>
+      <url>2021/08/18/sb/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LeetCode刷题12</title>
+      <link href="2021/08/18/LeetCode%E5%88%B7%E9%A2%98(12)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80(C++)/"/>
+      <url>2021/08/18/LeetCode%E5%88%B7%E9%A2%98(12)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80(C++)/</url>
+      
+        <content type="html"><![CDATA[<h1 id="最长公共前缀"><a href="#最长公共前缀" class="headerlink" title="最长公共前缀"></a>最长公共前缀</h1><p><strong>题目链接</strong>——<a href="https://leetcode-cn.com/problems/longest-common-prefix/">最长公共前缀</a><br><img src="https://img-blog.csdnimg.cn/db1c4c1e85e14b32ab39234dad7b2765.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzUxNjA0MzMw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p><strong>代码示例</strong>:</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">longestCommonPrefix</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; strs)</span> </span>&#123;</span><br><span class="line">       <span class="comment">//容器为空</span></span><br><span class="line">       <span class="keyword">if</span>(strs.size() == <span class="number">0</span>)</span><br><span class="line">       &#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       </span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; strs[<span class="number">0</span>].size(); i++) </span><br><span class="line">       &#123;</span><br><span class="line">            <span class="keyword">char</span> ch = strs[<span class="number">0</span>][i];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; strs.size();j++) </span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (strs[j][i] != ch || i &gt; strs[j].size()) </span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">return</span> strs[<span class="number">0</span>].substr(<span class="number">0</span>, i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//全都一样</span></span><br><span class="line">        <span class="keyword">return</span> strs[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><strong>题解</strong>:</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">垂直比较。</span><br><span class="line">如果容器为空，返回“”</span><br><span class="line"></span><br><span class="line">不为空</span><br><span class="line">以容器中第一个字符串为标准，将它的每个字母和容器中其它字符串的每一个字母做比较，</span><br><span class="line">如果不同或者此时遍历的长度i，已经大于了其他某个字符串的长度，</span><br><span class="line">那么直接返回第一个字符串截取到上一个i,这么长。</span><br><span class="line">substr截取区间为左闭右开。</span><br><span class="line"></span><br><span class="line">容器中字符串全都相等，或者只有一个元素</span><br><span class="line">返回本身（第一个字符串）。</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> -算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -C++ </tag>
+            
+            <tag> -算法 </tag>
+            
+            <tag> -LeetCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode刷题(11)【简单】回文数&amp;罗马数字转整数(C++)</title>
       <link href="2021/08/17/LeetCode%E5%88%B7%E9%A2%98(11)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%9B%9E%E6%96%87%E6%95%B0&amp;%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0(C++)/"/>
       <url>2021/08/17/LeetCode%E5%88%B7%E9%A2%98(11)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%9B%9E%E6%96%87%E6%95%B0&amp;%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0(C++)/</url>
