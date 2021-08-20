@@ -1,7 +1,9 @@
 /* 文章页背景 */
 .layout_post>#post {
-    background: rgba(255,255,255,0);
+    background: rgba(255,255,255,.3);
 }
+
+
 
 
 /* 所有背景（包括首页卡片、文章页、页面页等） */
