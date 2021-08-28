@@ -236,9 +236,9 @@
     <category term="笔记" scheme="http://example.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="-C++" scheme="http://example.com/tags/C/"/>
+    
+    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -264,9 +264,9 @@
     <category term="C++" scheme="http://example.com/categories/C/"/>
     
     
-    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="-C++" scheme="http://example.com/tags/C/"/>
+    
+    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -292,9 +292,9 @@
     <category term="C++" scheme="http://example.com/categories/C/"/>
     
     
-    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="-C++" scheme="http://example.com/tags/C/"/>
+    
+    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -320,9 +320,9 @@
     <category term="C++" scheme="http://example.com/categories/C/"/>
     
     
-    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="-C++" scheme="http://example.com/tags/C/"/>
+    
+    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -429,9 +429,9 @@
     <category term="C++" scheme="http://example.com/categories/C/"/>
     
     
-    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="-C++" scheme="http://example.com/tags/C/"/>
+    
+    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -456,9 +456,9 @@
     <category term="C++" scheme="http://example.com/categories/C/"/>
     
     
-    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="-C++" scheme="http://example.com/tags/C/"/>
+    
+    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
