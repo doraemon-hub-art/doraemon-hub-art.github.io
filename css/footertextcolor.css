@@ -1,0 +1,5 @@
+/*页脚自定义字段字体颜色*/
+/* 也就是配置文件里的footer_custom_text */
+.footer_custom_text {
+    color: #00c4b6;
+}
