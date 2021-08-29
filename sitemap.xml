@@ -585,6 +585,13 @@
   </url>
   
   <url>
+    <loc>http://doraemon2.xyz/tags/LeetCode/</loc>
+    <lastmod>2021-08-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://doraemon2.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2021-08-29</lastmod>
     <changefreq>daily</changefreq>
@@ -593,13 +600,6 @@
   
   <url>
     <loc>http://doraemon2.xyz/tags/%E9%93%BE%E8%A1%A8/</loc>
-    <lastmod>2021-08-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://doraemon2.xyz/tags/LeetCode/</loc>
     <lastmod>2021-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -797,14 +797,14 @@
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/categories/system/</loc>
+    <loc>http://doraemon2.xyz/categories/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2021-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://doraemon2.xyz/categories/system/</loc>
     <lastmod>2021-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
