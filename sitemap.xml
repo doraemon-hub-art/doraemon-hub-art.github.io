@@ -606,6 +606,13 @@
   </url>
   
   <url>
+    <loc>http://doraemon2.xyz/tags/%E6%95%B0%E7%BB%84/</loc>
+    <lastmod>2021-08-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://doraemon2.xyz/tags/%E6%A0%88/</loc>
     <lastmod>2021-08-29</lastmod>
     <changefreq>daily</changefreq>
@@ -635,13 +642,6 @@
   
   <url>
     <loc>http://doraemon2.xyz/tags/NowCoder/</loc>
-    <lastmod>2021-08-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://doraemon2.xyz/tags/%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2021-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
