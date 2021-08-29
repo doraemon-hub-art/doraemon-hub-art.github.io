@@ -3,11 +3,11 @@
   <title>半生瓜のblog</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="http://doraemon2.xyz/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="http://doraemon2.xyz/"/>
   <updated>2021-08-28T06:42:42.519Z</updated>
-  <id>http://example.com/</id>
+  <id>http://doraemon2.xyz/</id>
   
   <author>
     <name>Do2eM0N</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>【网络编程】select模型</title>
-    <link href="http://example.com/2021/08/28/%E3%80%90%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E3%80%91select%E6%A8%A1%E5%9E%8B/"/>
-    <id>http://example.com/2021/08/28/%E3%80%90%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E3%80%91select%E6%A8%A1%E5%9E%8B/</id>
+    <link href="http://doraemon2.xyz/2021/08/28/%E3%80%90%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E3%80%91select%E6%A8%A1%E5%9E%8B/"/>
+    <id>http://doraemon2.xyz/2021/08/28/%E3%80%90%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E3%80%91select%E6%A8%A1%E5%9E%8B/</id>
     <published>2021-08-28T06:40:30.000Z</published>
     <updated>2021-08-28T06:42:42.519Z</updated>
     
@@ -33,21 +33,21 @@
     
     
     
-    <category term="网络编程" scheme="http://example.com/categories/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    <category term="网络编程" scheme="http://doraemon2.xyz/categories/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
     
     
-    <category term="-C语言" scheme="http://example.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    <category term="-C语言" scheme="http://doraemon2.xyz/tags/C%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="-网络编程" scheme="http://example.com/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    <category term="-网络编程" scheme="http://doraemon2.xyz/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>【网络编程】基于TCP/IP协议的C/S模型</title>
-    <link href="http://example.com/2021/08/26/%E3%80%90%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E3%80%91%E5%9F%BA%E4%BA%8ETCPIP%E5%8D%8F%E8%AE%AE%E7%9A%84CS%E6%A8%A1%E5%9E%8B/"/>
-    <id>http://example.com/2021/08/26/%E3%80%90%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E3%80%91%E5%9F%BA%E4%BA%8ETCPIP%E5%8D%8F%E8%AE%AE%E7%9A%84CS%E6%A8%A1%E5%9E%8B/</id>
+    <link href="http://doraemon2.xyz/2021/08/26/%E3%80%90%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E3%80%91%E5%9F%BA%E4%BA%8ETCPIP%E5%8D%8F%E8%AE%AE%E7%9A%84CS%E6%A8%A1%E5%9E%8B/"/>
+    <id>http://doraemon2.xyz/2021/08/26/%E3%80%90%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E3%80%91%E5%9F%BA%E4%BA%8ETCPIP%E5%8D%8F%E8%AE%AE%E7%9A%84CS%E6%A8%A1%E5%9E%8B/</id>
     <published>2021-08-26T07:45:06.000Z</published>
     <updated>2021-08-27T04:09:15.211Z</updated>
     
@@ -62,21 +62,21 @@
     
     
     
-    <category term="网络编程" scheme="http://example.com/categories/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    <category term="网络编程" scheme="http://doraemon2.xyz/categories/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
     
     
-    <category term="-C语言" scheme="http://example.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    <category term="-C语言" scheme="http://doraemon2.xyz/tags/C%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="-网络编程" scheme="http://example.com/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    <category term="-网络编程" scheme="http://doraemon2.xyz/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode刷题(14)【简单】加一(C++)</title>
-    <link href="http://example.com/2021/08/21/LeetCode%E5%88%B7%E9%A2%98(14)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%8A%A0%E4%B8%80(C++)/"/>
-    <id>http://example.com/2021/08/21/LeetCode%E5%88%B7%E9%A2%98(14)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%8A%A0%E4%B8%80(C++)/</id>
+    <link href="http://doraemon2.xyz/2021/08/21/LeetCode%E5%88%B7%E9%A2%98(14)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%8A%A0%E4%B8%80(C++)/"/>
+    <id>http://doraemon2.xyz/2021/08/21/LeetCode%E5%88%B7%E9%A2%98(14)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%8A%A0%E4%B8%80(C++)/</id>
     <published>2021-08-21T04:51:17.000Z</published>
     <updated>2021-08-21T04:53:13.350Z</updated>
     
@@ -90,21 +90,21 @@
     
     
     
-    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://doraemon2.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="-C++" scheme="http://example.com/tags/C/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
-    <category term="-算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="-LeetCode" scheme="http://example.com/tags/LeetCode/"/>
+    <category term="-LeetCode" scheme="http://doraemon2.xyz/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode刷题(13)【简单】最大子序和(C++)</title>
-    <link href="http://example.com/2021/08/20/LeetCode%E5%88%B7%E9%A2%98(13)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C(C++)/"/>
-    <id>http://example.com/2021/08/20/LeetCode%E5%88%B7%E9%A2%98(13)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C(C++)/</id>
+    <link href="http://doraemon2.xyz/2021/08/20/LeetCode%E5%88%B7%E9%A2%98(13)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C(C++)/"/>
+    <id>http://doraemon2.xyz/2021/08/20/LeetCode%E5%88%B7%E9%A2%98(13)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C(C++)/</id>
     <published>2021-08-20T11:46:53.000Z</published>
     <updated>2021-08-20T11:50:25.624Z</updated>
     
@@ -118,21 +118,21 @@
     
     
     
-    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://doraemon2.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="-C++" scheme="http://example.com/tags/C/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
-    <category term="-算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="-LeetCode" scheme="http://example.com/tags/LeetCode/"/>
+    <category term="-LeetCode" scheme="http://doraemon2.xyz/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode刷题(12)【简单】最长公共前缀(C++)</title>
-    <link href="http://example.com/2021/08/18/LeetCode%E5%88%B7%E9%A2%98(12)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80(C++)/"/>
-    <id>http://example.com/2021/08/18/LeetCode%E5%88%B7%E9%A2%98(12)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80(C++)/</id>
+    <link href="http://doraemon2.xyz/2021/08/18/LeetCode%E5%88%B7%E9%A2%98(12)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80(C++)/"/>
+    <id>http://doraemon2.xyz/2021/08/18/LeetCode%E5%88%B7%E9%A2%98(12)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80(C++)/</id>
     <published>2021-08-18T07:25:10.000Z</published>
     <updated>2021-08-20T11:51:22.206Z</updated>
     
@@ -146,21 +146,21 @@
     
     
     
-    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://doraemon2.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="-C++" scheme="http://example.com/tags/C/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
-    <category term="-算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="-LeetCode" scheme="http://example.com/tags/LeetCode/"/>
+    <category term="-LeetCode" scheme="http://doraemon2.xyz/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode刷题(11)【简单】回文数&amp;罗马数字转整数(C++)</title>
-    <link href="http://example.com/2021/08/17/LeetCode%E5%88%B7%E9%A2%98(11)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%9B%9E%E6%96%87%E6%95%B0&amp;%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0(C++)/"/>
-    <id>http://example.com/2021/08/17/LeetCode%E5%88%B7%E9%A2%98(11)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%9B%9E%E6%96%87%E6%95%B0&amp;%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0(C++)/</id>
+    <link href="http://doraemon2.xyz/2021/08/17/LeetCode%E5%88%B7%E9%A2%98(11)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%9B%9E%E6%96%87%E6%95%B0&amp;%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0(C++)/"/>
+    <id>http://doraemon2.xyz/2021/08/17/LeetCode%E5%88%B7%E9%A2%98(11)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%9B%9E%E6%96%87%E6%95%B0&amp;%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0(C++)/</id>
     <published>2021-08-17T11:49:02.000Z</published>
     <updated>2021-08-17T11:55:21.130Z</updated>
     
@@ -174,21 +174,21 @@
     
     
     
-    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://doraemon2.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="-C++" scheme="http://example.com/tags/C/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
-    <category term="-算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="-LeetCode" scheme="http://example.com/tags/LeetCode/"/>
+    <category term="-LeetCode" scheme="http://doraemon2.xyz/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode刷题(10)【简单】反转整数(C++)</title>
-    <link href="http://example.com/2021/08/16/LeetCode%E5%88%B7%E9%A2%98(10)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%8F%8D%E8%BD%AC%E6%95%B4%E6%95%B0(C++)/"/>
-    <id>http://example.com/2021/08/16/LeetCode%E5%88%B7%E9%A2%98(10)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%8F%8D%E8%BD%AC%E6%95%B4%E6%95%B0(C++)/</id>
+    <link href="http://doraemon2.xyz/2021/08/16/LeetCode%E5%88%B7%E9%A2%98(10)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%8F%8D%E8%BD%AC%E6%95%B4%E6%95%B0(C++)/"/>
+    <id>http://doraemon2.xyz/2021/08/16/LeetCode%E5%88%B7%E9%A2%98(10)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%8F%8D%E8%BD%AC%E6%95%B4%E6%95%B0(C++)/</id>
     <published>2021-08-16T15:23:34.000Z</published>
     <updated>2021-08-17T11:52:05.933Z</updated>
     
@@ -202,21 +202,21 @@
     
     
     
-    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://doraemon2.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="-C++" scheme="http://example.com/tags/C/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
-    <category term="-算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="-LeetCode" scheme="http://example.com/tags/LeetCode/"/>
+    <category term="-LeetCode" scheme="http://doraemon2.xyz/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>黑马程序员C++课程笔记总结</title>
-    <link href="http://example.com/2021/08/14/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98C++%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93/"/>
-    <id>http://example.com/2021/08/14/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98C++%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93/</id>
+    <link href="http://doraemon2.xyz/2021/08/14/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98C++%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93/"/>
+    <id>http://doraemon2.xyz/2021/08/14/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98C++%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93/</id>
     <published>2021-08-13T17:50:09.000Z</published>
     <updated>2021-08-13T17:57:37.931Z</updated>
     
@@ -233,19 +233,19 @@
     
     
     
-    <category term="笔记" scheme="http://example.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    <category term="笔记" scheme="http://doraemon2.xyz/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="-C++" scheme="http://example.com/tags/C/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
-    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>C++实现机房预约系统</title>
-    <link href="http://example.com/2021/08/14/C++%E5%AE%9E%E7%8E%B0%E6%9C%BA%E6%88%BF%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://example.com/2021/08/14/C++%E5%AE%9E%E7%8E%B0%E6%9C%BA%E6%88%BF%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F/</id>
+    <link href="http://doraemon2.xyz/2021/08/14/C++%E5%AE%9E%E7%8E%B0%E6%9C%BA%E6%88%BF%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://doraemon2.xyz/2021/08/14/C++%E5%AE%9E%E7%8E%B0%E6%9C%BA%E6%88%BF%E9%A2%84%E7%BA%A6%E7%B3%BB%E7%BB%9F/</id>
     <published>2021-08-13T17:19:19.000Z</published>
     <updated>2021-08-13T18:00:21.517Z</updated>
     
@@ -261,19 +261,19 @@
     
     
     
-    <category term="C++" scheme="http://example.com/categories/C/"/>
+    <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++" scheme="http://example.com/tags/C/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
-    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>C++实现演讲比赛流程管理系统</title>
-    <link href="http://example.com/2021/08/11/C++%E5%AE%9E%E7%8E%B0%E6%BC%94%E8%AE%B2%E6%AF%94%E8%B5%9B%E6%B5%81%E7%A8%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://example.com/2021/08/11/C++%E5%AE%9E%E7%8E%B0%E6%BC%94%E8%AE%B2%E6%AF%94%E8%B5%9B%E6%B5%81%E7%A8%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</id>
+    <link href="http://doraemon2.xyz/2021/08/11/C++%E5%AE%9E%E7%8E%B0%E6%BC%94%E8%AE%B2%E6%AF%94%E8%B5%9B%E6%B5%81%E7%A8%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://doraemon2.xyz/2021/08/11/C++%E5%AE%9E%E7%8E%B0%E6%BC%94%E8%AE%B2%E6%AF%94%E8%B5%9B%E6%B5%81%E7%A8%8B%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</id>
     <published>2021-08-11T04:01:46.000Z</published>
     <updated>2021-08-13T18:00:45.383Z</updated>
     
@@ -289,19 +289,19 @@
     
     
     
-    <category term="C++" scheme="http://example.com/categories/C/"/>
+    <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++" scheme="http://example.com/tags/C/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
-    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>C++提高编程部分</title>
-    <link href="http://example.com/2021/08/09/C++%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B%E9%83%A8%E5%88%86/"/>
-    <id>http://example.com/2021/08/09/C++%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B%E9%83%A8%E5%88%86/</id>
+    <link href="http://doraemon2.xyz/2021/08/09/C++%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B%E9%83%A8%E5%88%86/"/>
+    <id>http://doraemon2.xyz/2021/08/09/C++%E6%8F%90%E9%AB%98%E7%BC%96%E7%A8%8B%E9%83%A8%E5%88%86/</id>
     <published>2021-08-09T04:39:00.000Z</published>
     <updated>2021-08-20T11:55:39.406Z</updated>
     
@@ -317,19 +317,19 @@
     
     
     
-    <category term="C++" scheme="http://example.com/categories/C/"/>
+    <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++" scheme="http://example.com/tags/C/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
-    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>几种常见的排序算法</title>
-    <link href="http://example.com/2021/07/25/%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
-    <id>http://example.com/2021/07/25/%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</id>
+    <link href="http://doraemon2.xyz/2021/07/25/%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    <id>http://doraemon2.xyz/2021/07/25/%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</id>
     <published>2021-07-25T04:02:00.000Z</published>
     <updated>2021-07-25T04:41:44.531Z</updated>
     
@@ -343,19 +343,19 @@
     
     
     
-    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://doraemon2.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="-算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
     
-    <category term="-排序算法" scheme="http://example.com/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    <category term="-排序算法" scheme="http://doraemon2.xyz/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>C语言实现学生成绩管理系统(EasyX图形窗口)</title>
-    <link href="http://example.com/2021/07/18/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E5%AD%A6%E7%94%9F%E6%88%90%E7%BB%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F(EasyX%E5%9B%BE%E5%BD%A2%E7%AA%97%E5%8F%A3)/"/>
-    <id>http://example.com/2021/07/18/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E5%AD%A6%E7%94%9F%E6%88%90%E7%BB%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F(EasyX%E5%9B%BE%E5%BD%A2%E7%AA%97%E5%8F%A3)/</id>
+    <link href="http://doraemon2.xyz/2021/07/18/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E5%AD%A6%E7%94%9F%E6%88%90%E7%BB%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F(EasyX%E5%9B%BE%E5%BD%A2%E7%AA%97%E5%8F%A3)/"/>
+    <id>http://doraemon2.xyz/2021/07/18/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E5%AD%A6%E7%94%9F%E6%88%90%E7%BB%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F(EasyX%E5%9B%BE%E5%BD%A2%E7%AA%97%E5%8F%A3)/</id>
     <published>2021-07-18T11:13:15.000Z</published>
     <updated>2021-07-18T11:20:10.228Z</updated>
     
@@ -370,19 +370,19 @@
     
     
     
-    <category term="C语言" scheme="http://example.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+    <category term="C语言" scheme="http://doraemon2.xyz/categories/C%E8%AF%AD%E8%A8%80/"/>
     
     
-    <category term="-C语言" scheme="http://example.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    <category term="-C语言" scheme="http://doraemon2.xyz/tags/C%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="-EasyX" scheme="http://example.com/tags/EasyX/"/>
+    <category term="-EasyX" scheme="http://doraemon2.xyz/tags/EasyX/"/>
     
   </entry>
   
   <entry>
     <title>C语言实现推箱子小游戏2</title>
-    <link href="http://example.com/2021/07/15/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E6%8E%A8%E7%AE%B1%E5%AD%90%E5%B0%8F%E6%B8%B8%E6%88%8F2/"/>
-    <id>http://example.com/2021/07/15/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E6%8E%A8%E7%AE%B1%E5%AD%90%E5%B0%8F%E6%B8%B8%E6%88%8F2/</id>
+    <link href="http://doraemon2.xyz/2021/07/15/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E6%8E%A8%E7%AE%B1%E5%AD%90%E5%B0%8F%E6%B8%B8%E6%88%8F2/"/>
+    <id>http://doraemon2.xyz/2021/07/15/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E6%8E%A8%E7%AE%B1%E5%AD%90%E5%B0%8F%E6%B8%B8%E6%88%8F2/</id>
     <published>2021-07-15T03:38:55.000Z</published>
     <updated>2021-07-15T03:53:52.062Z</updated>
     
@@ -398,19 +398,19 @@
     
     
     
-    <category term="C语言" scheme="http://example.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+    <category term="C语言" scheme="http://doraemon2.xyz/categories/C%E8%AF%AD%E8%A8%80/"/>
     
     
-    <category term="-C语言" scheme="http://example.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    <category term="-C语言" scheme="http://doraemon2.xyz/tags/C%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="-EasyX" scheme="http://example.com/tags/EasyX/"/>
+    <category term="-EasyX" scheme="http://doraemon2.xyz/tags/EasyX/"/>
     
   </entry>
   
   <entry>
     <title>C++实现职工管理系统</title>
-    <link href="http://example.com/2021/07/11/C++%E5%AE%9E%E7%8E%B0%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://example.com/2021/07/11/C++%E5%AE%9E%E7%8E%B0%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</id>
+    <link href="http://doraemon2.xyz/2021/07/11/C++%E5%AE%9E%E7%8E%B0%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://doraemon2.xyz/2021/07/11/C++%E5%AE%9E%E7%8E%B0%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</id>
     <published>2021-07-11T03:08:20.000Z</published>
     <updated>2021-08-13T18:01:38.182Z</updated>
     
@@ -426,19 +426,19 @@
     
     
     
-    <category term="C++" scheme="http://example.com/categories/C/"/>
+    <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++" scheme="http://example.com/tags/C/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
-    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>C++核心编程部分</title>
-    <link href="http://example.com/2021/07/08/C++%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B%E9%83%A8%E5%88%86/"/>
-    <id>http://example.com/2021/07/08/C++%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B%E9%83%A8%E5%88%86/</id>
+    <link href="http://doraemon2.xyz/2021/07/08/C++%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B%E9%83%A8%E5%88%86/"/>
+    <id>http://doraemon2.xyz/2021/07/08/C++%E6%A0%B8%E5%BF%83%E7%BC%96%E7%A8%8B%E9%83%A8%E5%88%86/</id>
     <published>2021-07-08T10:33:19.000Z</published>
     <updated>2021-08-13T18:02:10.084Z</updated>
     
@@ -453,19 +453,19 @@
     
     
     
-    <category term="C++" scheme="http://example.com/categories/C/"/>
+    <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++" scheme="http://example.com/tags/C/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
-    <category term="-笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>迟到的windows11虚拟机初体验</title>
-    <link href="http://example.com/2021/06/30/%E8%BF%9F%E5%88%B0%E7%9A%84windows11%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%9D%E4%BD%93%E9%AA%8C/"/>
-    <id>http://example.com/2021/06/30/%E8%BF%9F%E5%88%B0%E7%9A%84windows11%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%9D%E4%BD%93%E9%AA%8C/</id>
+    <link href="http://doraemon2.xyz/2021/06/30/%E8%BF%9F%E5%88%B0%E7%9A%84windows11%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%9D%E4%BD%93%E9%AA%8C/"/>
+    <id>http://doraemon2.xyz/2021/06/30/%E8%BF%9F%E5%88%B0%E7%9A%84windows11%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%9D%E4%BD%93%E9%AA%8C/</id>
     <published>2021-06-30T04:54:35.000Z</published>
     <updated>2021-06-30T05:00:01.377Z</updated>
     
@@ -479,19 +479,19 @@
     
     
     
-    <category term="system" scheme="http://example.com/categories/system/"/>
+    <category term="system" scheme="http://doraemon2.xyz/categories/system/"/>
     
     
-    <category term="-windows" scheme="http://example.com/tags/windows/"/>
+    <category term="-windows" scheme="http://doraemon2.xyz/tags/windows/"/>
     
-    <category term="-system" scheme="http://example.com/tags/system/"/>
+    <category term="-system" scheme="http://doraemon2.xyz/tags/system/"/>
     
   </entry>
   
   <entry>
     <title>NowCoder刷题(1)【树】二叉树的遍历</title>
-    <link href="http://example.com/2021/06/21/NowCoder%E5%88%B7%E9%A2%98(1)%E3%80%90%E6%A0%91%E3%80%91%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/"/>
-    <id>http://example.com/2021/06/21/NowCoder%E5%88%B7%E9%A2%98(1)%E3%80%90%E6%A0%91%E3%80%91%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/</id>
+    <link href="http://doraemon2.xyz/2021/06/21/NowCoder%E5%88%B7%E9%A2%98(1)%E3%80%90%E6%A0%91%E3%80%91%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/"/>
+    <id>http://doraemon2.xyz/2021/06/21/NowCoder%E5%88%B7%E9%A2%98(1)%E3%80%90%E6%A0%91%E3%80%91%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/</id>
     <published>2021-06-21T12:57:31.000Z</published>
     <updated>2021-08-29T01:14:27.077Z</updated>
     
@@ -506,25 +506,25 @@
     
     
     
-    <category term="算法" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="http://doraemon2.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="-C语言" scheme="http://example.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    <category term="-C语言" scheme="http://doraemon2.xyz/tags/C%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="-数据结构" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="-数据结构" scheme="http://doraemon2.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-    <category term="-树" scheme="http://example.com/tags/%E6%A0%91/"/>
+    <category term="-树" scheme="http://doraemon2.xyz/tags/%E6%A0%91/"/>
     
-    <category term="-二叉树" scheme="http://example.com/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    <category term="-二叉树" scheme="http://doraemon2.xyz/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
     
-    <category term="-NowCoder" scheme="http://example.com/tags/NowCoder/"/>
+    <category term="-NowCoder" scheme="http://doraemon2.xyz/tags/NowCoder/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode刷题(9)【树】前序&amp;平衡&amp;深度</title>
-    <link href="http://example.com/2021/06/18/LeetCode%E5%88%B7%E9%A2%98(9)%E3%80%90%E6%A0%91%E3%80%91%E5%89%8D%E5%BA%8F&amp;%E5%B9%B3%E8%A1%A1&amp;%E6%B7%B1%E5%BA%A6(C%E8%AF%AD%E8%A8%80)/"/>
-    <id>http://example.com/2021/06/18/LeetCode%E5%88%B7%E9%A2%98(9)%E3%80%90%E6%A0%91%E3%80%91%E5%89%8D%E5%BA%8F&amp;%E5%B9%B3%E8%A1%A1&amp;%E6%B7%B1%E5%BA%A6(C%E8%AF%AD%E8%A8%80)/</id>
+    <link href="http://doraemon2.xyz/2021/06/18/LeetCode%E5%88%B7%E9%A2%98(9)%E3%80%90%E6%A0%91%E3%80%91%E5%89%8D%E5%BA%8F&amp;%E5%B9%B3%E8%A1%A1&amp;%E6%B7%B1%E5%BA%A6(C%E8%AF%AD%E8%A8%80)/"/>
+    <id>http://doraemon2.xyz/2021/06/18/LeetCode%E5%88%B7%E9%A2%98(9)%E3%80%90%E6%A0%91%E3%80%91%E5%89%8D%E5%BA%8F&amp;%E5%B9%B3%E8%A1%A1&amp;%E6%B7%B1%E5%BA%A6(C%E8%AF%AD%E8%A8%80)/</id>
     <published>2021-06-18T01:06:50.000Z</published>
     <updated>2021-06-18T01:20:29.781Z</updated>
     
@@ -538,25 +538,25 @@
     
     
     
-    <category term="数据结构" scheme="http://example.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="数据结构" scheme="http://doraemon2.xyz/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
-    <category term="-C语言" scheme="http://example.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    <category term="-C语言" scheme="http://doraemon2.xyz/tags/C%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="-数据结构" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="-数据结构" scheme="http://doraemon2.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-    <category term="-LeetCode" scheme="http://example.com/tags/LeetCode/"/>
+    <category term="-LeetCode" scheme="http://doraemon2.xyz/tags/LeetCode/"/>
     
-    <category term="-树" scheme="http://example.com/tags/%E6%A0%91/"/>
+    <category term="-树" scheme="http://doraemon2.xyz/tags/%E6%A0%91/"/>
     
-    <category term="-二叉树" scheme="http://example.com/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    <category term="-二叉树" scheme="http://doraemon2.xyz/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
     
   </entry>
   
   <entry>
     <title>Hexo-Butterfly添加天气插件</title>
-    <link href="http://example.com/2021/06/17/Hexo-Butterfly%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6/"/>
-    <id>http://example.com/2021/06/17/Hexo-Butterfly%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6/</id>
+    <link href="http://doraemon2.xyz/2021/06/17/Hexo-Butterfly%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6/"/>
+    <id>http://doraemon2.xyz/2021/06/17/Hexo-Butterfly%E6%B7%BB%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6/</id>
     <published>2021-06-17T11:18:33.000Z</published>
     <updated>2021-06-17T12:16:25.798Z</updated>
     
@@ -571,10 +571,10 @@
     
     
     
-    <category term="hexo" scheme="http://example.com/categories/hexo/"/>
+    <category term="hexo" scheme="http://doraemon2.xyz/categories/hexo/"/>
     
     
-    <category term="-Hexo" scheme="http://example.com/tags/Hexo/"/>
+    <category term="-Hexo" scheme="http://doraemon2.xyz/tags/Hexo/"/>
     
   </entry>
   
