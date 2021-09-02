@@ -797,14 +797,14 @@
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/categories/system/</loc>
+    <loc>http://doraemon2.xyz/categories/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2021-09-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://doraemon2.xyz/categories/system/</loc>
     <lastmod>2021-09-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
