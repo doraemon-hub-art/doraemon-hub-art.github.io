@@ -8,7 +8,7 @@
       <link href="2021/09/27/C++11%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8F%98%E5%8F%82%E6%A8%A1%E6%9D%BF%E3%80%81%E5%AE%8C%E7%BE%8E%E8%BD%AC%E5%8F%91%E5%92%8Cemplace/"/>
       <url>2021/09/27/C++11%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8F%98%E5%8F%82%E6%A8%A1%E6%9D%BF%E3%80%81%E5%AE%8C%E7%BE%8E%E8%BD%AC%E5%8F%91%E5%92%8Cemplace/</url>
       
-        <content type="html"><![CDATA[<h1 id="C-11新特性：变参模板、完美转发和emplace"><a href="#C-11新特性：变参模板、完美转发和emplace" class="headerlink" title="C++11新特性：变参模板、完美转发和emplace"></a>C++11新特性：变参模板、完美转发和emplace</h1><p>使得 emplace 可以接受任意参数，这样就可以适用于任意对象的构建。</p><hr><p><strong>C++Primer</strong>:<br>新标准引入了三个是新成员——emplace、emplace_front和emplace_back,这些操作构造而不是拷贝元素。这些操作分别对应着，insert、push_front、push_back，允许我们将元素放置在容器头部、一个指定位置之前或容器尾部。</p><p>当我们调用push或insert成员函数时，我们将元素类型的对象传递给它们，这些对象被拷贝到容器中。而当我们调用一个emplace成员函数时，则是将参数传递给元素类型的构造函数。emplace成员使用这些参数在容器管理的内存空间中直接构造元素。</p><p><strong>问题代码如下</strong>：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;list&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">Student(<span class="keyword">int</span> age, <span class="keyword">const</span> <span class="keyword">char</span>* name) :age(age), name(name)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;有参构造函数被调用&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line">~Student()</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;析构函数被调用&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line">Student(<span class="keyword">const</span> Student&amp; other)</span><br><span class="line">&#123;</span><br><span class="line">age = other.age;</span><br><span class="line">name = other.name;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;拷贝构造函数被调用&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="keyword">int</span> age;</span><br><span class="line"><span class="built_in">string</span> name;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">vector</span>&lt;Student&gt; vectStu;</span><br><span class="line"><span class="comment">//插入元素</span></span><br><span class="line"><span class="comment">//1.先定义再插入</span></span><br><span class="line"><span class="comment">//Student s1(18, &quot;老王&quot;);</span></span><br><span class="line"><span class="comment">//这样插入实际上是vector拷贝了一份s1放到了它自己里面，所以会执行一个有参构造和一个拷贝构造</span></span><br><span class="line"><span class="comment">//vectStu.push_back(s1);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2.插入临时变量</span></span><br><span class="line">vectStu.push_back(Student(<span class="number">19</span>, <span class="string">&quot;老张&quot;</span>));<span class="comment">//效果同上</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>将对应的学生对象直接放入容器中会调用拷贝构造函数，拷贝一份放入容器中，<strong>引起了性能问题</strong>。</p><p> <strong>用变参模板和完美转发来解决这个问题。</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vectStu.emplace_back(<span class="number">20</span>, <span class="string">&quot;小花&quot;</span>);</span><br></pre></td></tr></table></figure><p><img src="/images/C-11%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8F%98%E5%8F%82%E6%A8%A1%E6%9D%BF%E3%80%81%E5%AE%8C%E7%BE%8E%E8%BD%AC%E5%8F%91%E5%92%8Cemplace.assets/image-20210927200858360.png" alt="image-20210927200858360"></p><p>变参模板——就是()中的参数。与该类有参构造函数参数相同。</p><p>完美转法——用上面这个参数私底下去调用该类的构造函数，构造一个对象放入到容器中。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vectStu.emplace_back();<span class="comment">//相当于push_back</span></span><br><span class="line">vectStu.emplace();<span class="comment">//相当于insert</span></span><br></pre></td></tr></table></figure><p>如果发现还会出现多次调用情况，那是因为先放入了一个元素，然后由于空间不够，又重新开辟了一块新的空间，并且将原来的数据拷贝了过来。</p><p>这就是为什么vector容器在中间插入、删除元素挺费时的原因。</p><p><strong>补充:</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">不同容器相关用法有所不同</span><br><span class="line">    类似于 <span class="built_in">deque</span> <span class="built_in">list</span>中</span><br><span class="line">    还可以这样用</span><br><span class="line">    emplace_front();</span><br><span class="line">...</span><br><span class="line">    直接用emplace()——相当于insert</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="C-11新特性：变参模板、完美转发和emplace"><a href="#C-11新特性：变参模板、完美转发和emplace" class="headerlink" title="C++11新特性：变参模板、完美转发和emplace"></a>C++11新特性：变参模板、完美转发和emplace</h1><p>使得 emplace 可以接受任意参数，这样就可以适用于任意对象的构建。</p><hr><p><strong>《C++Primer》</strong>:<br>新标准引入了三个是新成员——emplace、emplace_front和emplace_back,这些操作构造而不是拷贝元素。这些操作分别对应着，insert、push_front、push_back，允许我们将元素放置在容器头部、一个指定位置之前或容器尾部。</p><p>当我们调用push或insert成员函数时，我们将元素类型的对象传递给它们，这些对象被拷贝到容器中。而当我们调用一个emplace成员函数时，则是将参数传递给元素类型的构造函数。emplace成员使用这些参数在容器管理的内存空间中直接构造元素。</p><p><strong>问题代码如下</strong>：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;list&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">Student(<span class="keyword">int</span> age, <span class="keyword">const</span> <span class="keyword">char</span>* name) :age(age), name(name)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;有参构造函数被调用&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line">~Student()</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;析构函数被调用&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line">Student(<span class="keyword">const</span> Student&amp; other)</span><br><span class="line">&#123;</span><br><span class="line">age = other.age;</span><br><span class="line">name = other.name;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;拷贝构造函数被调用&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="keyword">int</span> age;</span><br><span class="line"><span class="built_in">string</span> name;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">vector</span>&lt;Student&gt; vectStu;</span><br><span class="line"><span class="comment">//插入元素</span></span><br><span class="line"><span class="comment">//1.先定义再插入</span></span><br><span class="line"><span class="comment">//Student s1(18, &quot;老王&quot;);</span></span><br><span class="line"><span class="comment">//这样插入实际上是vector拷贝了一份s1放到了它自己里面，所以会执行一个有参构造和一个拷贝构造</span></span><br><span class="line"><span class="comment">//vectStu.push_back(s1);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2.插入临时变量</span></span><br><span class="line">vectStu.push_back(Student(<span class="number">19</span>, <span class="string">&quot;老张&quot;</span>));<span class="comment">//效果同上</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>将对应的学生对象直接放入容器中会调用拷贝构造函数，拷贝一份放入容器中，<strong>引起了性能问题</strong>。</p><p> <strong>用变参模板和完美转发来解决这个问题。</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vectStu.emplace_back(<span class="number">20</span>, <span class="string">&quot;小花&quot;</span>);</span><br></pre></td></tr></table></figure><p><img src="/images/C-11%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8F%98%E5%8F%82%E6%A8%A1%E6%9D%BF%E3%80%81%E5%AE%8C%E7%BE%8E%E8%BD%AC%E5%8F%91%E5%92%8Cemplace.assets/image-20210927200858360.png" alt="image-20210927200858360"></p><p>变参模板——就是()中的参数。与该类有参构造函数参数相同。</p><p>完美转法——用上面这个参数私底下去调用该类的构造函数，构造一个对象放入到容器中。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vectStu.emplace_back();<span class="comment">//相当于push_back</span></span><br><span class="line">vectStu.emplace();<span class="comment">//相当于insert</span></span><br></pre></td></tr></table></figure><p>如果发现还会出现多次调用情况，那是因为先放入了一个元素，然后由于空间不够，又重新开辟了一块新的空间，并且将原来的数据拷贝了过来。</p><p>这就是为什么vector容器在中间插入、删除元素挺费时的原因。</p><p><strong>补充:</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">不同容器相关用法有所不同</span><br><span class="line">    类似于 <span class="built_in">deque</span> <span class="built_in">list</span>中</span><br><span class="line">    还可以这样用</span><br><span class="line">    emplace_front();</span><br><span class="line">...</span><br><span class="line">    直接用emplace()——相当于insert</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -20,11 +20,11 @@
       
         <tags>
             
-            <tag> -C++ </tag>
+            <tag> -C++11 </tag>
             
             <tag> -笔记 </tag>
             
-            <tag> -C++11 </tag>
+            <tag> -C++ </tag>
             
         </tags>
       
@@ -49,9 +49,9 @@
       
         <tags>
             
-            <tag> -C++ </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C++ </tag>
             
         </tags>
       
@@ -76,9 +76,9 @@
       
         <tags>
             
-            <tag> -C++ </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C++ </tag>
             
         </tags>
       
@@ -103,9 +103,9 @@
       
         <tags>
             
-            <tag> -C++ </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C++ </tag>
             
         </tags>
       
@@ -124,9 +124,9 @@
       
         <tags>
             
-            <tag> -C++ </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C++ </tag>
             
         </tags>
       
@@ -151,9 +151,9 @@
       
         <tags>
             
-            <tag> -C++ </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C++ </tag>
             
             <tag> -算法 </tag>
             
@@ -193,9 +193,9 @@
       
         <tags>
             
-            <tag> -C语言 </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C语言 </tag>
             
             <tag> -网络编程 </tag>
             
@@ -222,9 +222,9 @@
       
         <tags>
             
-            <tag> -C语言 </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C语言 </tag>
             
             <tag> -网络编程 </tag>
             
@@ -251,9 +251,9 @@
       
         <tags>
             
-            <tag> -C语言 </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C语言 </tag>
             
             <tag> -网络编程 </tag>
             
@@ -280,9 +280,9 @@
       
         <tags>
             
-            <tag> -C语言 </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C语言 </tag>
             
             <tag> -网络编程 </tag>
             
@@ -454,9 +454,9 @@
       
         <tags>
             
-            <tag> -C++ </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C++ </tag>
             
         </tags>
       
@@ -481,9 +481,9 @@
       
         <tags>
             
-            <tag> -C++ </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C++ </tag>
             
         </tags>
       
@@ -508,9 +508,9 @@
       
         <tags>
             
-            <tag> -C++ </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C++ </tag>
             
         </tags>
       
@@ -535,9 +535,9 @@
       
         <tags>
             
-            <tag> -C++ </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C++ </tag>
             
         </tags>
       
@@ -643,9 +643,9 @@
       
         <tags>
             
-            <tag> -C++ </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C++ </tag>
             
         </tags>
       
@@ -670,9 +670,9 @@
       
         <tags>
             
-            <tag> -C++ </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C++ </tag>
             
         </tags>
       
@@ -759,9 +759,9 @@
             
             <tag> -C语言 </tag>
             
-            <tag> -数据结构 </tag>
-            
             <tag> -LeetCode </tag>
+            
+            <tag> -数据结构 </tag>
             
             <tag> -树 </tag>
             
@@ -848,9 +848,9 @@
             
             <tag> -C语言 </tag>
             
-            <tag> -数据结构 </tag>
-            
             <tag> -LeetCode </tag>
+            
+            <tag> -数据结构 </tag>
             
             <tag> -栈 </tag>
             
@@ -881,9 +881,9 @@
             
             <tag> -C语言 </tag>
             
-            <tag> -数据结构 </tag>
-            
             <tag> -LeetCode </tag>
+            
+            <tag> -数据结构 </tag>
             
             <tag> -栈 </tag>
             
@@ -912,9 +912,9 @@
       
         <tags>
             
-            <tag> -C++ </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C++ </tag>
             
         </tags>
       
@@ -935,9 +935,9 @@
             
             <tag> -C语言 </tag>
             
-            <tag> -数据结构 </tag>
-            
             <tag> -LeetCode </tag>
+            
+            <tag> -数据结构 </tag>
             
             <tag> -栈 </tag>
             
@@ -1022,11 +1022,11 @@
             
             <tag> -C语言 </tag>
             
+            <tag> -LeetCode </tag>
+            
             <tag> -数据结构 </tag>
             
             <tag> -链表 </tag>
-            
-            <tag> -LeetCode </tag>
             
         </tags>
       
@@ -1053,9 +1053,9 @@
             
             <tag> -C语言 </tag>
             
-            <tag> -数据结构 </tag>
-            
             <tag> -LeetCode </tag>
+            
+            <tag> -数据结构 </tag>
             
             <tag> -数组 </tag>
             
@@ -1161,11 +1161,11 @@
             
             <tag> -C语言 </tag>
             
+            <tag> -LeetCode </tag>
+            
             <tag> -数据结构 </tag>
             
             <tag> -链表 </tag>
-            
-            <tag> -LeetCode </tag>
             
         </tags>
       
@@ -1192,11 +1192,11 @@
             
             <tag> -C语言 </tag>
             
+            <tag> -LeetCode </tag>
+            
             <tag> -数据结构 </tag>
             
             <tag> -链表 </tag>
-            
-            <tag> -LeetCode </tag>
             
         </tags>
       
@@ -1223,11 +1223,11 @@
             
             <tag> -C语言 </tag>
             
+            <tag> -LeetCode </tag>
+            
             <tag> -数据结构 </tag>
             
             <tag> -链表 </tag>
-            
-            <tag> -LeetCode </tag>
             
         </tags>
       
@@ -1568,9 +1568,9 @@
       
         <tags>
             
-            <tag> -计算机 </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -计算机 </tag>
             
             <tag> -JAVA </tag>
             
@@ -1624,9 +1624,9 @@
       
         <tags>
             
-            <tag> -C语言 </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C语言 </tag>
             
         </tags>
       
@@ -1705,9 +1705,9 @@
       
         <tags>
             
-            <tag> -C语言 </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C语言 </tag>
             
         </tags>
       
@@ -1807,9 +1807,9 @@
       
         <tags>
             
-            <tag> -C语言 </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C语言 </tag>
             
         </tags>
       
@@ -1834,13 +1834,13 @@
       
         <tags>
             
+            <tag> -笔记 </tag>
+            
             <tag> -C语言 </tag>
             
             <tag> -计算机 </tag>
             
             <tag> -二级 </tag>
-            
-            <tag> -笔记 </tag>
             
         </tags>
       
@@ -1865,13 +1865,13 @@
       
         <tags>
             
+            <tag> -笔记 </tag>
+            
             <tag> -C语言 </tag>
             
             <tag> -计算机 </tag>
             
             <tag> -二级 </tag>
-            
-            <tag> -笔记 </tag>
             
         </tags>
       
@@ -1896,13 +1896,13 @@
       
         <tags>
             
+            <tag> -笔记 </tag>
+            
             <tag> -C语言 </tag>
             
             <tag> -计算机 </tag>
             
             <tag> -二级 </tag>
-            
-            <tag> -笔记 </tag>
             
         </tags>
       
@@ -1927,13 +1927,13 @@
       
         <tags>
             
+            <tag> -笔记 </tag>
+            
             <tag> -C语言 </tag>
             
             <tag> -计算机 </tag>
             
             <tag> -二级 </tag>
-            
-            <tag> -笔记 </tag>
             
         </tags>
       
@@ -1958,13 +1958,13 @@
       
         <tags>
             
+            <tag> -笔记 </tag>
+            
             <tag> -C语言 </tag>
             
             <tag> -计算机 </tag>
             
             <tag> -二级 </tag>
-            
-            <tag> -笔记 </tag>
             
         </tags>
       
@@ -2047,9 +2047,9 @@
       
         <tags>
             
-            <tag> -C语言 </tag>
-            
             <tag> -笔记 </tag>
+            
+            <tag> -C语言 </tag>
             
         </tags>
       
