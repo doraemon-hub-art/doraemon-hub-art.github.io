@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>C++仿函数(函数对象)</title>
+      <link href="2021/09/28/C++%E4%BB%BF%E5%87%BD%E6%95%B0(%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1)/"/>
+      <url>2021/09/28/C++%E4%BB%BF%E5%87%BD%E6%95%B0(%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1)/</url>
+      
+        <content type="html"><![CDATA[<h1 id="仿函数-函数对象"><a href="#仿函数-函数对象" class="headerlink" title="仿函数(函数对象)"></a>仿函数(函数对象)</h1><p>研究set/multiset容器的排序原理。</p><p>当我们构造一个存放int类型的set容器时</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; s1;</span><br></pre></td></tr></table></figure><p>系统会自动帮我们设定并调用一个函数，自动调用头文件functional中的仿函数(一个类中重载了()实现了对比的操作，从而完成了排序)。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">int</span>,less&lt;<span class="keyword">int</span>&gt;&gt; s1;</span><br></pre></td></tr></table></figure><p>less函数对象实现比较，为排序提供依据。（升序）<br>greater（降序）</p><p><strong>functional中，如图</strong></p><p><img src="/images/C++%E4%BB%BF%E5%87%BD%E6%95%B0(%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1).assets/image-20210928153035870.png" alt="image-20210928153035870"></p><p><strong>手动实现:</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">Student(<span class="keyword">int</span> _age):age(_age)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span><span class="keyword">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> age;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> Student&amp; right) <span class="keyword">const</span> &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">this</span>-&gt;age &lt; right.age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span> &gt; (<span class="keyword">const</span> Student&amp; right) <span class="keyword">const</span> &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">this</span>-&gt;age &gt; right.age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">~Student() &#123; &#125; </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="keyword">int</span> age;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">set</span>&lt;Student,greater&lt;Student&gt;&gt; setStu;</span><br><span class="line">setStu.insert(<span class="number">19</span>);</span><br><span class="line">setStu.insert(<span class="number">20</span>);</span><br><span class="line">setStu.insert(<span class="number">18</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">set</span>&lt;Student&gt;::iterator it = setStu.begin(); it != setStu.end(); it++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; it-&gt;getAge()&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>如果一个类将()运算符重载为成员函数，这个类就称为函数对象类，这个类的对象就是函数对象。函数对象是一个对象，但是使用的形式看起来像函数调用，实际上也执行了函数调用，因而得名。——<a href="http://c.biancheng.net/view/354.html">C++函数对象详解 </a></p><p><strong>实现自己的less(greater)达到效果：</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FuncStudent</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">const</span> Student&amp; left, <span class="keyword">const</span> Student&amp; right)</span><span class="keyword">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> left.getAge() &gt; right.getAge();</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">set</span>&lt;Student,FuncStudent&gt; setStu;</span><br><span class="line"><span class="function">Student <span class="title">s1</span><span class="params">(<span class="number">12</span>)</span></span>;</span><br><span class="line"><span class="function">Student <span class="title">s2</span><span class="params">(<span class="number">13</span>)</span></span>;</span><br><span class="line">setStu.insert(s1);</span><br><span class="line">setStu.insert(s2);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">set</span>&lt;Student,FuncStudent&gt;::iterator it = setStu.begin(); it != setStu.end(); it++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; it-&gt;getAge()&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>仿函数(函数对象)概念</strong></p><ol><li>尽管函数指针被广泛用于实现函数回调，但C++还提供了一个重要的实现回调函数的方法，那就是函数对象。回调函数解释——<a href="https://cloud.tencent.com/developer/article/1373683#:~:text=%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1,%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E5%BC%95%E7%94%A8%E3%80%82">回调函数</a></li><li>functor，翻译成函数对象，伪函数，它是是重载了“()”操作符的普通类对象。从语法上讲，它与普通函数行为类似。</li><li>functional头文件中包含的 greater&lt;&gt;与less&lt;&gt;就是函数对象。</li></ol><p><strong>set/setmulti容器就是调用函数对象的operator()方法去比较两个值的大小，从而实现的排序。</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -C++ </tag>
+            
+            <tag> -笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C++11新特性:变参模板、完美转发和emplace</title>
       <link href="2021/09/27/C++11%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8F%98%E5%8F%82%E6%A8%A1%E6%9D%BF%E3%80%81%E5%AE%8C%E7%BE%8E%E8%BD%AC%E5%8F%91%E5%92%8Cemplace/"/>
       <url>2021/09/27/C++11%E6%96%B0%E7%89%B9%E6%80%A7-%E5%8F%98%E5%8F%82%E6%A8%A1%E6%9D%BF%E3%80%81%E5%AE%8C%E7%BE%8E%E8%BD%AC%E5%8F%91%E5%92%8Cemplace/</url>
@@ -20,11 +47,11 @@
       
         <tags>
             
-            <tag> -C++11 </tag>
+            <tag> -C++ </tag>
             
             <tag> -笔记 </tag>
             
-            <tag> -C++ </tag>
+            <tag> -C++11 </tag>
             
         </tags>
       
@@ -49,9 +76,9 @@
       
         <tags>
             
-            <tag> -笔记 </tag>
-            
             <tag> -C++ </tag>
+            
+            <tag> -笔记 </tag>
             
         </tags>
       
@@ -76,9 +103,9 @@
       
         <tags>
             
-            <tag> -笔记 </tag>
-            
             <tag> -C++ </tag>
+            
+            <tag> -笔记 </tag>
             
         </tags>
       
@@ -103,9 +130,9 @@
       
         <tags>
             
-            <tag> -笔记 </tag>
-            
             <tag> -C++ </tag>
+            
+            <tag> -笔记 </tag>
             
         </tags>
       
@@ -124,9 +151,9 @@
       
         <tags>
             
-            <tag> -笔记 </tag>
-            
             <tag> -C++ </tag>
+            
+            <tag> -笔记 </tag>
             
         </tags>
       
@@ -151,9 +178,9 @@
       
         <tags>
             
-            <tag> -笔记 </tag>
-            
             <tag> -C++ </tag>
+            
+            <tag> -笔记 </tag>
             
             <tag> -算法 </tag>
             
@@ -180,9 +207,9 @@
       
         <tags>
             
-            <tag> -笔记 </tag>
-            
             <tag> -C++ </tag>
+            
+            <tag> -笔记 </tag>
             
         </tags>
       
@@ -468,9 +495,9 @@
       
         <tags>
             
-            <tag> -笔记 </tag>
-            
             <tag> -C++ </tag>
+            
+            <tag> -笔记 </tag>
             
         </tags>
       
@@ -495,9 +522,9 @@
       
         <tags>
             
-            <tag> -笔记 </tag>
-            
             <tag> -C++ </tag>
+            
+            <tag> -笔记 </tag>
             
         </tags>
       
@@ -522,9 +549,9 @@
       
         <tags>
             
-            <tag> -笔记 </tag>
-            
             <tag> -C++ </tag>
+            
+            <tag> -笔记 </tag>
             
         </tags>
       
@@ -549,9 +576,9 @@
       
         <tags>
             
-            <tag> -笔记 </tag>
-            
             <tag> -C++ </tag>
+            
+            <tag> -笔记 </tag>
             
         </tags>
       
@@ -657,9 +684,9 @@
       
         <tags>
             
-            <tag> -笔记 </tag>
-            
             <tag> -C++ </tag>
+            
+            <tag> -笔记 </tag>
             
         </tags>
       
@@ -684,9 +711,9 @@
       
         <tags>
             
-            <tag> -笔记 </tag>
-            
             <tag> -C++ </tag>
+            
+            <tag> -笔记 </tag>
             
         </tags>
       
@@ -926,9 +953,9 @@
       
         <tags>
             
-            <tag> -笔记 </tag>
-            
             <tag> -C++ </tag>
+            
+            <tag> -笔记 </tag>
             
         </tags>
       
