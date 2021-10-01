@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 2386095 */
-  src: url('//at.alicdn.com/t/font_2386095_w6coi9cp9or.woff2?t=1621914791921') format('woff2'),
-       url('//at.alicdn.com/t/font_2386095_w6coi9cp9or.woff?t=1621914791921') format('woff'),
-       url('//at.alicdn.com/t/font_2386095_w6coi9cp9or.ttf?t=1621914791921') format('truetype');
+  font-family: "iconfont"; /* Project id 2846497 */
+  src: url('//at.alicdn.com/t/font_2846497_pvb6dg8w6rh.woff2?t=1633058584040') format('woff2'),
+       url('//at.alicdn.com/t/font_2846497_pvb6dg8w6rh.woff?t=1633058584040') format('woff'),
+       url('//at.alicdn.com/t/font_2846497_pvb6dg8w6rh.ttf?t=1633058584040') format('truetype');
 }
 
 .iconfont {
@@ -13,35 +13,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-leetcode:before {
-  content: "\ebf2";
+.icon-weixin:before {
+  content: "\e63a";
 }
 
-.icon-zhihu-circle-fill:before {
-  content: "\ea8b";
-}
-
-.icon-github-fill:before {
-  content: "\eac8";
-}
-
-.icon-QQyinle1:before {
-  content: "\e600";
-}
-
-.icon-bilibili:before {
-  content: "\e79f";
-}
-
-.icon-QQMusic:before {
-  content: "\e601";
-}
-
-.icon-a-qq:before {
-  content: "\e623";
+.icon-bofangqi-zantingxiaodianshi:before {
+  content: "\e6ac";
 }
 
 .icon-csdn:before {
-  content: "\e605";
+  content: "\e600";
+}
+
+.icon-github:before {
+  content: "\e6b7";
 }
 
