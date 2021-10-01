@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://doraemon2.xyz/2021/10/01/C++%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/</loc>
+    
+    <lastmod>2021-10-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://doraemon2.xyz/2021/10/01/C++%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86&C++11%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
     
     <lastmod>2021-10-01</lastmod>
@@ -662,6 +669,13 @@
   </url>
   
   <url>
+    <loc>http://doraemon2.xyz/tags/%E6%8C%87%E9%92%88/</loc>
+    <lastmod>2021-10-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://doraemon2.xyz/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2021-10-01</lastmod>
     <changefreq>daily</changefreq>
@@ -817,13 +831,6 @@
   
   <url>
     <loc>http://doraemon2.xyz/tags/system/</loc>
-    <lastmod>2021-10-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://doraemon2.xyz/tags/%E6%8C%87%E9%92%88/</loc>
     <lastmod>2021-10-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
