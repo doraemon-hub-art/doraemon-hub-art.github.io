@@ -37,11 +37,11 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
     <category term="-C" scheme="http://doraemon2.xyz/tags/C/"/>
+    
+    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
     <category term="-内存" scheme="http://doraemon2.xyz/tags/%E5%86%85%E5%AD%98/"/>
     
@@ -67,22 +67,22 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
     
     <category term="-指针" scheme="http://doraemon2.xyz/tags/%E6%8C%87%E9%92%88/"/>
     
   </entry>
   
   <entry>
-    <title>C++补充知识&amp;C++11新特性</title>
+    <title>C++explicit关键字、类型转换、左右值</title>
     <link href="http://doraemon2.xyz/2021/10/01/C++%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86&amp;C++11%E6%96%B0%E7%89%B9%E6%80%A7/"/>
     <id>http://doraemon2.xyz/2021/10/01/C++%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86&amp;C++11%E6%96%B0%E7%89%B9%E6%80%A7/</id>
     <published>2021-10-01T02:59:25.000Z</published>
-    <updated>2021-10-01T03:01:08.646Z</updated>
+    <updated>2021-10-03T11:06:34.065Z</updated>
     
     <content type="html"><![CDATA[<h1 id="C-补充知识-amp-C-11及其特性"><a href="#C-补充知识-amp-C-11及其特性" class="headerlink" title="C++补充知识&amp;C++11及其特性"></a>C++补充知识&amp;C++11及其特性</h1><p><img src="/images/C++%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86&C++11%E6%96%B0%E7%89%B9%E6%80%A7.assets/image-20210930092847356.png" alt="image-20210930092847356"></p><h2 id="explicit关键字"><a href="#explicit关键字" class="headerlink" title="explicit关键字"></a>explicit关键字</h2><p>加在类构造函数前表明该构造函数是显式的，并非隐式的，不能进行隐式类型转换！</p><p>类构造函数默认情况下声明为隐式。</p><p><strong>给构造函数加上关键字explicit使得该类创建对象必须显式调用构造。</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">student <span class="title">xiaohua</span><span class="params">(<span class="number">18</span>)</span></span>;<span class="comment">//显式构造</span></span><br><span class="line">student xiaoming = <span class="number">18</span>;<span class="comment">//隐式构造</span></span><br><span class="line"><span class="function">student <span class="title">xiaoli</span><span class="params">(<span class="string">&quot;小李&quot;</span>，<span class="number">18</span>)</span></span>;<span class="comment">//显式构造</span></span><br><span class="line">student xiaomei = (<span class="string">&quot;小美&quot;</span>，<span class="number">18</span>);<span class="comment">//隐式构造-C++11之前编译不能过</span></span><br><span class="line"><span class="comment">//初始化参数列表C++11新增</span></span><br></pre></td></tr></table></figure><p>看到=要想是赋值呢，还是隐式构造呢。</p><h2 id="左值和右值的概念"><a href="#左值和右值的概念" class="headerlink" title="左值和右值的概念"></a>左值和右值的概念</h2><p><img src="/images/C++%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86&C++11%E6%96%B0%E7%89%B9%E6%80%A7.assets/image-20210930122633001.png" alt="image-20210930122633001"></p><p> 按字面意思，通俗的说，以赋值运算符=为界，左边的就是左值，右边的就是右值。</p><p>左值(lvalue)——代表一个在内存中占有确定位置的对象(就是有一个地址)。</p><p>右值(rvalue)——通过排他性来定义，每个表达式不是左值就是右值，rvalue是不在内存中占有确定位置的表达式，而是在<strong>存在寄存器</strong>中。</p><p>所有的左值(无论是数组，函数或不完全类型)都可以转化成右值。</p><h2 id="函数返回值当引用"><a href="#函数返回值当引用" class="headerlink" title="函数返回值当引用"></a>函数返回值当引用</h2><p>C++使用引用时的难点</p><ol><li><p>当函数返回值为引用时</p><p>若返回栈变量，不能称为其他引用的初始值，不能作为左值使用。</p><p>(函数在栈上开辟空间存放形参和局部变量，这个变量所在内存空格占的位置不是固定的，再有一个函数压进栈来，原来的局部变量所在内存被覆盖。(变量和其对应的地址对不上了,该变量指向的那个地址所存的内容被覆盖了)-个人理解)</p></li><li><p>若返回静态变量或全局变量</p><p>可以成为其他引用的初始值。</p><p>即可作为右值使用，也可以作为左值使用。</p></li><li><p>返回形参当引用</p><p>（注:C++链式编程中，经常用到引用， 例如运输符重载）</p></li></ol><h2 id="Array容器"><a href="#Array容器" class="headerlink" title="Array容器"></a>Array容器</h2><p>详见-<a href="https://blog.csdn.net/qq_51604330/article/details/120545493?spm=1001.2014.3001.5501">C++SLT容器</a>中。</p><p>(取容器中元素的地址貌似是没有意义的，除非他里面的内容不在改变，因为有的容器中元素发生变化后，里面的容器元素是会发生移动的。)</p><p>其中，有意思的是empty()接口永远false，因为在构造的时候要指定数量。</p><p><img src="/images/C++%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86&C++11%E6%96%B0%E7%89%B9%E6%80%A7.assets/image-20210930180201082.png" alt="image-20210930180201082"></p><h2 id="C-类型转换"><a href="#C-类型转换" class="headerlink" title="C++类型转换"></a>C++类型转换</h2><p><strong>C语言风格</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> PI = <span class="number">3.1415926</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> i = PI;<span class="comment">//隐式类型转换</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> i1 = (<span class="keyword">int</span>)PI;<span class="comment">//显式类型转换</span></span><br><span class="line"><span class="keyword">int</span>* addr = (<span class="keyword">int</span>*)<span class="number">0x888888</span>;<span class="comment">//强制类型转换，整数直接指针</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p><strong>C++类型转换操作符</strong></p><h3 id="static-cast"><a href="#static-cast" class="headerlink" title="static_cast"></a>static_cast</h3><p>静态类型转换,同时做检查给予提示。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="keyword">static_cast</span>&lt;<span class="keyword">int</span>&gt;(PI);</span><br><span class="line"> </span><br><span class="line"><span class="comment">//父子类之间的类型转换</span></span><br><span class="line">Dog* dog = <span class="keyword">new</span> Dog;</span><br><span class="line"><span class="comment">//子类指针转型到父类指针</span></span><br><span class="line">Animal* animal = <span class="keyword">static_cast</span>&lt;Animal*&gt;(dog);</span><br><span class="line"><span class="comment">//父类指针转型到子类指针</span></span><br><span class="line">Dog* dog2 = <span class="keyword">static_cast</span>&lt;Dog*&gt;(animal);</span><br><span class="line">Dog dog2;</span><br><span class="line"><span class="comment">//子类引用转型到父类引用</span></span><br><span class="line">Animal&amp; animal2 = <span class="keyword">static_cast</span>&lt;Animal&amp;&gt;(dog2);</span><br><span class="line"></span><br><span class="line"><span class="comment">//基本类型转换</span></span><br><span class="line"><span class="keyword">int</span> kk = <span class="number">234</span>;</span><br><span class="line"><span class="keyword">char</span> cc = <span class="keyword">static_cast</span>&lt;<span class="keyword">char</span>&gt;(kk);<span class="comment">//都是模板</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//把空指针转换成目标类型的空指针</span></span><br><span class="line"><span class="keyword">int</span>* p = <span class="keyword">static_cast</span>&lt;<span class="keyword">int</span>*&gt;(<span class="literal">NULL</span>);</span><br><span class="line">Dog* dp = <span class="keyword">static_cast</span>&lt;Dog*&gt;(<span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//把任何类型的表达式转化成void类型</span></span><br><span class="line"><span class="keyword">int</span>* p = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">void</span>* vp = <span class="keyword">static_cast</span>&lt;<span class="keyword">void</span>*&gt;(p);</span><br><span class="line">vp = p;<span class="comment">//效果相同 </span></span><br></pre></td></tr></table></figure><p>主要用法：</p><ul><li>用于类层次结构中基类（父类）和派生类（子类）之间指针或引用的转换。<strong>上行指针或引用(派生类到基类)转换安全，下行不安全</strong></li><li>用于基本数据类型之间的转换，如把int转换成char，把int转换成enum。这种转换的安全性也要开发人员来保证。</li><li>把空指针转换成目标类型的空指针。</li><li>把任何类型的表达式转换成void类型。</li></ul><p>(写了会提醒编译器检查，提醒其他程序员要注意。)</p><p>(没事别转。)</p><h3 id="reinterpret-cast"><a href="#reinterpret-cast" class="headerlink" title="reinterpret_cast"></a>reinterpret_cast</h3><p>(可以用于强制类型转换)</p><p>重新解释类型不同类型间的互转，数值与指针间的互转。</p><p>用法： TYPE  b <strong>=</strong> reinterpret_cast  &lt; TYPE&gt; (a)</p><p><strong>TYPE</strong>必须是一个指针、引用、算术类型、函数指针.</p> <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>* p = <span class="keyword">reinterpret_cast</span>&lt;<span class="keyword">int</span>*&gt;(<span class="number">0x999999</span>);<span class="comment">//整型转指针</span></span><br><span class="line"><span class="keyword">int</span>* val = <span class="keyword">reinterpret_cast</span>&lt;<span class="keyword">int</span>&gt;(p);<span class="comment">//指针转整型</span></span><br><span class="line"></span><br><span class="line">Dog  dog1;</span><br><span class="line">Animal* a1 = &amp;dog1;</span><br><span class="line"></span><br><span class="line">Animal&amp; a2 = dog1;</span><br><span class="line">Dog&amp; dog3 = <span class="keyword">reinterpret_cast</span>&lt;Dog&amp;&gt;(a2);<span class="comment">//引用强转用法</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p><strong>注意</strong>：滥用 reinterpret_cast 运算符可能很容易带来风险。 除非所需转换本身是<strong>低级别</strong>的，否则应使用其他强制转换运算符之一。(低级别:在内存没啥差别)</p><p>与static_cast相加可替换掉C风格的类型转换。</p><h3 id="dynamic-cast"><a href="#dynamic-cast" class="headerlink" title="dynamic_cast"></a>dynamic_cast</h3><p>动态类型转换</p><p>将一个<strong>基类对象指针</strong>cast到继承类指针，dynamic_cast 会根据基类指针是否真正指向继承类指针来做相应处理。失败返回null，成功返回正常cast后的对象指针。</p><p>( 看该父类是否真正指向该子类(因为有多个子类。))</p><p>(子类* xx = dynamic_cast&lt;子类*&gt;(父类xx);</p><p>将一个<strong>基类对象引用</strong>cast 继承类对象，dynamic_cast 会根据基类对象是否真正属于继承类来做相应处理。<strong>失败抛出异常bad_cast。</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">animalPlay</span><span class="params">(Animal* animal)</span> </span>&#123;</span><br><span class="line">animal-&gt;cry();</span><br><span class="line"></span><br><span class="line">Dog* pDog = <span class="keyword">dynamic_cast</span>&lt;Dog*&gt;(animal);</span><br><span class="line"><span class="keyword">if</span> (pDog) &#123;</span><br><span class="line">pDog-&gt;play();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;<span class="comment">//pDog == NULL</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;不是狗，别骗我！&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Cat* pCat = <span class="keyword">dynamic_cast</span>&lt;Cat*&gt;(animal);</span><br><span class="line"><span class="keyword">if</span> (pCat) &#123;</span><br><span class="line">pCat-&gt;play();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;<span class="comment">//pDog == NULL</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;不是猫，别骗我！&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">animalPlay</span><span class="params">(Animal&amp; animal)</span> </span>&#123;</span><br><span class="line">animal.cry();</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">Dog&amp; pDog = <span class="keyword">dynamic_cast</span>&lt;Dog&amp;&gt;(animal);</span><br><span class="line">pDog.play();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span> (<span class="built_in">std</span>::bad_cast bc) &#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;不是狗，那应该是猫&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">Cat&amp; pCat = <span class="keyword">dynamic_cast</span>&lt;Cat&amp;&gt;(animal);</span><br><span class="line">pCat.play();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span> (<span class="built_in">std</span>::bad_cast bc) &#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;不是猫，那应该是上面的狗&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>注意:    dynamic_cast在将父类cast到子类时，父类必须要有虚函数一起玩。</p><h3 id="const-cast"><a href="#const-cast" class="headerlink" title="const_cast"></a>const_cast</h3><p>去掉const属性，仅针对于指针和引用。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">demo</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//对指针去掉const 重新赋值</span></span><br><span class="line">    <span class="keyword">char</span>* p1 = <span class="keyword">const_cast</span>&lt;<span class="keyword">char</span>*&gt;(p);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//直接去掉const修改</span></span><br><span class="line">    <span class="keyword">const_cast</span>&lt;<span class="keyword">char</span>*&gt;(P)[<span class="number">0</span>] = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>常量字符串不行，考虑内存范围。</p><p>在去掉常量限定符之前，保证指针所指向的内存可被修改，不能修改则会引起异常。</p><h3 id="类型转换使用建议"><a href="#类型转换使用建议" class="headerlink" title="类型转换使用建议"></a>类型转换使用建议</h3><ol><li><p>static_cast静态类型转换，编译的时c++编译器会做编译时的类型检查；隐式转换；基本类型转换，父子类之间合理转换</p></li><li><p>若不同类型之间，进行强制类型转换，用reinterpret_cast&lt;&gt;() 进行重新解释。</p><p><strong>建议</strong>:</p></li></ol><p>C语言中  能隐式类型转换的，在c++中可用 static_cast&lt;&gt;()进行类型转换。因C++编译器在编译检查一般都能通过；C语言中不能隐式类型转换的，在c++中可以用 reinterpret_cast&lt;&gt;() 进行<strong>强制</strong>类型解释**。</p><p><strong>总结</strong>：static_cast&lt;&gt;()和reinterpret_cast&lt;&gt;() 基本上把C语言中的 强制类型转换给覆盖，注意reinterpret_cast&lt;&gt;()很难保证移植性。</p><p>3.dynamic_cast&lt;&gt;()，动态类型转换，安全的虚基类和子类之间转换；运行时类型检查</p><p>4.const_cast&lt;&gt;()，去除变量的只读属性    </p><hr><p>程序员必须清楚的知道: 要转的变量，类型转换前是什么类型，类型转换后是什么类型，转换后有什么后果。</p><p><strong>一般情况下，不建议进行类型转换；避免进行类型转换。</strong></p><hr>]]></content>
     
@@ -97,11 +97,11 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
     
   </entry>
   
@@ -157,11 +157,11 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
     
     <category term="-STL" scheme="http://doraemon2.xyz/tags/STL/"/>
     
@@ -188,9 +188,9 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    
+    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -214,11 +214,11 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
     
   </entry>
   
@@ -242,9 +242,9 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    
+    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -268,9 +268,9 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    
+    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -294,9 +294,9 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    
+    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -321,9 +321,9 @@
     
     
     
-    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    
+    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -348,9 +348,9 @@
     <category term="算法" scheme="http://doraemon2.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    
+    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
     <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
     
@@ -377,9 +377,9 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    
+    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
