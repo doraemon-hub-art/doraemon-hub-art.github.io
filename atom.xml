@@ -6,7 +6,7 @@
   <link href="http://doraemon2.xyz/atom.xml" rel="self"/>
   
   <link href="http://doraemon2.xyz/"/>
-  <updated>2021-10-03T15:59:30.691Z</updated>
+  <updated>2021-10-03T16:03:26.395Z</updated>
   <id>http://doraemon2.xyz/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>【数据结构】线性表(C++)</title>
-    <link href="http://doraemon2.xyz/2021/10/03/%E3%80%90%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%91%E7%BA%BF%E6%80%A7%E8%A1%A8(C++)/"/>
-    <id>http://doraemon2.xyz/2021/10/03/%E3%80%90%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%91%E7%BA%BF%E6%80%A7%E8%A1%A8(C++)/</id>
+    <title>【数据结构】顺序表(C++)</title>
+    <link href="http://doraemon2.xyz/2021/10/03/%E3%80%90%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%91%E9%A1%BA%E5%BA%8F%E8%A1%A8(C++)/"/>
+    <id>http://doraemon2.xyz/2021/10/03/%E3%80%90%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%91%E9%A1%BA%E5%BA%8F%E8%A1%A8(C++)/</id>
     <published>2021-10-03T15:54:35.000Z</published>
-    <updated>2021-10-03T15:59:30.691Z</updated>
+    <updated>2021-10-03T16:03:26.395Z</updated>
     
     <content type="html"><![CDATA[<h1 id="顺序表"><a href="#顺序表" class="headerlink" title="顺序表"></a>顺序表</h1><p>顺序表是简单的一种线性结构，逻辑上相邻的数据在计算机中内的存储位置也是相邻的，可以快速定位第几个元素，中间允许有空值，插入、删除时需要移动大量元素。</p><blockquote><p>顺序表的三个要素</p></blockquote><ul><li>用elems记录存储位置的基地址。</li><li>分配一段连续的存储空间size（可以存放的元素个数）。</li><li>用length记录实际的元素个数，即顺序表的长度（现在实际存放的元素个数）。</li></ul><h2 id="图示"><a href="#图示" class="headerlink" title="图示"></a>图示</h2><p><img src="/images/%E3%80%90%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E3%80%91%E7%BA%BF%E6%80%A7%E8%A1%A8(C++).assets/image-20211002221204434.png" alt="image-20211002221204434"></p><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_SIZE 100</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemsType;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">SqList</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">ElemsType* elems;</span><br><span class="line"><span class="keyword">int</span> length;<span class="comment">//长度</span></span><br><span class="line"><span class="keyword">int</span> size;<span class="comment">//容量</span></span><br><span class="line">&#125;SqList;</span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">initSqList</span><span class="params">(SqList &amp;sqlist)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">sqlist.elems = <span class="keyword">new</span> <span class="keyword">int</span>[MAX_SIZE];</span><br><span class="line"><span class="keyword">if</span> (!sqlist.elems)<span class="comment">//开辟失败直接返回</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line">sqlist.length = <span class="number">0</span>;</span><br><span class="line">sqlist.size = MAX_SIZE;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//打印整个list</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printSqList</span><span class="params">(SqList &amp;sqlist)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; sqlist.length; i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; sqlist.elems[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//顺序表增加元素</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">addSqList</span><span class="params">(SqList&amp; sqlist,<span class="keyword">int</span> e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span> (sqlist.length == sqlist.size)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line">sqlist.elems[sqlist.length] = e;</span><br><span class="line">sqlist.length++;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//指定位置插入元素</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">insertSqList</span><span class="params">(SqList&amp; sqlist,<span class="keyword">int</span> index,<span class="keyword">int</span> e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">//合法性判断</span></span><br><span class="line"><span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= sqlist.length)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (sqlist.length == sqlist.size)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j= sqlist.length<span class="number">-1</span>; j &gt;= index; j--)</span><br><span class="line">&#123;</span><br><span class="line">sqlist.elems[j + <span class="number">1</span>] = sqlist.elems[j];</span><br><span class="line">&#125;</span><br><span class="line">sqlist.elems[index] = e;</span><br><span class="line">sqlist.length++;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//删除指定位置元素</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">deleteSqList</span><span class="params">(SqList&amp; sqlist, <span class="keyword">int</span> index)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span> (index &lt; <span class="number">0</span> || index &gt;= sqlist.length)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (index == sqlist.length)</span><br><span class="line">&#123;</span><br><span class="line">sqlist.length--;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = index; j &lt; sqlist.length; j++)</span><br><span class="line">&#123;</span><br><span class="line">sqlist.elems[j] = sqlist.elems[j + <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line">sqlist.length--;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//销毁整个表</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">destorySqList</span><span class="params">(SqList&amp; sqlist)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span> (sqlist.elems)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">delete</span>[]sqlist.elems;</span><br><span class="line">&#125;</span><br><span class="line">sqlist.length = <span class="number">0</span>;</span><br><span class="line">sqlist.size = <span class="number">0</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="实际应用"><a href="#实际应用" class="headerlink" title="实际应用"></a>实际应用</h2><blockquote><p>高并发WEB服务器中顺序表的应用</p></blockquote><p>高性能的 web 服务器 Squid 每秒可处理上万并发的请求，从网络连接到服务器的客 户端与服务器端在交互时会保持一种会话（和电话通话的场景类似）。服务器端为了管 理好所有的客户端连接，给每个连接都编了一个唯一的整数编号，叫做文件句柄，简称 fd。</p><hr><p>为了防止某些恶意连接消耗系统资源，当某个客户端连接超时（在设定的一定时间内没有发送数据）时，服务器就需要关闭这些客户端的连接。</p><hr><blockquote><p>具体实现方案:</p></blockquote><p>1.当有新的请求连到服务器时，如果经过服务器频率限制模块判断，貌似恶意连 接，则使用顺序表来保存此连接的超时数据，超时值使用时间戳来表示,时间戳是指格林 威治时间 1970 年 01 月 01 日 00 时 00 分 00 秒(相当于北京时间 1970 年 01 月 01 日 08 时 00 分 00 秒)起至现在的总秒数。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">补充:</span><br><span class="line">求当前的时间戳</span><br><span class="line">    <span class="keyword">time_t</span> now;</span><br><span class="line">    time(&amp;now);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;当前时间戳:&quot;</span> &lt;&lt; now &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure><p>其结构体定义如下： </p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span> </span><br><span class="line"><span class="keyword">int</span> fd; </span><br><span class="line"><span class="keyword">time_t</span> timeout; <span class="comment">// 使用超时时刻的时间戳表示</span></span><br><span class="line">&#125;ConnTimeout;</span><br></pre></td></tr></table></figure><p>2.服务器程序每隔一秒钟扫描一次所有的连接，检查是否超时，如果存在超时的 连接，就关闭连接，结束服务，同时将顺序表中的记录清除!</p><blockquote><p>大致实现过程(相关接口并未实现)</p></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">checkTimeOut</span><span class="params">(TimeOutSqList&amp; <span class="built_in">list</span>,<span class="keyword">time_t</span> now)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> fd,i;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;检查超时&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i  &lt; <span class="built_in">list</span>.length;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">list</span>.emels[i].timeout &gt; now)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//超时 清理</span></span><br><span class="line">        fd = <span class="built_in">list</span>.emels[i].fd;</span><br><span class="line">        <span class="comment">//关闭链接---模拟</span></span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;关闭链接&quot;</span>&lt;&lt;ednl;</span><br><span class="line">listDelete(<span class="built_in">list</span>,i);<span class="comment">//注意顺序表会移动，注意漏删情况</span></span><br><span class="line">        i--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">time_t</span> now,end;</span><br><span class="line">    <span class="keyword">time_t</span> last_timeout;<span class="comment">//每秒执行一次超时检测</span></span><br><span class="line">    TimeOutSqList <span class="built_in">list</span>;</span><br><span class="line">    </span><br><span class="line">    time(&amp;now);</span><br><span class="line">    end  = now+<span class="number">60</span>;<span class="comment">//就处理一分钟，60s后退出循环</span></span><br><span class="line">    </span><br><span class="line">    initList(<span class="built_in">list</span>);</span><br><span class="line">    <span class="comment">//通过频率限制模块通过判断分析，增加恶意连接到顺序表中</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i&lt; <span class="number">10</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        ConnectTimeOut e;</span><br><span class="line">        e.df = i;</span><br><span class="line">        e.timeout = now + i *<span class="number">2</span>;</span><br><span class="line">listAdd(<span class="built_in">list</span>,e);</span><br><span class="line">    &#125;</span><br><span class="line">    listPrint(<span class="built_in">list</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//控制 1（几）秒钟做一次事情</span></span><br><span class="line">        <span class="keyword">if</span>(last_timeout + <span class="number">0.999</span> &lt; now)</span><br><span class="line">        &#123;</span><br><span class="line">            checkTimeOut(<span class="built_in">list</span>,now);</span><br><span class="line">            last_timeout = now;</span><br><span class="line">&#125;</span><br><span class="line">        Sleep(<span class="number">10</span>);</span><br><span class="line">        time(&amp;now);<span class="comment">//读取现在时间</span></span><br><span class="line">&#125;<span class="keyword">while</span>(end &gt; now);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>(理解顺序表在这其中的作用即可。)</p>]]></content>
     
@@ -36,9 +36,9 @@
     <category term="数据结构" scheme="http://doraemon2.xyz/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
-    
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
     <category term="-数据结构" scheme="http://doraemon2.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
@@ -67,9 +67,9 @@
     
     <category term="-C语言" scheme="http://doraemon2.xyz/tags/C%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
-    
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
     <category term="-内存" scheme="http://doraemon2.xyz/tags/%E5%86%85%E5%AD%98/"/>
     
@@ -95,11 +95,11 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
     
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
     <category term="-指针" scheme="http://doraemon2.xyz/tags/%E6%8C%87%E9%92%88/"/>
     
@@ -125,11 +125,11 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
     
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
   </entry>
   
@@ -185,11 +185,11 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
     
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
     <category term="-STL" scheme="http://doraemon2.xyz/tags/STL/"/>
     
@@ -216,9 +216,9 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
-    
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
   </entry>
   
@@ -242,11 +242,11 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
     
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
   </entry>
   
@@ -270,9 +270,9 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
-    
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
   </entry>
   
@@ -296,9 +296,9 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
-    
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
   </entry>
   
@@ -322,9 +322,9 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
-    
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
   </entry>
   
@@ -349,9 +349,9 @@
     
     
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
-    
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
   </entry>
   
@@ -376,9 +376,9 @@
     <category term="算法" scheme="http://doraemon2.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
-    
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
     <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
     
@@ -405,9 +405,9 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
-    
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
   </entry>
   
