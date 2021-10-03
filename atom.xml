@@ -6,7 +6,7 @@
   <link href="http://doraemon2.xyz/atom.xml" rel="self"/>
   
   <link href="http://doraemon2.xyz/"/>
-  <updated>2021-10-02T12:25:37.147Z</updated>
+  <updated>2021-10-03T11:08:01.366Z</updated>
   <id>http://doraemon2.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://doraemon2.xyz/2021/10/02/C&amp;C++%E7%BB%93%E6%9E%84%E4%BD%93%E5%86%85%E5%AD%98%E5%AF%B9%E9%BD%90/"/>
     <id>http://doraemon2.xyz/2021/10/02/C&amp;C++%E7%BB%93%E6%9E%84%E4%BD%93%E5%86%85%E5%AD%98%E5%AF%B9%E9%BD%90/</id>
     <published>2021-10-02T12:20:29.000Z</published>
-    <updated>2021-10-02T12:25:37.147Z</updated>
+    <updated>2021-10-03T11:08:01.366Z</updated>
     
     <content type="html"><![CDATA[<h1 id="结构体内存对齐"><a href="#结构体内存对齐" class="headerlink" title="结构体内存对齐"></a>结构体内存对齐</h1><p>先来看这几个结构体，并计算它们的大小</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span><span class="title">A</span> // 8</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">char</span> a;</span><br><span class="line"><span class="keyword">int</span> b;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">B</span> // 16</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">char</span> c;</span><br><span class="line"><span class="keyword">int</span> d;</span><br><span class="line"><span class="keyword">double</span> e;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">C</span> // 24</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">char</span> f;</span><br><span class="line"><span class="keyword">int</span> g;</span><br><span class="line"><span class="keyword">double</span> h;</span><br><span class="line"><span class="keyword">char</span> i;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>输出的结果并非是实际成员占用的字节数，这就是结构体内存对齐。</p><h2 id="结构体内存对齐的原因"><a href="#结构体内存对齐的原因" class="headerlink" title="结构体内存对齐的原因"></a>结构体内存对齐的原因</h2><blockquote><p>1.平台原因(移植原因)</p></blockquote><p>不是所有硬件平台都能访问任意地址上的任意数据，某些硬件平台只能在某些特定地址处取某些特定的数据，否则就会抛出硬件异常。也就是说计算机在读取内存数据时，只能在规定的地址处读数据，而不是在内存中任意位置都会可以读取的。</p><blockquote><p>2.效率原因</p></blockquote><p>正是由于只能在特定的地址处读取数据，所以在访问一些数据时，对于访问未对齐的内存，处理器需要进行两次访问；而对于对齐的内存，只需要访问一次就可以，其实这是一种以空间换时间的做法，并且这种做法是值得的。</p><h2 id="结构体内存对齐规则"><a href="#结构体内存对齐规则" class="headerlink" title="结构体内存对齐规则"></a>结构体内存对齐规则</h2><ol><li><p>第一个成员在结构体变量偏移为0的地址处，也就是第一个成员必须从头开始。</p></li><li><p>其他成员变量要对齐到某个数字（对齐数）的整数倍地址处。对齐数为编译器默认的一个对齐数与该成员大小中的较小值。vs中默认值是8，Linux默认值为4,(可以通过#pragma pack (N)修改，使用#pragma pack(show)可以查看对齐值)，但修改时N的取值只能设置成1，2，4，8，16。</p><blockquote><p><strong>一句话</strong>，就是结构体成员的偏移量得是该成员类型大小的整数倍。</p><p>当结构体有多个类型的成员变量时，后面的成员会引起偏移量的变化(这个变化指的是与你预想的按顺序排布(不对齐)不同)，就是对齐。</p></blockquote></li><li><p><strong>结构体的总大小为最大对齐数的整数倍。</strong>(每个成员都有自己的对齐数)</p></li><li><p>如果嵌套结构体，嵌套的结构体对齐到自己的最大对齐数的整数倍，结构体的整体大小就是所有最大对齐数(包括嵌套结构体的对齐数)的整数倍。</p></li></ol><h2 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h2><p><img src="/images/C&C++%E7%BB%93%E6%9E%84%E4%BD%93%E5%86%85%E5%AD%98%E5%AF%B9%E9%BD%90.assets/image-20211002201929193.png" alt="image-20211002201929193"></p><hr><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">offsetof(结构体名字,要求偏移量的结构体变量名-)</span><br><span class="line">可以求出当前变量再结构体中的偏移量</span><br><span class="line">(结构体的的第一个成员在偏移量为<span class="number">0</span>的位置(用这个求该结构体的第一个成员得到的结果就是<span class="number">0</span>))</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -37,9 +37,9 @@
     <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
     
     
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    <category term="-C语言" scheme="http://doraemon2.xyz/tags/C%E8%AF%AD%E8%A8%80/"/>
     
-    <category term="-C" scheme="http://doraemon2.xyz/tags/C/"/>
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
     <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
