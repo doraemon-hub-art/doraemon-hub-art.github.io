@@ -6,7 +6,7 @@
   <link href="http://doraemon2.xyz/atom.xml" rel="self"/>
   
   <link href="http://doraemon2.xyz/"/>
-  <updated>2021-10-03T16:03:26.395Z</updated>
+  <updated>2021-10-05T11:39:52.449Z</updated>
   <id>http://doraemon2.xyz/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode刷题(15)【简单】删除链表中重复元素(C++)</title>
+    <link href="http://doraemon2.xyz/2021/10/05/LeetCode%E5%88%B7%E9%A2%98(15)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0(C++)/"/>
+    <id>http://doraemon2.xyz/2021/10/05/LeetCode%E5%88%B7%E9%A2%98(15)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0(C++)/</id>
+    <published>2021-10-05T11:11:26.000Z</published>
+    <updated>2021-10-05T11:39:52.449Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="83-删除排序链表中的重复元素"><a href="#83-删除排序链表中的重复元素" class="headerlink" title="83. 删除排序链表中的重复元素"></a>83. 删除排序链表中的重复元素</h1><hr><p>题目——<a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/">链接</a></p><p><img src="LeetCode%E5%88%B7%E9%A2%98(15)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0(C++).assets/image-20211005184131269.png" alt="image-20211005184131269"></p><hr><h2 id="单指针法"><a href="#单指针法" class="headerlink" title="单指针法"></a>单指针法</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//一个指针往后遍历</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">deleteDuplicates</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!head || !head-&gt;next)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode* tempnode = head;<span class="comment">//这个头结点里面好像有元素</span></span><br><span class="line">        <span class="keyword">while</span>(tempnode-&gt;next)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(tempnode-&gt;val == tempnode-&gt;next-&gt;val)</span><br><span class="line">            &#123;</span><br><span class="line">                tempnode-&gt;next = tempnode-&gt;next-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                tempnode = tempnode-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h2 id="双指针-前后指针法"><a href="#双指针-前后指针法" class="headerlink" title="双指针-前后指针法"></a>双指针-前后指针法</h2><p><strong>注意前后指针的链接</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">deleteDuplicates</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!head || !head-&gt;next)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode* Prev = head;</span><br><span class="line">        ListNode* Next = head-&gt;next;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(Next)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(Prev-&gt;val == Next-&gt;val)</span><br><span class="line">            &#123;</span><br><span class="line">              </span><br><span class="line">               Prev-&gt;next = Next-&gt;next;</span><br><span class="line">               Next = Next-&gt;next;               </span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                Prev= Next;</span><br><span class="line">                Next = Next-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h2 id="递归法"><a href="#递归法" class="headerlink" title="递归法"></a>递归法</h2><p>感谢这位老哥的分享——<a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/comments/40973">链接</a></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">deleteDuplicates</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!head || !head-&gt;next)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        head-&gt;next = deleteDuplicates(head-&gt;next);</span><br><span class="line">        <span class="keyword">if</span>(head-&gt;val == head-&gt;next-&gt;val)</span><br><span class="line">        &#123;</span><br><span class="line">            head = head-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p><strong>图解</strong>:</p><p><img src="LeetCode%E5%88%B7%E9%A2%98(15)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0(C++).assets/image-20211005183636285.png" alt="image-20211005183636285"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;83-删除排序链表中的重复元素&quot;&gt;&lt;a href=&quot;#83-删除排序链表中的重复元素&quot; class=&quot;headerlink&quot; title=&quot;83. 删除排序链表中的重复元素&quot;&gt;&lt;/a&gt;83. 删除排序链表中的重复元素&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;题目——&lt;a href</summary>
+      
+    
+    
+    
+    <category term="算法" scheme="http://doraemon2.xyz/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
+    
+    <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="-链表" scheme="http://doraemon2.xyz/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+    <category term="-LeetCode" scheme="http://doraemon2.xyz/tags/LeetCode/"/>
+    
+  </entry>
   
   <entry>
     <title>【数据结构】顺序表(C++)</title>
@@ -537,34 +568,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;加一&quot;&gt;&lt;a href=&quot;#加一&quot; class=&quot;headerlink&quot; title=&quot;加一&quot;&gt;&lt;/a&gt;加一&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;题目链接&lt;/strong&gt;——&lt;a href=&quot;https://leetcode-cn.com/problems/plus-</summary>
-      
-    
-    
-    
-    <category term="算法" scheme="http://doraemon2.xyz/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
-    
-    <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="-LeetCode" scheme="http://doraemon2.xyz/tags/LeetCode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode刷题(13)【简单】最大子序和(C++)</title>
-    <link href="http://doraemon2.xyz/2021/08/20/LeetCode%E5%88%B7%E9%A2%98(13)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C(C++)/"/>
-    <id>http://doraemon2.xyz/2021/08/20/LeetCode%E5%88%B7%E9%A2%98(13)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C(C++)/</id>
-    <published>2021-08-20T11:46:53.000Z</published>
-    <updated>2021-08-20T11:50:25.624Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="最大子序和"><a href="#最大子序和" class="headerlink" title="最大子序和"></a>最大子序和</h1><p><strong>题目链接</strong>——<a href="https://leetcode-cn.com/problems/maximum-subarray/">最大子序和</a></p><p><img src="https://img-blog.csdnimg.cn/c8d97260a62f40cdb6542f7dff1c121a.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzUxNjA0MzMw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><strong>代码示例</strong>:</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">最笨的方法:</span><br><span class="line">依次从每个元素开始往后一个一个的相加，加到temp1中，如果比之前的大就存到temp2中，最后得到最大的和。</span><br><span class="line">每轮完重置temp1</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;   </span><br><span class="line">    <span class="keyword">int</span> temp1 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> temp2 = INT_MIN;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;nums.size();i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j =i;j &lt;nums.size();j++)</span><br><span class="line">        &#123;</span><br><span class="line">            temp1  += nums[j];</span><br><span class="line">           </span><br><span class="line">            <span class="keyword">if</span>(temp1 &gt;= temp2)</span><br><span class="line">            &#123;</span><br><span class="line">                temp2 = temp1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        temp1 = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> temp2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;最大子序和&quot;&gt;&lt;a href=&quot;#最大子序和&quot; class=&quot;headerlink&quot; title=&quot;最大子序和&quot;&gt;&lt;/a&gt;最大子序和&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;题目链接&lt;/strong&gt;——&lt;a href=&quot;https://leetcode-cn.com/pr</summary>
       
     
     
