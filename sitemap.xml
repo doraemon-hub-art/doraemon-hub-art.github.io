@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://doraemon2.xyz/2021/10/13/LeetCode%E5%88%B7%E9%A2%98(18)%E3%80%90%E4%B8%AD%E7%AD%89%E3%80%91%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%AC%20N%20%E4%B8%AA%E7%BB%93%E7%82%B9(C++)/</loc>
+    
+    <lastmod>2021-10-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://doraemon2.xyz/2021/10/10/Windows%E5%AE%89%E8%A3%85MySQL/</loc>
     
     <lastmod>2021-10-13</lastmod>
@@ -30,7 +37,7 @@
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/2021/10/10/LeetCode%E5%88%B7%E9%A2%98-(17)%E3%80%90%E4%B8%AD%E7%AD%89%E3%80%91%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</loc>
+    <loc>http://doraemon2.xyz/2021/10/10/LeetCode%E5%88%B7%E9%A2%98(17)%E3%80%90%E4%B8%AD%E7%AD%89%E3%80%91%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</loc>
     
     <lastmod>2021-10-10</lastmod>
     
@@ -711,7 +718,7 @@
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/tags/C-11/</loc>
+    <loc>http://doraemon2.xyz/tags/C/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -725,14 +732,14 @@
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/tags/C/</loc>
+    <loc>http://doraemon2.xyz/tags/%E5%86%85%E5%AD%98/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/tags/%E5%86%85%E5%AD%98/</loc>
+    <loc>http://doraemon2.xyz/tags/C-11/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
