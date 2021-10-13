@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://doraemon2.xyz/2021/10/10/Windows%E5%AE%89%E8%A3%85MySQL/</loc>
+    
+    <lastmod>2021-10-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://doraemon2.xyz/2021/10/13/%E3%80%90%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%91%E5%A0%86(C++)/</loc>
     
     <lastmod>2021-10-13</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://doraemon2.xyz/2021/10/11/%E3%80%90%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%91%E9%98%9F%E5%88%97(C++)/</loc>
     
     <lastmod>2021-10-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://doraemon2.xyz/2021/10/10/Windows%E5%AE%89%E8%A3%85MySQL/</loc>
-    
-    <lastmod>2021-10-10</lastmod>
     
   </url>
   
@@ -844,6 +844,13 @@
   </url>
   
   <url>
+    <loc>http://doraemon2.xyz/tags/MySQL/</loc>
+    <lastmod>2021-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://doraemon2.xyz/tags/hexo/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
@@ -852,13 +859,6 @@
   
   <url>
     <loc>http://doraemon2.xyz/tags/%E7%BB%8F%E9%AA%8C/</loc>
-    <lastmod>2021-10-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://doraemon2.xyz/tags/MySQL/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -907,6 +907,13 @@
   </url>
   
   <url>
+    <loc>http://doraemon2.xyz/tags/%E8%BF%9B%E5%88%B6/</loc>
+    <lastmod>2021-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://doraemon2.xyz/tags/windows/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
@@ -915,13 +922,6 @@
   
   <url>
     <loc>http://doraemon2.xyz/tags/system/</loc>
-    <lastmod>2021-10-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://doraemon2.xyz/tags/%E8%BF%9B%E5%88%B6/</loc>
     <lastmod>2021-10-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
