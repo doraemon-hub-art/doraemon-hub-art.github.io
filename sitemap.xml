@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://doraemon2.xyz/2021/10/16/C%E8%AF%AD%E8%A8%80%E9%A3%8E%E6%A0%BC%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%B3%A8%E6%84%8F%E7%82%B9/</loc>
+    
+    <lastmod>2021-10-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://doraemon2.xyz/2021/10/16/%E3%80%90%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%91%E6%A0%88(C++)/</loc>
     
     <lastmod>2021-10-16</lastmod>
@@ -795,14 +802,21 @@
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/tags/Hexo/</loc>
+    <loc>http://doraemon2.xyz/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
     <lastmod>2021-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/</loc>
+    <loc>http://doraemon2.xyz/tags/%E6%B3%A8%E6%84%8F/</loc>
+    <lastmod>2021-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://doraemon2.xyz/tags/Hexo/</loc>
     <lastmod>2021-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -824,6 +838,13 @@
   
   <url>
     <loc>http://doraemon2.xyz/tags/LeetCode/</loc>
+    <lastmod>2021-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1014,14 +1035,14 @@
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/categories/%E7%AE%97%E6%B3%95/</loc>
+    <loc>http://doraemon2.xyz/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2021-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>http://doraemon2.xyz/categories/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1042,14 +1063,14 @@
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://doraemon2.xyz/categories/system/</loc>
     <lastmod>2021-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/categories/system/</loc>
+    <loc>http://doraemon2.xyz/categories/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2021-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
