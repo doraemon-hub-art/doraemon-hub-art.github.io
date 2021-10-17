@@ -6,7 +6,7 @@
   <link href="http://doraemon2.xyz/atom.xml" rel="self"/>
   
   <link href="http://doraemon2.xyz/"/>
-  <updated>2021-10-16T11:52:25.969Z</updated>
+  <updated>2021-10-17T07:04:19.557Z</updated>
   <id>http://doraemon2.xyz/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【树】红黑树构建过程(略)</title>
+    <link href="http://doraemon2.xyz/2021/10/17/%E3%80%90%E6%A0%91%E3%80%91%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B(%E7%95%A5)/"/>
+    <id>http://doraemon2.xyz/2021/10/17/%E3%80%90%E6%A0%91%E3%80%91%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B(%E7%95%A5)/</id>
+    <published>2021-10-17T07:02:31.000Z</published>
+    <updated>2021-10-17T07:04:19.557Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><blockquote><p>是每个节点都带有颜色属性（颜色为红色或黑色）的自平衡二叉查找(搜索)树，满足下列性质： </p><p>1）节点是红色或黑色； </p><p>2）根节点是黑色； </p><p>3）所有叶子节点都是黑色节点(NULL)； </p><p>4）每个红色节点必须有两个黑色的子节点。(从每个叶子到根的所有路径上不能有两个连续的红色节点。) </p><p>5）从任一节点到其每个叶子的所有简单路径都包含相同数目的黑色节点</p></blockquote><p><img src="/images/%E3%80%90%E6%A0%91%E3%80%91%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B(%E7%95%A5).assets/image-20211017111903878.png" alt="image-20211017111903878"></p><p><strong>红黑树可以解决二叉树搜索树出现的长短腿情况</strong></p><p><img src="/images/%E3%80%90%E6%A0%91%E3%80%91%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B(%E7%95%A5).assets/image-20211017114705932.png" alt="image-20211017114705932"></p><h2 id="构建过程"><a href="#构建过程" class="headerlink" title="构建过程"></a>构建过程</h2><blockquote><p>红黑树是一种自平衡二叉查找树，从上面红黑树的图可以看到，根结点右子树显然比左子树高，但左子树和右子树的黑结 点的层数是相等的，也即任意一个结点到到每个叶子结点的路径都包含数量相同的黑结点。所以我们叫红黑树这种平衡为黑色完美平衡。</p></blockquote><p>给定如下数组来构建红黑树</p><p><img src="/images/%E3%80%90%E6%A0%91%E3%80%91%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B(%E7%95%A5).assets/image-20211017115438763.png" alt="image-20211017115438763"></p><p>1.使用第一个元素创建一个根结点(黑色)。</p><p><img src="/images/%E3%80%90%E6%A0%91%E3%80%91%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B(%E7%95%A5).assets/image-20211017115711055.png" alt="image-20211017115711055"></p><p>2.插入13，根据二叉搜索树规则，应该插入到左侧，此时插入红色结点不会破坏红黑树平衡，直接插入即可。</p><p><img src="/images/%E3%80%90%E6%A0%91%E3%80%91%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B(%E7%95%A5).assets/image-20211017120051611.png" alt="image-20211017120051611"></p><p>3.插入16，插入红色结点不会破坏平衡，直接插入。</p><p><img src="/images/%E3%80%90%E6%A0%91%E3%80%91%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B(%E7%95%A5).assets/image-20211017120221054.png" alt="image-20211017120221054"></p><p>4.插入11，此时插入红色结点会破坏平衡(<strong>红色结点下面必须是两个黑色结点</strong>)，但插入黑色结点也会破坏平衡(<strong>从任一结点到其每个叶子结点的所有简单路径都包含相同数量的黑色结点</strong>)，所以对此进行调整。</p><p><img src="/images/%E3%80%90%E6%A0%91%E3%80%91%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B(%E7%95%A5).assets/image-20211017120839100.png" alt="image-20211017120839100"></p><p>5.插入9，应该插入到11的下方，无论插入红色结点还是黑色结点都会破坏平衡，所以，进行调整。</p><p><img src="/images/%E3%80%90%E6%A0%91%E3%80%91%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B(%E7%95%A5).assets/image-20211017121236646.png" alt="image-20211017121236646"></p><p>6.插入7，应该到9的下方，插入红色结点或是黑色结点都会破坏平衡，进行调整。旋转处理。</p><p><img src="/images/%E3%80%90%E6%A0%91%E3%80%91%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B(%E7%95%A5).assets/image-20211017121454130.png" alt="image-20211017121454130"></p><p>7.插入5，应该插入到7的下方，此时插入红色结点或是黑色结点都会破坏平衡，进行调整。变色处理。</p><p><img src="/images/%E3%80%90%E6%A0%91%E3%80%91%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B(%E7%95%A5).assets/image-20211017121834784.png" alt="image-20211017121834784"></p><p>8.插入3，应该插入到5的下方，无论插入黑色结点还是红色结点都会破坏平衡。进行调整。对根节点进行右旋。</p><p><img src="/images/%E3%80%90%E6%A0%91%E3%80%91%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B(%E7%95%A5).assets/image-20211017122849710.png" alt="image-20211017122849710"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;红黑树&quot;&gt;&lt;a href=&quot;#红黑树&quot; class=&quot;headerlink&quot; title=&quot;红黑树&quot;&gt;&lt;/a&gt;红黑树&lt;/h1&gt;&lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;b</summary>
+      
+    
+    
+    
+    <category term="数据结构" scheme="http://doraemon2.xyz/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+    <category term="-数据结构" scheme="http://doraemon2.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="-树" scheme="http://doraemon2.xyz/tags/%E6%A0%91/"/>
+    
+    <category term="-红黑树" scheme="http://doraemon2.xyz/tags/%E7%BA%A2%E9%BB%91%E6%A0%91/"/>
+    
+  </entry>
   
   <entry>
     <title>C语言风格字符串注意点</title>
@@ -98,9 +126,9 @@
     
     <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
-    <category term="-数据结构" scheme="http://doraemon2.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
     <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="-数据结构" scheme="http://doraemon2.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     <category term="-栈" scheme="http://doraemon2.xyz/tags/%E6%A0%88/"/>
     
@@ -130,9 +158,9 @@
     
     <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
-    <category term="-数据结构" scheme="http://doraemon2.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
     <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="-数据结构" scheme="http://doraemon2.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     <category term="-栈" scheme="http://doraemon2.xyz/tags/%E6%A0%88/"/>
     
@@ -305,11 +333,11 @@
     
     <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
+    <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
+    
     <category term="-链表" scheme="http://doraemon2.xyz/tags/%E9%93%BE%E8%A1%A8/"/>
     
     <category term="-LeetCode" scheme="http://doraemon2.xyz/tags/LeetCode/"/>
-    
-    <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -333,11 +361,11 @@
     <category term="算法" scheme="http://doraemon2.xyz/categories/%E7%AE%97%E6%B3%95/"/>
     
     
+    <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
+    
     <category term="-数据结构" scheme="http://doraemon2.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     <category term="-LeetCode" scheme="http://doraemon2.xyz/tags/LeetCode/"/>
-    
-    <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -393,11 +421,11 @@
     
     <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
     
+    <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
+    
     <category term="-链表" scheme="http://doraemon2.xyz/tags/%E9%93%BE%E8%A1%A8/"/>
     
     <category term="-LeetCode" scheme="http://doraemon2.xyz/tags/LeetCode/"/>
-    
-    <category term="-算法" scheme="http://doraemon2.xyz/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -577,33 +605,6 @@
     <category term="-C++11" scheme="http://doraemon2.xyz/tags/C-11/"/>
     
     <category term="-STL" scheme="http://doraemon2.xyz/tags/STL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++仿函数(函数对象)</title>
-    <link href="http://doraemon2.xyz/2021/09/28/C++%E4%BB%BF%E5%87%BD%E6%95%B0(%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1)/"/>
-    <id>http://doraemon2.xyz/2021/09/28/C++%E4%BB%BF%E5%87%BD%E6%95%B0(%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1)/</id>
-    <published>2021-09-28T08:43:10.000Z</published>
-    <updated>2021-09-28T09:07:29.533Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="仿函数-函数对象"><a href="#仿函数-函数对象" class="headerlink" title="仿函数(函数对象)"></a>仿函数(函数对象)</h1><p>研究set/multiset容器的排序原理。</p><p>当我们构造一个存放int类型的set容器时</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; s1;</span><br></pre></td></tr></table></figure><p>系统会自动帮我们设定并调用一个函数，自动调用头文件functional中的仿函数(一个类中重载了()实现了对比的操作，从而完成了排序)。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">int</span>,less&lt;<span class="keyword">int</span>&gt;&gt; s1;</span><br></pre></td></tr></table></figure><p>less函数对象实现比较，为排序提供依据。（升序）<br>greater（降序）</p><p><strong>functional中，如图</strong></p><p><img src="/images/C++%E4%BB%BF%E5%87%BD%E6%95%B0(%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1).assets/image-20210928153035870.png" alt="image-20210928153035870"></p><p><strong>手动实现:</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">Student(<span class="keyword">int</span> _age):age(_age)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span><span class="keyword">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> age;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> Student&amp; right) <span class="keyword">const</span> &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">this</span>-&gt;age &lt; right.age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> <span class="keyword">operator</span> &gt; (<span class="keyword">const</span> Student&amp; right) <span class="keyword">const</span> &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">this</span>-&gt;age &gt; right.age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">~Student() &#123; &#125; </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="keyword">int</span> age;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">set</span>&lt;Student,greater&lt;Student&gt;&gt; setStu;</span><br><span class="line">setStu.insert(<span class="number">19</span>);</span><br><span class="line">setStu.insert(<span class="number">20</span>);</span><br><span class="line">setStu.insert(<span class="number">18</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">set</span>&lt;Student&gt;::iterator it = setStu.begin(); it != setStu.end(); it++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; it-&gt;getAge()&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>如果一个类将()运算符重载为成员函数，这个类就称为函数对象类，这个类的对象就是函数对象。函数对象是一个对象，但是使用的形式看起来像函数调用，实际上也执行了函数调用，因而得名。——<a href="http://c.biancheng.net/view/354.html">C++函数对象详解 </a></p><p><strong>实现自己的less(greater)达到效果：</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FuncStudent</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">const</span> Student&amp; left, <span class="keyword">const</span> Student&amp; right)</span><span class="keyword">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> left.getAge() &gt; right.getAge();</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">set</span>&lt;Student,FuncStudent&gt; setStu;</span><br><span class="line"><span class="function">Student <span class="title">s1</span><span class="params">(<span class="number">12</span>)</span></span>;</span><br><span class="line"><span class="function">Student <span class="title">s2</span><span class="params">(<span class="number">13</span>)</span></span>;</span><br><span class="line">setStu.insert(s1);</span><br><span class="line">setStu.insert(s2);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">set</span>&lt;Student,FuncStudent&gt;::iterator it = setStu.begin(); it != setStu.end(); it++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; it-&gt;getAge()&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>仿函数(函数对象)概念</strong></p><ol><li>尽管函数指针被广泛用于实现函数回调，但C++还提供了一个重要的实现回调函数的方法，那就是函数对象。回调函数解释——<a href="https://cloud.tencent.com/developer/article/1373683#:~:text=%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1,%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E5%BC%95%E7%94%A8%E3%80%82">回调函数</a></li><li>functor，翻译成函数对象，伪函数，它是是重载了“()”操作符的普通类对象。从语法上讲，它与普通函数行为类似。</li><li>functional头文件中包含的 greater&lt;&gt;与less&lt;&gt;就是函数对象。</li></ol><p><strong>set/setmulti容器就是调用函数对象的operator()方法去比较两个值的大小，从而实现的排序。</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;仿函数-函数对象&quot;&gt;&lt;a href=&quot;#仿函数-函数对象&quot; class=&quot;headerlink&quot; title=&quot;仿函数(函数对象)&quot;&gt;&lt;/a&gt;仿函数(函数对象)&lt;/h1&gt;&lt;p&gt;研究set/multiset容器的排序原理。&lt;/p&gt;
-&lt;p&gt;当我们构造一个存放int类型</summary>
-      
-    
-    
-    
-    <category term="C++" scheme="http://doraemon2.xyz/categories/C/"/>
-    
-    
-    <category term="-C++" scheme="http://doraemon2.xyz/tags/C/"/>
-    
-    <category term="-笔记" scheme="http://doraemon2.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
