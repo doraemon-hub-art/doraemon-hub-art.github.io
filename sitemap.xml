@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://doraemon2.xyz/2021/10/23/%E3%80%90%E7%AE%97%E6%B3%95%E3%80%91%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95(C++)/</loc>
+    
+    <lastmod>2021-10-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://doraemon2.xyz/2021/10/23/%E3%80%90%E7%AE%97%E6%B3%95%E3%80%91%E5%9B%9E%E6%BA%AF%E6%B3%95(C++)/</loc>
     
     <lastmod>2021-10-23</lastmod>
@@ -809,7 +816,7 @@
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/tags/C/</loc>
+    <loc>http://doraemon2.xyz/tags/C-11/</loc>
     <lastmod>2021-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -823,14 +830,14 @@
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/tags/%E5%86%85%E5%AD%98/</loc>
+    <loc>http://doraemon2.xyz/tags/C/</loc>
     <lastmod>2021-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/tags/C-11/</loc>
+    <loc>http://doraemon2.xyz/tags/%E5%86%85%E5%AD%98/</loc>
     <lastmod>2021-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -942,13 +949,6 @@
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/tags/NowCoder/</loc>
-    <lastmod>2021-10-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://doraemon2.xyz/tags/%E9%98%9F%E5%88%97/</loc>
     <lastmod>2021-10-23</lastmod>
     <changefreq>daily</changefreq>
@@ -971,6 +971,13 @@
   
   <url>
     <loc>http://doraemon2.xyz/tags/%E7%BB%8F%E9%AA%8C/</loc>
+    <lastmod>2021-10-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://doraemon2.xyz/tags/NowCoder/</loc>
     <lastmod>2021-10-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
