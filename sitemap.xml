@@ -886,7 +886,7 @@
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/tags/C/</loc>
+    <loc>http://doraemon2.xyz/tags/C-11/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -900,14 +900,14 @@
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/tags/%E5%86%85%E5%AD%98/</loc>
+    <loc>http://doraemon2.xyz/tags/C/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/tags/C-11/</loc>
+    <loc>http://doraemon2.xyz/tags/%E5%86%85%E5%AD%98/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1054,13 +1054,6 @@
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/tags/hash/</loc>
-    <lastmod>2021-10-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://doraemon2.xyz/tags/%E5%9B%BE/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
@@ -1068,7 +1061,7 @@
   </url>
   
   <url>
-    <loc>http://doraemon2.xyz/tags/%E5%A0%86/</loc>
+    <loc>http://doraemon2.xyz/tags/hash/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1076,6 +1069,13 @@
   
   <url>
     <loc>http://doraemon2.xyz/tags/c/</loc>
+    <lastmod>2021-10-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://doraemon2.xyz/tags/%E5%A0%86/</loc>
     <lastmod>2021-10-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
