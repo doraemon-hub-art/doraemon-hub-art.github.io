@@ -6,7 +6,7 @@
   <link href="http://zhaoyuxuan.xyz/atom.xml" rel="self"/>
   
   <link href="http://zhaoyuxuan.xyz/"/>
-  <updated>2021-11-14T06:00:47.107Z</updated>
+  <updated>2021-11-19T08:32:32.905Z</updated>
   <id>http://zhaoyuxuan.xyz/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学习记录1</title>
+    <link href="http://zhaoyuxuan.xyz/2021/11/19/%E3%80%90%E7%A7%AF%E7%B4%AF%E3%80%91%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/"/>
+    <id>http://zhaoyuxuan.xyz/2021/11/19/%E3%80%90%E7%A7%AF%E7%B4%AF%E3%80%91%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/</id>
+    <published>2021-11-19T08:13:17.000Z</published>
+    <updated>2021-11-19T08:32:32.905Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>​        最近的这半个月，通过与老师和学长交流以及学习理解别人写的代码让我接触到了一些新鲜的事物，比如cmake,linux下C++项目的运行，vscode等软件在Centos7环境下的安装与运行，以及网络协议等相关知识。</p><p>​        网络部分我感觉其实它并不难，不过我最近还不能深入的去学，因为我想的MFC,MySQL,还没有学完，同时我发现这套体系课的内容貌似不是很细节，但其实这并不是重点，我一直认同一句话，想深入细致的学习一块内容，只凭一本书，一套视频，肯定是不够的。</p><p>​        vim和cmake是个有趣的东西，尤其是vim，linux下的开发，vim可少不了，通过纯键盘的操作，确实比鼠标加键盘的效率要高(虽然我只会两个指令，而且都是现学的。还没有具体的学习vim的骚操作。)而cmake我理解它就是个可以跨平台的编译工具(我更愿意叫它为生成可执行文件的工具，它自己并不会编译代码，而是去调用对应的编译器来对代码进行编译。)，使得我们编译项目方便了不少，将相关的编译操作指令，都包含在CMakeLists.txt这个文件中。</p><p>​        目前来看，我的大概学习路线为MySQL、MFC、QT、Linux相关……</p></blockquote><p><strong>未完待续……</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;​        最近的这半个月，通过与老师和学长交流以及学习理解别人写的代码让我接触到了一些新鲜的事物，比如cmake,linux下C++项目的运行，vscode等软件在Centos7环境下的安装与运行，以及网络协议等相关知识。&lt;/p&gt;
+&lt;p&gt;​</summary>
+      
+    
+    
+    
+    <category term="学习记录" scheme="http://zhaoyuxuan.xyz/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="-学习记录" scheme="http://zhaoyuxuan.xyz/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>【网络编程】简单的服务端客户端实现</title>
@@ -528,37 +554,6 @@
     <category term="-数据结构" scheme="http://zhaoyuxuan.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     <category term="-图" scheme="http://zhaoyuxuan.xyz/tags/%E5%9B%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode刷题(19)【简单】二叉树的前&amp;&amp;中&amp;&amp;后序遍历(C++)</title>
-    <link href="http://zhaoyuxuan.xyz/2021/10/19/LeetCode%E5%88%B7%E9%A2%98(19)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D&amp;&amp;%E4%B8%AD&amp;&amp;%E5%90%8E%E9%81%8D%E5%8E%86(%E9%9D%9E%E9%80%92%E5%BD%92)(C++)/"/>
-    <id>http://zhaoyuxuan.xyz/2021/10/19/LeetCode%E5%88%B7%E9%A2%98(19)%E3%80%90%E7%AE%80%E5%8D%95%E3%80%91%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D&amp;&amp;%E4%B8%AD&amp;&amp;%E5%90%8E%E9%81%8D%E5%8E%86(%E9%9D%9E%E9%80%92%E5%BD%92)(C++)/</id>
-    <published>2021-10-19T14:06:22.000Z</published>
-    <updated>2021-10-19T14:07:38.662Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>精华在于进栈和出栈的时机</strong></p><h1 id="94-二叉树的中序遍历"><a href="#94-二叉树的中序遍历" class="headerlink" title="94.二叉树的中序遍历"></a>94.二叉树的中序遍历</h1><p><a href="https://leetcode-cn.com/problems/binary-tree-inorder-traversal/">题目</a></p><p><img src="https://img-blog.csdnimg.cn/9d297ef375fb4b468c58ad49d2bfae32.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG8yZU0wTg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><blockquote><p>思路：<br>中序遍历的顺序是，左 - 根 - 右<br>创建一个栈来存储结点，创建一个vector来存储中序遍历的值<br>从根结点开始，只要该结点有左子树，就将该结点压进栈中。<br>直到root为空。<br>取出栈顶元素，栈顶元素出栈，将该结点值存进recv。<br>…<br>剩下的只可意会不可言传了，</p><p>感谢这位老哥分享——<a href="https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/zhan-c-by-li-kou-it-16d5/">链接</a></p></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">//中序遍历顺序-左-中-右</span></span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">inorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;recv;</span><br><span class="line">        <span class="built_in">stack</span>&lt;TreeNode*&gt; Tstack;</span><br><span class="line">       </span><br><span class="line">       <span class="comment">//当前结点不为空或当前栈不为空</span></span><br><span class="line">       <span class="keyword">while</span>(root || !Tstack.empty())</span><br><span class="line">       &#123;</span><br><span class="line">           <span class="keyword">while</span>(root)</span><br><span class="line">           &#123;</span><br><span class="line">               <span class="comment">//只要当前结点不为空就往栈里面压</span></span><br><span class="line">               Tstack.push(root);</span><br><span class="line">               root = root-&gt;left;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="comment">//此时栈顶元素为根节点左侧树最左的左子树</span></span><br><span class="line">           <span class="comment">//取到该结点</span></span><br><span class="line">           root = Tstack.top();</span><br><span class="line">           Tstack.pop();</span><br><span class="line">           <span class="comment">//pop出栈，存进recv中</span></span><br><span class="line">           recv.push_back(root-&gt;val);</span><br><span class="line">           root = root-&gt;right;</span><br><span class="line">       &#125;</span><br><span class="line">        <span class="keyword">return</span> recv;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>递归方法</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><h1 id="144-二叉树的前序遍历"><a href="#144-二叉树的前序遍历" class="headerlink" title="144.二叉树的前序遍历"></a>144.二叉树的前序遍历</h1><p><a href="https://leetcode-cn.com/problems/binary-tree-preorder-traversal/">题目</a><br><img src="https://img-blog.csdnimg.cn/57f870c20620471f83d7e8b07ea2cd17.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG8yZU0wTg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br><strong>非递归</strong><br>感谢这位老哥分享——<a href="https://leetcode-cn.com/problems/binary-tree-preorder-traversal/solution/shu-de-qian-xu-bian-li-fei-di-gui-fang-fa-zhan-by-/">链接</a></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">preorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;recv;</span><br><span class="line">    <span class="built_in">stack</span>&lt;TreeNode*&gt;Tstack;</span><br><span class="line">    <span class="keyword">while</span>(root || !Tstack.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(root)</span><br><span class="line">        &#123;</span><br><span class="line">            recv.push_back(root-&gt;val);</span><br><span class="line">            Tstack.push(root);</span><br><span class="line">            root = root-&gt;left;</span><br><span class="line">        &#125;</span><br><span class="line">        root = Tstack.top();</span><br><span class="line">        Tstack.pop();</span><br><span class="line">        root = root-&gt;right;</span><br><span class="line">    &#125;    </span><br><span class="line">    <span class="keyword">return</span> recv;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h1 id="145-二叉树的后序遍历"><a href="#145-二叉树的后序遍历" class="headerlink" title="145.二叉树的后序遍历"></a>145.二叉树的后序遍历</h1><p><a href="https://leetcode-cn.com/problems/binary-tree-postorder-traversal/">题目</a><br><img src="https://img-blog.csdnimg.cn/e6e1e58b4d444317b4dc7673d573d24b.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG8yZU0wTg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p><blockquote><p>一直往栈里面往左节点，压到左边最后一个做结点，往回pop,判断当前这个结点是否右结点，有右结点就输出，最后判断自己。</p><p>感谢这位老哥分享思路—<a href="https://leetcode-cn.com/problems/binary-tree-postorder-traversal/solution/er-cha-shu-hou-xu-fei-di-gui-bian-li-liang-chong-z/">链接</a></p></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">postorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;result;</span><br><span class="line">        <span class="built_in">stack</span>&lt;TreeNode*&gt;Tstack;</span><br><span class="line">        TreeNode* cur = root;</span><br><span class="line">        TreeNode* prev = <span class="literal">nullptr</span>;<span class="comment">//记录cur上一个指向的结点，比cur走慢一步</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(!Tstack.empty() || cur)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//只有cur不为空，就一直往里面压左节点</span></span><br><span class="line">            <span class="keyword">while</span>(cur) </span><br><span class="line">            &#123;</span><br><span class="line">                Tstack.push(cur);</span><br><span class="line">                cur =cur-&gt;left;</span><br><span class="line">            &#125;</span><br><span class="line">            cur = Tstack.top();</span><br><span class="line">            <span class="comment">//如果当前结点没有右结点 ||  右结点已经访问过了</span></span><br><span class="line">            <span class="keyword">if</span>(!cur-&gt;right || prev == cur-&gt;right)</span><br><span class="line">            &#123;</span><br><span class="line">                Tstack.pop();</span><br><span class="line">                result.push_back(cur-&gt;val);</span><br><span class="line">                prev = cur;</span><br><span class="line">                <span class="comment">//要从栈里面往外面吐结点，所以要将cur置为null</span></span><br><span class="line">                cur = <span class="literal">nullptr</span>;</span><br><span class="line">            &#125;   </span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                cur = cur-&gt;right;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>   result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>大致流程感觉<br><img src="https://img-blog.csdnimg.cn/88d1252a9a964302bf56a25c8757cb2c.jpg?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG8yZU0wTg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/be98cf30ed3240ceabe2540a448efaff.gif#pic_center#pic_center" alt="在这里插入图片描述"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;精华在于进栈和出栈的时机&lt;/strong&gt;&lt;/p&gt;
-&lt;h1 id=&quot;94-二叉树的中序遍历&quot;&gt;&lt;a href=&quot;#94-二叉树的中序遍历&quot; class=&quot;headerlink&quot; title=&quot;94.二叉树的中序遍历&quot;&gt;&lt;/a&gt;94.二叉树的中序遍历&lt;/h1&gt;</summary>
-      
-    
-    
-    
-    <category term="算法" scheme="http://zhaoyuxuan.xyz/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="-C++" scheme="http://zhaoyuxuan.xyz/tags/C/"/>
-    
-    <category term="-LeetCode" scheme="http://zhaoyuxuan.xyz/tags/LeetCode/"/>
-    
-    <category term="-树" scheme="http://zhaoyuxuan.xyz/tags/%E6%A0%91/"/>
-    
-    <category term="-二叉树" scheme="http://zhaoyuxuan.xyz/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
     
   </entry>
   
