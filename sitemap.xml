@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/2021/11/26/[MySQL]C%20or%20C++%E9%93%BE%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>http://zhaoyuxuan.xyz/2021/11/26/%E3%80%90MySQL%E3%80%91C%20or%20C++%E9%93%BE%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     
     <lastmod>2021-11-27</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/2021/11/26/[MySQL]MySQL%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</loc>
+    <loc>http://zhaoyuxuan.xyz/2021/11/26/%E3%80%90MySQL%E3%80%91MySQL%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93%20/</loc>
     
     <lastmod>2021-11-27</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/2021/11/27/[MySQL]Windows%E4%B8%8B%E5%AE%89%E8%A3%85MySQL/</loc>
+    <loc>http://zhaoyuxuan.xyz/2021/10/10/%E3%80%90MySQL%E3%80%91Windows%E4%B8%8B%E5%AE%89%E8%A3%85MySQL/</loc>
     
     <lastmod>2021-11-27</lastmod>
     
@@ -1005,13 +1005,6 @@
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-11-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://zhaoyuxuan.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2021-11-27</lastmod>
     <changefreq>daily</changefreq>
@@ -1027,6 +1020,13 @@
   
   <url>
     <loc>http://zhaoyuxuan.xyz/tags/LeetCode/</loc>
+    <lastmod>2021-11-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhaoyuxuan.xyz/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-11-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1075,20 +1075,6 @@
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/tags/C/</loc>
-    <lastmod>2021-11-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://zhaoyuxuan.xyz/tags/MySQL/</loc>
-    <lastmod>2021-11-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://zhaoyuxuan.xyz/tags/hexo/</loc>
     <lastmod>2021-11-27</lastmod>
     <changefreq>daily</changefreq>
@@ -1104,6 +1090,20 @@
   
   <url>
     <loc>http://zhaoyuxuan.xyz/tags/MFC/</loc>
+    <lastmod>2021-11-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhaoyuxuan.xyz/tags/C/</loc>
+    <lastmod>2021-11-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhaoyuxuan.xyz/tags/MySQL/</loc>
     <lastmod>2021-11-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1280,13 +1280,6 @@
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/categories/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-11-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://zhaoyuxuan.xyz/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2021-11-27</lastmod>
     <changefreq>daily</changefreq>
@@ -1294,7 +1287,7 @@
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/categories/MySQL/</loc>
+    <loc>http://zhaoyuxuan.xyz/categories/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-11-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1302,6 +1295,13 @@
   
   <url>
     <loc>http://zhaoyuxuan.xyz/categories/MFC/</loc>
+    <lastmod>2021-11-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhaoyuxuan.xyz/categories/MySQL/</loc>
     <lastmod>2021-11-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
