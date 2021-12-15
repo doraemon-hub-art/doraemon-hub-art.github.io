@@ -10,7 +10,7 @@
   <id>http://zhaoyuxuan.xyz/</id>
   
   <author>
-    <name>Do2eM0N</name>
+    <name>快乐的威猛先生</name>
     
   </author>
   
@@ -94,9 +94,9 @@
     
     <category term="-C++" scheme="http://zhaoyuxuan.xyz/tags/C/"/>
     
-    <category term="-C" scheme="http://zhaoyuxuan.xyz/tags/C/"/>
-    
     <category term="-MySQL" scheme="http://zhaoyuxuan.xyz/tags/MySQL/"/>
+    
+    <category term="-C" scheme="http://zhaoyuxuan.xyz/tags/C/"/>
     
   </entry>
   
