@@ -47,7 +47,7 @@
     <link href="http://zhaoyuxuan.xyz/2021/12/26/%E5%AE%8F%E7%A2%81%E6%9A%97%E5%BD%B1%E9%AA%91%E5%A3%AB%E6%93%8E%E5%AE%89%E8%A3%85%E5%8F%8C%E7%B3%BB%E7%BB%9F%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
     <id>http://zhaoyuxuan.xyz/2021/12/26/%E5%AE%8F%E7%A2%81%E6%9A%97%E5%BD%B1%E9%AA%91%E5%A3%AB%E6%93%8E%E5%AE%89%E8%A3%85%E5%8F%8C%E7%B3%BB%E7%BB%9F%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</id>
     <published>2021-12-26T13:59:23.000Z</published>
-    <updated>2021-12-27T03:46:16.400Z</updated>
+    <updated>2022-01-01T04:01:12.995Z</updated>
     
     <content type="html"><![CDATA[<p><strong>宏碁暗影骑士擎安装Ubuntu 20.04.3 + Windows10</strong></p><p>本文用来记录笔者前两天安装双系统所遇到的问题，解决的困难只局限于宏碁暗影骑士擎，其它电脑没准不适用。</p><ul><li>安装视频推荐——<a href="https://www.bilibili.com/video/BV1554y1n7zv?from=search&seid=5406529348841572890&spm_id_from=333.337.0.0">Windows 和 Ubuntu 双系统安装指南</a>,这个up主讲的很详细，跟着视频一步一步做就可以。</li><li>我的U盘用<strong>Win32DiskImager</strong>写入镜像之后提示需要格式化才能打开，所以我用的是<strong>rufus</strong>，这个问题该视频评论下面有人提到。</li><li>安装Unbuntu时提示，<strong>turn off rst</strong>,开机猛按F2进入bios设置，在main界面按<strong>ctrl+s</strong>,进入bios高级设置，将sata mode 修改为<strong>ahci</strong>,即可完成正常安装。</li><li>安装完成之后发现无法正常进入win10，因为修改了sata mode,解决办法参考这个博主的文章，完美解决问题——<a href="https://blog.csdn.net/weixin_45658858/article/details/107307523">双系统之下更改Windows硬盘启动方式为AHCI（不用重装系统）</a>。</li></ul>]]></content>
     
