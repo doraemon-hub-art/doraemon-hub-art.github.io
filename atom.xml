@@ -6,7 +6,7 @@
   <link href="https://doraemon-hub-art.github.io/atom.xml" rel="self"/>
   
   <link href="https://doraemon-hub-art.github.io/"/>
-  <updated>2022-01-05T10:14:04.784Z</updated>
+  <updated>2022-01-08T03:08:34.066Z</updated>
   <id>https://doraemon-hub-art.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【操作系统】动态链接库</title>
+    <link href="https://doraemon-hub-art.github.io/2022/01/08/%E3%80%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%91%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%BA%93/"/>
+    <id>https://doraemon-hub-art.github.io/2022/01/08/%E3%80%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%91%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%BA%93/</id>
+    <published>2022-01-08T03:05:05.000Z</published>
+    <updated>2022-01-08T03:08:34.066Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="动态链接库"><a href="#动态链接库" class="headerlink" title="动态链接库"></a>动态链接库</h1><p>DLL就是整个windows操作系统的基础。动态链接库不能直接运行，也不能接收消息。他们就是一些独立的文件。</p><p>Windows API中的所有函数都包含在DLL中。</p><p><strong>其中三个最重要的DLL</strong></p><ul><li>Kernel32.dll——它包含用于管理内存、进程和线程的各个函数:CreateThread</li><li>User32.dll——它包含用于指定用户界面任务(如窗口的创建和消息的传送)的各个函数</li><li>GDI32.dll——它包含用于画图和显示文本的各个函数</li></ul><h2 id="静态库和动态库"><a href="#静态库和动态库" class="headerlink" title="静态库和动态库"></a>静态库和动态库</h2><p><strong>静态库:</strong><br>函数和数据被编译进一个二进制文件(通常扩展名为.LIB)。在使用静态库的情况下，在编译链接可执行文件时，链接器从库中复制这些函数和数据并把它们和应用程序的其他模块组合起来创建最终的可执行文件(.EXE文件)。</p><p><strong>动态库:</strong><br>在使用动态库的时候，往往提供提供两个文件：一个引入库(静态库)(LIB)和一个DLL。引入库包含被DLL导出的函数和变量的符号名,DLL包含实际的函数和数据。<strong>在编译链接</strong>可执行文件时，<strong>只</strong>需要链接引入库，DLL中的函数代码和数据并不复制到可执行文件中，而是在运行时候，再去加载DLL，访问DLL中导出的函数。</p><p><strong>使用动态链接库的好处:</strong></p><ol><li>增强产品的功能(更换界面的DLL)</li><li>提供二次开发的平台(SDK基础版本)</li><li>简化项目管理(串行开发，以多个DLL的方式获取)</li><li>可以节省磁盘空间和内存</li><li>有助于资源的共享(对话框模块，字符串，图标)</li><li>有助于实现应用程序的本地化(多语言版本)</li><li>可以采用多种语言来编写</li></ol><h2 id="使用动态链接库"><a href="#使用动态链接库" class="headerlink" title="使用动态链接库"></a>使用动态链接库</h2><h3 id="创建DLL"><a href="#创建DLL" class="headerlink" title="创建DLL"></a>创建DLL</h3><p> <strong>dumpbin命令</strong></p><p>通过使用这个命令来知道库中导出的都是什么函数。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//提供给用户用的函数</span></span><br><span class="line"><span class="comment">//应用程序如果要访问某个DLL中的函数，那么函数必须是被导出的函数。</span></span><br><span class="line"><span class="comment">//为了让DLL导出一些函数，需要在每个将要被导出的函数前面加上_declspec(dllexport)</span></span><br><span class="line">_declspec(dllexport)<span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">_declspec(dllexport)<span class="function"><span class="keyword">int</span> <span class="title">substract</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> a - b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201071213937.png" alt="image-20220107121301863"></p><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201081105890.png"></p><p>名字改变===名字粉碎，区分不同的函数。</p><h3 id="DLL的导入和导出以及条件编译"><a href="#DLL的导入和导出以及条件编译" class="headerlink" title="DLL的导入和导出以及条件编译"></a>DLL的导入和导出以及条件编译</h3><p>lib文件直接复制到当前文件路径下，对应的dll文件也要复制过去。</p><p> 将静态库文件.lib添加到项目属性的链接器-输入-附加依赖项中。</p><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201081105999.png" alt="image-20220107130111252"></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">extern</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">extern</span> <span class="keyword">int</span> <span class="title">substract</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CDLLMFCTestDlg::OnBnClickedButton1</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">CString str;</span><br><span class="line">str.Format(<span class="string">L&quot;4+3 = %d&quot;</span>,add(<span class="number">4</span>,<span class="number">3</span>));</span><br><span class="line">MessageBox(str);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CDLLMFCTestDlg::OnBnClickedButton2</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">CString str;</span><br><span class="line">str.Format(<span class="string">L&quot;4-3 = %d&quot;</span>,substract (<span class="number">4</span>, <span class="number">3</span>));</span><br><span class="line">MessageBox(str);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>使用dumpbin -imports XXX.exe查看可执行文件导入了哪些DLL。</p><p>在.exe文件运行的时候，系统将为exe分配一个4GB的地址空间，然后加载模块会分析该应用程序的输入信息，从中找到该程序将要访问的动态链接库信息。然后在用户的机器上搜索这些动态链接库。</p><hr><p>_ declspec(dllexport)与_declspec(dllimport)</p><p>与使用extern关键字这种方式对比，使用_declspec(dllimport)的标识符，它将告诉编译器是从<strong>动态链接库</strong>引入的。</p><p>extern表示函数是外部的全局函数。</p><p>_declspec(dllexport)是在类、函数以及数据的声明的时候使用。把DLL里面的相关代码暴露出来给其他应用程序使用。<strong>提供给别的应用程序使用。</strong>表示提供者。供DLL内部使用。</p><p>_declspec(dllimport)是在外部程序需要使用DLL内相关内容时使用的标识符。<strong>是把DLL中的相关代码插入到应用程序中去。</strong>表示使用者。不是DLL内部使用。</p><p>通常情况下，DLL的实现者和使用者不是同一个人，DLL+头文件方式。</p><p>具体：略……</p><p>头文件建议使用条件指令编译。是使得程序的可读性增强，灵活性增强。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果定义了DLL1_API，则什么也不干，如果没听已，则</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> DLL1_API </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DLL1_API _declspec(dllimport)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span>   </span></span><br><span class="line"></span><br><span class="line"><span class="function">DLL1_API <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br><span class="line"><span class="function">DLL1_API <span class="keyword">int</span> <span class="title">substract</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</span><br></pre></td></tr></table></figure><hr><h3 id="从DLL中导出C-类"><a href="#从DLL中导出C-类" class="headerlink" title="从DLL中导出C++类"></a>从DLL中导出C++类</h3><p>动态链接库导出整个类和仅导出该类的某些成员函数在实现方式的区别:如果在声明该类时，指定了导出标志，那么该类中所有的函数都被导出，否则只有那些声明时指定了导出标志的类成员才会被导出。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;动态链接库&quot;&gt;&lt;a href=&quot;#动态链接库&quot; class=&quot;headerlink&quot; title=&quot;动态链接库&quot;&gt;&lt;/a&gt;动态链接库&lt;/h1&gt;&lt;p&gt;DLL就是整个windows操作系统的基础。动态链接库不能直接运行，也不能接收消息。他们就是一些独立的文件。&lt;/p&gt;</summary>
+      
+    
+    
+    
+    <category term="操作系统" scheme="https://doraemon-hub-art.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="-操作系统" scheme="https://doraemon-hub-art.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="-DLL" scheme="https://doraemon-hub-art.github.io/tags/DLL/"/>
+    
+  </entry>
   
   <entry>
     <title>【操作系统】进程间的通信</title>
@@ -518,34 +544,6 @@
     
     <category term="算法" scheme="https://doraemon-hub-art.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
-    
-    <category term="-算法" scheme="https://doraemon-hub-art.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【算法】分支定界算法</title>
-    <link href="https://doraemon-hub-art.github.io/2021/10/23/%E3%80%90%E7%AE%97%E6%B3%95%E3%80%91%E5%88%86%E6%94%AF%E5%AE%9A%E7%95%8C%E7%AE%97%E6%B3%95/"/>
-    <id>https://doraemon-hub-art.github.io/2021/10/23/%E3%80%90%E7%AE%97%E6%B3%95%E3%80%91%E5%88%86%E6%94%AF%E5%AE%9A%E7%95%8C%E7%AE%97%E6%B3%95/</id>
-    <published>2021-10-23T13:11:39.000Z</published>
-    <updated>2021-10-23T13:12:34.522Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="分支定界算法"><a href="#分支定界算法" class="headerlink" title="分支定界算法"></a>分支定界算法</h1><p><strong>概念</strong></p><blockquote><p>分支定界(branch and bound)算法是一种在问题的解空间上搜索问题的解的方法。但与回溯算法不同，分支定界算法采用广度优先或最小耗费优先的方法搜索解空间树。并且，在分支定界算法中，每一个活结点只有一次机会称为扩展结点。</p></blockquote><p>​    <strong>利用分支定界算法对问题的解空间树进行搜索</strong>，<strong>它的搜索策略是</strong>：</p><ol><li>产生当前扩展结点的所有孩子结点。</li><li>在产生的孩子结点中，抛弃那些不可能产生可行解(或)最优解的结点。</li><li>将其余的孩子结点加入活结点表。</li><li>从活结点表中选择下一个活结点作为新的扩展结点。</li></ol><p>如此循环，直到找到问题的可行解(最优解)或活结点表为空。</p><p>从活结点表中选择下一个活结点作为新的扩展结点，<strong>根据选择的方式不同</strong>，分支定界算法通常可以分为两种形式。</p><ol><li>FIFO(First In First Out) 分支定界算法：按照先进先出原则选择下一个活结点作为扩展结点，即从活结点表中取出结点的顺序与加入结点的顺序相同。</li><li><strong>最小耗费或最大收益分支定界算法</strong>：在这种情况下，每个结点都有一个耗费或收益。假如要查找一个具有最小耗费的解，那么要<strong>选择</strong>的下一个扩展结点就是活结点表中具有最小耗费的活结点，假如要查找一个具有最大收益的解，那么要<strong>选择</strong>的下一个扩展结点就是活结点表中具有最大收益的活结点。</li></ol><hr><p><strong>补充</strong>: A *算法（最小消耗优先法搜索解空间树）(未完待续……)</p><hr>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;分支定界算法&quot;&gt;&lt;a href=&quot;#分支定界算法&quot; class=&quot;headerlink&quot; title=&quot;分支定界算法&quot;&gt;&lt;/a&gt;分支定界算法&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;概念&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;分支定界(branch an</summary>
-      
-    
-    
-    
-    <category term="算法" scheme="https://doraemon-hub-art.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="-C++" scheme="https://doraemon-hub-art.github.io/tags/C/"/>
     
     <category term="-算法" scheme="https://doraemon-hub-art.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
