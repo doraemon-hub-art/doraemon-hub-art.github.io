@@ -970,7 +970,7 @@
   </url>
   
   <url>
-    <loc>https://doraemon-hub-art.github.io/tags/C-11/</loc>
+    <loc>https://doraemon-hub-art.github.io/tags/C/</loc>
     <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -984,14 +984,14 @@
   </url>
   
   <url>
-    <loc>https://doraemon-hub-art.github.io/tags/C/</loc>
+    <loc>https://doraemon-hub-art.github.io/tags/%E5%86%85%E5%AD%98/</loc>
     <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://doraemon-hub-art.github.io/tags/%E5%86%85%E5%AD%98/</loc>
+    <loc>https://doraemon-hub-art.github.io/tags/C-11/</loc>
     <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1061,20 +1061,6 @@
   </url>
   
   <url>
-    <loc>https://doraemon-hub-art.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2022-01-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://doraemon-hub-art.github.io/tags/%E9%93%BE%E8%A1%A8/</loc>
-    <lastmod>2022-01-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://doraemon-hub-art.github.io/tags/LeetCode/</loc>
     <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
@@ -1083,6 +1069,20 @@
   
   <url>
     <loc>https://doraemon-hub-art.github.io/tags/JAVA/</loc>
+    <lastmod>2022-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://doraemon-hub-art.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2022-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://doraemon-hub-art.github.io/tags/%E9%93%BE%E8%A1%A8/</loc>
     <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1124,13 +1124,6 @@
   </url>
   
   <url>
-    <loc>https://doraemon-hub-art.github.io/tags/NowCoder/</loc>
-    <lastmod>2022-01-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://doraemon-hub-art.github.io/tags/hexo/</loc>
     <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
@@ -1146,6 +1139,13 @@
   
   <url>
     <loc>https://doraemon-hub-art.github.io/tags/MFC/</loc>
+    <lastmod>2022-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://doraemon-hub-art.github.io/tags/NowCoder/</loc>
     <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1194,13 +1194,6 @@
   </url>
   
   <url>
-    <loc>https://doraemon-hub-art.github.io/tags/Win32-C/</loc>
-    <lastmod>2022-01-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://doraemon-hub-art.github.io/tags/%E8%BF%9B%E7%A8%8B/</loc>
     <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
@@ -1208,7 +1201,7 @@
   </url>
   
   <url>
-    <loc>https://doraemon-hub-art.github.io/tags/c/</loc>
+    <loc>https://doraemon-hub-art.github.io/tags/Win32-C/</loc>
     <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1216,6 +1209,13 @@
   
   <url>
     <loc>https://doraemon-hub-art.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <lastmod>2022-01-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://doraemon-hub-art.github.io/tags/c/</loc>
     <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1236,14 +1236,14 @@
   </url>
   
   <url>
-    <loc>https://doraemon-hub-art.github.io/tags/%E7%BA%A2%E9%BB%91%E6%A0%91/</loc>
+    <loc>https://doraemon-hub-art.github.io/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://doraemon-hub-art.github.io/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
+    <loc>https://doraemon-hub-art.github.io/tags/%E7%BA%A2%E9%BB%91%E6%A0%91/</loc>
     <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1278,14 +1278,14 @@
   </url>
   
   <url>
-    <loc>https://doraemon-hub-art.github.io/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://doraemon-hub-art.github.io/tags/%E5%9B%BE%E5%BD%A2%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://doraemon-hub-art.github.io/tags/%E5%9B%BE%E5%BD%A2%E7%BC%96%E7%A8%8B/</loc>
+    <loc>https://doraemon-hub-art.github.io/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1371,14 +1371,14 @@
   </url>
   
   <url>
-    <loc>https://doraemon-hub-art.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>https://doraemon-hub-art.github.io/categories/JAVA/</loc>
     <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://doraemon-hub-art.github.io/categories/JAVA/</loc>
+    <loc>https://doraemon-hub-art.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2022-01-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
