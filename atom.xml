@@ -6,7 +6,7 @@
   <link href="https://doraemon-hub-art.github.io/atom.xml" rel="self"/>
   
   <link href="https://doraemon-hub-art.github.io/"/>
-  <updated>2022-01-09T05:24:49.803Z</updated>
+  <updated>2022-01-11T10:30:47.162Z</updated>
   <id>https://doraemon-hub-art.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【QT】自定义软件打包发布</title>
+    <link href="https://doraemon-hub-art.github.io/2022/01/11/%E3%80%90QT%E3%80%91%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BD%AF%E4%BB%B6%E6%89%93%E5%8C%85%E5%8F%91%E5%B8%83/"/>
+    <id>https://doraemon-hub-art.github.io/2022/01/11/%E3%80%90QT%E3%80%91%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BD%AF%E4%BB%B6%E6%89%93%E5%8C%85%E5%8F%91%E5%B8%83/</id>
+    <published>2022-01-11T10:29:34.000Z</published>
+    <updated>2022-01-11T10:30:47.162Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="自定义软件打包发布"><a href="#自定义软件打包发布" class="headerlink" title="自定义软件打包发布"></a>自定义软件打包发布</h1><ul><li>安装nisi和nisedit。</li></ul><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111830396.png" alt="image-20220111172214216"></p><ul><li>打开nisedit。</li></ul><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111726717.png"></p><ul><li>点击——文件——新建脚本：向导。</li></ul><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111729295.png" alt="image-20220111172905248"></p><ul><li>设置名称等信息，点击下一步。</li></ul><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111830469.png"></p><ul><li>选择安装图标——设置安装语言，点击下一步。</li></ul><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111731748.png"></p><ul><li>选择授权文件(License.txt,里面的内容自定义。)点击下一步。</li></ul><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111830536.png" alt="image-20220111173423517"></p><ul><li>选择你的程序相关文件，删掉默认的两个。</li></ul><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111830195.png" alt="image-20220111173708350"></p><ul><li>点击添加文件，注意其中部分文件的路径。</li></ul><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111830512.png" alt="image-20220111173816372"></p><ul><li>其中要注意的路径，就是带有文件夹的，如下图所示。</li></ul><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111830658.png" alt="image-20220111174520365"></p><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111830635.png" alt="image-20220111174539381"></p><ul><li>添加完成，选中.exe文件，点击下一步。</li></ul><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111747350.png" alt="image-20220111174756306"></p><ul><li>默认，点击下一步。</li></ul><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111746544.png" alt="image-20220111174654495"></p><ul><li>选择自述文件，点击下一步。</li></ul><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111830098.png" alt="image-20220111174809257"></p><ul><li>设置相关文字消息提示，以及图标。点击下一步。</li></ul><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111803351.png" alt="image-20220111180304300"></p><ul><li>将三个选项都勾上，点击完成。</li></ul><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111830698.png" alt="image-20220111180406001"></p><ul><li>保存文件，打包完成。</li></ul><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111830687.png" alt="image-20220111180457048"></p><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111830547.png" alt="image-20220111180522390"></p><hr><h1 id="补充-windeployqt补全相关库"><a href="#补充-windeployqt补全相关库" class="headerlink" title="补充:windeployqt补全相关库"></a>补充:windeployqt补全相关库</h1><p>有可能补的不全，需要手动补充。</p><p>windeployqt ExamSys.exe</p><p>找不到命令添加环境变量。D:\QT5.9.6\5.9.6\mingw53_32\bin</p><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201111811360.png" alt="image-20220111181158287"></p><p>完成。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;自定义软件打包发布&quot;&gt;&lt;a href=&quot;#自定义软件打包发布&quot; class=&quot;headerlink&quot; title=&quot;自定义软件打包发布&quot;&gt;&lt;/a&gt;自定义软件打包发布&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;安装nisi和nisedit。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img s</summary>
+      
+    
+    
+    
+    <category term="QT" scheme="https://doraemon-hub-art.github.io/categories/QT/"/>
+    
+    
+    <category term="-QT" scheme="https://doraemon-hub-art.github.io/tags/QT/"/>
+    
+  </entry>
   
   <entry>
     <title>【MFC】MFC文件操作和注册表操作</title>
@@ -512,32 +539,6 @@
     <summary type="html">&lt;h1 id=&quot;插入排序&quot;&gt;&lt;a href=&quot;#插入排序&quot; class=&quot;headerlink&quot; title=&quot;插入排序&quot;&gt;&lt;/a&gt;插入排序&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;实现原理&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;插入排序的工作原理是通过构建有序序列，对</summary>
-      
-    
-    
-    
-    <category term="算法" scheme="https://doraemon-hub-art.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="-算法" scheme="https://doraemon-hub-art.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【算法】冒泡排序</title>
-    <link href="https://doraemon-hub-art.github.io/2021/10/24/%E3%80%90%E7%AE%97%E6%B3%95%E3%80%91%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"/>
-    <id>https://doraemon-hub-art.github.io/2021/10/24/%E3%80%90%E7%AE%97%E6%B3%95%E3%80%91%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/</id>
-    <published>2021-10-24T03:02:00.000Z</published>
-    <updated>2021-10-24T04:29:54.053Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><p><strong>排序流程</strong></p><blockquote><p>通过重复地遍历排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复的地进行直到没有再需要交换，也就是或该数列已经排序完成。这个算法的名字由来是因为越小(大)的元素会经由交换慢慢的像泡泡一样“浮”到数列的顶端，故而得名。</p></blockquote><p><strong>代码实现</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span>* arr, <span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; arr[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>&amp; a, <span class="keyword">int</span>&amp; b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">temp = a;</span><br><span class="line">a = b;</span><br><span class="line">b = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PopSort1</span><span class="params">(<span class="keyword">int</span>* arr,<span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len - <span class="number">1</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">bool</span> sorted = <span class="number">0</span>;<span class="comment">//判断循环是否进行元素的交换了</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; len - <span class="number">1</span> - i; j++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>])<span class="comment">//稳定的排序算法，相同值的数，不会进行交换</span></span><br><span class="line">&#123;</span><br><span class="line">sorted = <span class="number">1</span>;</span><br><span class="line">swap(arr[j], arr[j + <span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (!sorted)<span class="comment">//本次循环没进行交换，说明排序已经完成，剩下还没进行的循环就不用进行了。</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">print(arr, len);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PopSort2</span><span class="params">(<span class="keyword">int</span>* arr, <span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> end = len - <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (end)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; end; i++)<span class="comment">//&lt;end,保证每次都能取到第i+1个</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span> (arr[i] &gt; arr[i + <span class="number">1</span>])</span><br><span class="line">&#123;</span><br><span class="line">swap(arr[i], arr[i + <span class="number">1</span>]);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">end--;</span><br><span class="line">&#125;</span><br><span class="line">print(arr, len);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> arr[] = &#123; <span class="number">1</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">266</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">78</span>,<span class="number">9</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> len = <span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>(arr[<span class="number">0</span>]);</span><br><span class="line">PopSort1(arr, len);</span><br><span class="line"><span class="comment">//PopSort2(arr, len);</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;冒泡排序&quot;&gt;&lt;a href=&quot;#冒泡排序&quot; class=&quot;headerlink&quot; title=&quot;冒泡排序&quot;&gt;&lt;/a&gt;冒泡排序&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;排序流程&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;通过重复地遍历排序的数列，一次比较两个元</summary>
       
     
     
