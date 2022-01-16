@@ -6,7 +6,7 @@
   <link href="https://doraemon-hub-art.github.io/atom.xml" rel="self"/>
   
   <link href="https://doraemon-hub-art.github.io/"/>
-  <updated>2022-01-13T14:10:59.123Z</updated>
+  <updated>2022-01-16T04:28:59.538Z</updated>
   <id>https://doraemon-hub-art.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【QT】QT窗口部件</title>
+    <link href="https://doraemon-hub-art.github.io/2022/01/16/%E3%80%90QT%E3%80%91QT%E7%AA%97%E5%8F%A3%E9%83%A8%E4%BB%B6/"/>
+    <id>https://doraemon-hub-art.github.io/2022/01/16/%E3%80%90QT%E3%80%91QT%E7%AA%97%E5%8F%A3%E9%83%A8%E4%BB%B6/</id>
+    <published>2022-01-16T04:26:40.000Z</published>
+    <updated>2022-01-16T04:28:59.538Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="QT窗口部件"><a href="#QT窗口部件" class="headerlink" title="QT窗口部件"></a>QT窗口部件</h1><h2 id="默认部件基类"><a href="#默认部件基类" class="headerlink" title="默认部件基类"></a>默认部件基类</h2><p>QT提供的默认部件基类包括QMainWindow、QWidget、和QDialog，这三个部件基类也是用的最多的。</p><p>QMainWindow是带有菜单栏、工具栏、状态栏的主窗口类，它有自己单独的布局。布局有一个中心区域，通常是标准的QT部件，也可以是定制的部件，且必须有一个中心小部件。setCentralWidget()方法可设置中心部件。</p><p>QWidget类是所有部件对象的基类，被称为基础窗口部件。</p><p>QWidget提供自我绘制和处理用户输入等基本功能，如接收鼠标、键盘和其他事件，并且在屏幕上绘制自己的表现。每一个窗口部件都是矩形的，并且它们是按照**Z轴(由屏幕里到屏幕外)**顺序排列的。一个窗口部件可以被它的父窗口部件或者它前面的窗口部件盖住一部分。一个没有父窗口部件的窗口部件一直是顶级窗口部件。非顶级窗口部件时父窗口的子部件。</p><p>QWidget构造函数有两个参数:QWidget*parent = 0,QT:WindowFlages f = 0。</p><p>parent即父窗口，默认为0，即没有父窗口，是顶级窗口，如果指定parent值，则当前窗体将会是一个子部件。QT:WindowFlags是QT:WindowType，枚举值的组合，用来设置窗口的属性，f=0表示默认为QT:Widget风格，setWindowState()可设置窗体的状态，参数由QT:WindowStates枚举值指定。</p><p><strong>QWidget类关系表</strong></p><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201161228351.png" alt="image-20220115102847426"></p><p><strong>窗体状态</strong></p><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201151029912.png" alt="image-20220115102920884"></p><p><strong>模态</strong></p><p>窗口间的阻塞情况，是否必须先关闭某一窗口之后，才能对另一个窗口进行操作。</p><p>被设置为模态窗口的窗口关闭之后才能对其他窗口进行操作。</p><hr><p>QDialog是各种对话框的基类，其继承自QWidget，对话框有两种表现形态:形态对话框、非模态对话框。模态对话框就是一个阻塞同一应用程序中其它可视窗口的输入对话框。用户必须完成当前对话框中的交互操作并且关闭窗口后才能操作当前音乐程序中的其它窗口。模式对话框有它们自己的本地事件循环。exec()方法可使窗口以模态方式运行。当用户关闭这个对话框，exec()将提供一个可用的返回值并且这时流程控制继续从调用exec()的地方进行。</p><p>通常，我们链接默认按钮，例如”OK”到accpet()槽并且把”Cancel”链接到reject()槽，来使对话框关闭并且返回适当的值。另外，我们也可以连接done()槽，传递给它Accepted或Rejected。</p><p><strong>模态窗口运行</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">（<span class="number">1</span>）调用exec()方法，如</span><br><span class="line">QDialog dlg;</span><br><span class="line">dlg.exec();</span><br><span class="line">（<span class="number">2</span>）调用setModal()方法设置模态，如</span><br><span class="line">QDialog dlg;</span><br><span class="line">dlg.setModal(<span class="literal">true</span>);</span><br><span class="line">dlg.show();</span><br><span class="line">（<span class="number">3</span>）QWidget widget;</span><br><span class="line">widget.setWindowModality(Qt::ApplicationModal);</span><br><span class="line">widget.show();</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201161228218.png" alt="image-20220115175915707"></p><hr><h2 id="其他部件"><a href="#其他部件" class="headerlink" title="其他部件"></a>其他部件</h2><p><strong>QLabel</strong></p><p>常用来显示文本、文字、图片、gif动图。</p><p>可与其他部件设置伙伴关系，此时标签起到快捷键作用。</p><p><strong>QLineEdit</strong></p><p>接收用户输入。</p><p>可以增加限制条件，例如只能让用户输入什么。</p><p>掩码字符</p><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/202201161136600.png" alt="image-20220116113648534"></p><p><strong>QPushButton</strong></p><p>按钮类，常用显示文字图标。</p><p><strong>QRadioButton</strong></p><p>单选按钮类，只能选一个，将单选框按钮加入一个分组框中时，加入的按钮是一个分组，分组中只能选中一个，具有排他性。</p><p><strong>QCheckBox</strong></p><p>多选按钮类，可多选。</p><p>略….</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;QT窗口部件&quot;&gt;&lt;a href=&quot;#QT窗口部件&quot; class=&quot;headerlink&quot; title=&quot;QT窗口部件&quot;&gt;&lt;/a&gt;QT窗口部件&lt;/h1&gt;&lt;h2 id=&quot;默认部件基类&quot;&gt;&lt;a href=&quot;#默认部件基类&quot; class=&quot;headerlink&quot; titl</summary>
+      
+    
+    
+    
+    <category term="QT" scheme="https://doraemon-hub-art.github.io/categories/QT/"/>
+    
+    
+    <category term="-QT" scheme="https://doraemon-hub-art.github.io/tags/QT/"/>
+    
+  </entry>
   
   <entry>
     <title>【QT】QT对象树</title>
@@ -508,32 +532,6 @@
 &lt;ol&gt;
 &lt;li&gt;每次选区第一个的数为基准数&lt;/li&gt;
 &lt;li&gt;然后将</summary>
-      
-    
-    
-    
-    <category term="算法" scheme="https://doraemon-hub-art.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="-算法" scheme="https://doraemon-hub-art.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【算法】希尔排序</title>
-    <link href="https://doraemon-hub-art.github.io/2021/10/24/%E3%80%90%E7%AE%97%E6%B3%95%E3%80%91%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/"/>
-    <id>https://doraemon-hub-art.github.io/2021/10/24/%E3%80%90%E7%AE%97%E6%B3%95%E3%80%91%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F/</id>
-    <published>2021-10-24T10:16:03.000Z</published>
-    <updated>2021-10-24T10:17:19.896Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h1><p><strong>插入排序的缺点</strong></p><blockquote><p>插入排序虽好，但在有些情况下是有很多缺点的，比如：</p><p>14,18,20,36,1,2</p><p>除了最后的两个元素，其他的已经有序了，而这两个几乎要移动前面所有的元素。 </p></blockquote><p><strong>引出希尔排序</strong></p><blockquote><p>希尔排序是希尔(Donald Shell)于1959年提出的一种排序算法。希尔排序也是一种插入排序，它是简单插入排序经过改进之后的一个更高效的版本，也称为缩小增量排序。它与插入排序的不同之处在于，它会优化比较距离较远的元素。</p></blockquote><blockquote><p>希尔排序是把记录按下标的一定增量分组，对每组使用直接插入排序，随着增量逐渐减少，每组包含的元素越来越多，当增量减至1时，所有的元素被分成1组，实际上等同于执行一次插入排序，算法终止。</p><p>(就是拆开分组进行排序，排完之后再合并在一起再排序一遍。如下图所示。</p></blockquote><p><img src="https://img-blog.csdnimg.cn/df66993e673c43c5a2e8af0f23f48d01.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG8yZU0wTg==,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p><p><strong>希尔排序的基本步骤</strong>：</p><ol><li>选择增量：gap  = length / 2,缩小增量：gap = gap /2 ;</li><li>增加序列：用序列表示增量的选择，{n/2,(n/2)/2,…1}</li><li>先将整个待排序的序列分割成若干子序列分别进行直接插入排序，具体算法描述：</li></ol><blockquote><p>选择一个增量序列t1,t2,……,tk,其中ti&gt;tj,tk = 1;</p><p>按增量序列个数k，对整个序列进行k趟排序。</p><p>每趟排序，根据对应的增量ti,将待排序分割成若若干长度为m的子序列，分别对各子表进行直接插入排序。</p></blockquote><p><strong>仅增量因子为1时，整个序列作为一个整体来处理， 表长度即为整个序列的长度。</strong></p><p><strong>代码实现</strong>：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ShellSort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> len)</span><span class="comment">//希尔排序</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> gap = len / <span class="number">2</span>;<span class="comment">//增量</span></span><br><span class="line"><span class="keyword">for</span> (; gap &gt; <span class="number">0</span>; gap /= <span class="number">2</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = gap; i &lt; len; i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">int</span> cur = arr[i];</span><br><span class="line"><span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (j = i - gap; j &gt;= <span class="number">0</span> &amp;&amp; arr[j] &gt; cur; j-= gap)</span><br><span class="line">&#123;</span><br><span class="line">arr[j + gap] = arr[j];</span><br><span class="line">&#125;</span><br><span class="line">arr[j+gap] = cur;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;希尔排序&quot;&gt;&lt;a href=&quot;#希尔排序&quot; class=&quot;headerlink&quot; title=&quot;希尔排序&quot;&gt;&lt;/a&gt;希尔排序&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;插入排序的缺点&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;插入排序虽好，但在有些情况下是有很</summary>
       
     
     
