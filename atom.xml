@@ -6,7 +6,7 @@
   <link href="https://doraemon-hub-art.github.io/atom.xml" rel="self"/>
   
   <link href="https://doraemon-hub-art.github.io/"/>
-  <updated>2022-01-24T15:29:28.874Z</updated>
+  <updated>2022-01-28T10:43:39.313Z</updated>
   <id>https://doraemon-hub-art.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【QT】QT打印调试信息</title>
+    <link href="https://doraemon-hub-art.github.io/2022/01/28/%E3%80%90QT%E3%80%91QT%E6%89%93%E5%8D%B0%E8%B0%83%E8%AF%95%E4%BF%A1%E6%81%AF/"/>
+    <id>https://doraemon-hub-art.github.io/2022/01/28/%E3%80%90QT%E3%80%91QT%E6%89%93%E5%8D%B0%E8%B0%83%E8%AF%95%E4%BF%A1%E6%81%AF/</id>
+    <published>2022-01-28T10:43:07.000Z</published>
+    <updated>2022-01-28T10:43:39.313Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//QDebug打印调试信息</span></span><br><span class="line">   <span class="keyword">int</span> num = <span class="number">20</span>;</span><br><span class="line">   qDebug(<span class="string">&quot;十进制%d&quot;</span>,num);</span><br><span class="line">   qDebug(<span class="string">&quot;八进制%o&quot;</span>,num);</span><br><span class="line">   qDebug(<span class="string">&quot;十六进制%x&quot;</span>,num);</span><br><span class="line">   qreal PI = <span class="number">3.14</span>;</span><br><span class="line">   qDebug(<span class="string">&quot;浮点%f&quot;</span>,PI);</span><br><span class="line">   qDebug(<span class="string">&quot;科学计数法%e&quot;</span>,PI);</span><br><span class="line">   qDebug(<span class="string">&quot;123%%&quot;</span>);<span class="comment">//123%</span></span><br><span class="line">   <span class="comment">//另一种输入方式</span></span><br><span class="line">   qDebug()&lt;&lt;PI;</span><br><span class="line">   QString str = <span class="string">&quot;Hello world&quot;</span>;</span><br><span class="line">   qDebug()&lt;&lt;str;</span><br><span class="line">   qDebug().noquote()&lt;&lt;str;<span class="comment">//不带双引号输出</span></span><br><span class="line">   qDebug()&lt;&lt;<span class="string">&quot;hello&quot;</span>&lt;&lt;<span class="string">&quot;world&quot;</span>;<span class="comment">//默认输入，这两个单词中间会有空格</span></span><br><span class="line">   qDebug().nospace()&lt;&lt;<span class="string">&quot;hello&quot;</span>&lt;&lt;<span class="string">&quot;world&quot;</span>;<span class="comment">//去掉空格</span></span><br><span class="line">   <span class="comment">//控制台程序会输入到黑窗口</span></span><br><span class="line">   <span class="comment">//桌面应用程序会输出到-应用程序输出</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;</summary>
+      
+    
+    
+    
+    <category term="QT" scheme="https://doraemon-hub-art.github.io/categories/QT/"/>
+    
+    
+    <category term="-QT" scheme="https://doraemon-hub-art.github.io/tags/QT/"/>
+    
+  </entry>
   
   <entry>
     <title>【QT】QT文件处理</title>
@@ -500,36 +524,6 @@
     
     <category term="MySQL" scheme="https://doraemon-hub-art.github.io/categories/MySQL/"/>
     
-    
-    <category term="-MySQL" scheme="https://doraemon-hub-art.github.io/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【MySQL】C/C++链接MySQL数据库</title>
-    <link href="https://doraemon-hub-art.github.io/2021/11/26/%E3%80%90MySQL%E3%80%91C%20or%20C++%E9%93%BE%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>https://doraemon-hub-art.github.io/2021/11/26/%E3%80%90MySQL%E3%80%91C%20or%20C++%E9%93%BE%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/</id>
-    <published>2021-11-26T10:06:58.000Z</published>
-    <updated>2021-11-27T05:40:57.921Z</updated>
-    
-    <content type="html"><![CDATA[<p>​    <strong>VS2019链接</strong></p><p>1.找到这个文件夹</p><p><img src="/images/C++%E9%93%BE%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93.assets/image-20211126181149532.png" alt="image-20211126181149532"></p><p>拿到这两个路径，库文件路径，和头文件路径</p><p>C:\Program Files\MySQL\MySQL Server 8.0\lib</p><p>C:\Program Files\MySQL\MySQL Server 8.0\include</p><p>2.打开vs2019</p><p>新建项目，解决方案改成x64。打开项目属性。</p><p>将头文件目录放到这里面。</p><p><img src="/images/C++%E9%93%BE%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93.assets/image-20211126181600209.png" alt="image-20211126181600209"></p><p>3.添加库文件路径到库目录</p><p><img src="/images/C++%E9%93%BE%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93.assets/image-20211126181719023.png" alt="image-20211126181719023"></p><p>4.将mysql安装文件夹中lib目录中的libmysql.lib文件添加到依赖项中。</p><p><img src="/images/C++%E9%93%BE%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93.assets/image-20211126181957110.png" alt="image-20211126181957110"></p><p>5.把mysql安装目录中lib文件夹中的libmysql.dll文件复制到c:\windows\system32下</p><p>6.编写代码开始连接</p><p><strong>示例</strong>：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;mysql.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">MYSQL mysql;<span class="comment">//数据库句柄</span></span><br><span class="line">MYSQL_RES* res;<span class="comment">//查询结果集</span></span><br><span class="line">MYSQL_ROW row;<span class="comment">//记录结构体</span></span><br><span class="line"><span class="comment">//初始化数据库</span></span><br><span class="line">mysql_init(&amp;mysql);</span><br><span class="line"><span class="comment">//设置字符编码</span></span><br><span class="line">mysql_options(&amp;mysql, MYSQL_SET_CHARSET_NAME, <span class="string">&quot;gbk&quot;</span>);</span><br><span class="line"><span class="comment">//连接数据库</span></span><br><span class="line"><span class="keyword">if</span> (mysql_real_connect(&amp;mysql, <span class="string">&quot;127.0.0.1&quot;</span>, <span class="string">&quot;root&quot;</span>, <span class="string">&quot;PASSWORD&quot;</span>, <span class="string">&quot;temp5&quot;</span>, <span class="number">3306</span>, <span class="literal">NULL</span>, <span class="number">0</span>) == <span class="literal">NULL</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;错误原因:%s\n&quot;</span>, mysql_error(&amp;mysql));</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;连接失败!\n&quot;</span>);</span><br><span class="line"><span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//查询数据</span></span><br><span class="line"><span class="keyword">int</span> ret = mysql_query(&amp;mysql, <span class="string">&quot;select * from student&quot;</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;ret:%d\n&quot;</span>, ret);</span><br><span class="line"><span class="comment">//获取结果集</span></span><br><span class="line">res = mysql_store_result(&amp;mysql);</span><br><span class="line"><span class="comment">//给ROW赋值，判断ROW是否为空，不为空就打印数据</span></span><br><span class="line"><span class="keyword">while</span> (row = mysql_fetch_row(res))</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%s &quot;</span>, row[<span class="number">0</span>]);<span class="comment">//ID</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%s &quot;</span>, row[<span class="number">1</span>]);<span class="comment">//姓名</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%s &quot;</span>, row[<span class="number">2</span>]);<span class="comment">//班级</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%s \n&quot;</span>, row[<span class="number">3</span>]);<span class="comment">//性别</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//释放结果集</span></span><br><span class="line">mysql_free_result(res);</span><br><span class="line"><span class="comment">//关闭数据库</span></span><br><span class="line">mysql_close(&amp;mysql);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><p><strong>小补充:hexo文章标题不能包括[]</strong></p><hr>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;​    &lt;strong&gt;VS2019链接&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;1.找到这个文件夹&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/C++%E9%93%BE%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93.assets/image-20</summary>
-      
-    
-    
-    
-    <category term="MySQL" scheme="https://doraemon-hub-art.github.io/categories/MySQL/"/>
-    
-    
-    <category term="-C++" scheme="https://doraemon-hub-art.github.io/tags/C/"/>
-    
-    <category term="-C" scheme="https://doraemon-hub-art.github.io/tags/C/"/>
     
     <category term="-MySQL" scheme="https://doraemon-hub-art.github.io/tags/MySQL/"/>
     
