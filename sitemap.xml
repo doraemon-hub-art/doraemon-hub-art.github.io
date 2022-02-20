@@ -1229,13 +1229,6 @@
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/tags/JAVA/</loc>
-    <lastmod>2022-02-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://zhaoyuxuan.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
@@ -1251,6 +1244,13 @@
   
   <url>
     <loc>http://zhaoyuxuan.xyz/tags/LeetCode/</loc>
+    <lastmod>2022-02-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhaoyuxuan.xyz/tags/JAVA/</loc>
     <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1320,13 +1320,6 @@
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/tags/MFC/</loc>
-    <lastmod>2022-02-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://zhaoyuxuan.xyz/tags/hexo/</loc>
     <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
@@ -1335,13 +1328,6 @@
   
   <url>
     <loc>http://zhaoyuxuan.xyz/tags/%E7%BB%8F%E9%AA%8C/</loc>
-    <lastmod>2022-02-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://zhaoyuxuan.xyz/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</loc>
     <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1362,7 +1348,28 @@
   </url>
   
   <url>
+    <loc>http://zhaoyuxuan.xyz/tags/MFC/</loc>
+    <lastmod>2022-02-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://zhaoyuxuan.xyz/tags/Python/</loc>
+    <lastmod>2022-02-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhaoyuxuan.xyz/tags/%E7%88%AC%E8%99%AB/</loc>
+    <lastmod>2022-02-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhaoyuxuan.xyz/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</loc>
     <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1432,14 +1439,14 @@
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/tags/%E5%A0%86/</loc>
+    <loc>http://zhaoyuxuan.xyz/tags/hash/</loc>
     <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/tags/hash/</loc>
+    <loc>http://zhaoyuxuan.xyz/tags/%E5%A0%86/</loc>
     <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1461,13 +1468,6 @@
   
   <url>
     <loc>http://zhaoyuxuan.xyz/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2022-02-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://zhaoyuxuan.xyz/tags/%E7%88%AC%E8%99%AB/</loc>
     <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1609,13 +1609,6 @@
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/categories/JAVA/</loc>
-    <lastmod>2022-02-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://zhaoyuxuan.xyz/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
@@ -1623,7 +1616,7 @@
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/categories/MFC/</loc>
+    <loc>http://zhaoyuxuan.xyz/categories/JAVA/</loc>
     <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1631,6 +1624,13 @@
   
   <url>
     <loc>http://zhaoyuxuan.xyz/categories/MySQL/</loc>
+    <lastmod>2022-02-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhaoyuxuan.xyz/categories/MFC/</loc>
     <lastmod>2022-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
