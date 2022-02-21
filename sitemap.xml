@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zhaoyuxuan.xyz/2022/02/21/%E3%80%90QT%E3%80%91QT%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/</loc>
+    
+    <lastmod>2022-02-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zhaoyuxuan.xyz/2022/02/19/%E3%80%90QT%E3%80%91QT%E8%B0%83%E8%89%B2%E6%9D%BF%E7%B1%BB/</loc>
     
     <lastmod>2022-02-19</lastmod>
@@ -1131,7 +1138,7 @@
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/tags/C-11/</loc>
+    <loc>http://zhaoyuxuan.xyz/tags/C/</loc>
     <lastmod>2022-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1145,14 +1152,14 @@
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/tags/C/</loc>
+    <loc>http://zhaoyuxuan.xyz/tags/%E5%86%85%E5%AD%98/</loc>
     <lastmod>2022-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/tags/%E5%86%85%E5%AD%98/</loc>
+    <loc>http://zhaoyuxuan.xyz/tags/C-11/</loc>
     <lastmod>2022-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1194,20 +1201,6 @@
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/tags/DIY/</loc>
-    <lastmod>2022-02-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://zhaoyuxuan.xyz/tags/Hexo/</loc>
-    <lastmod>2022-02-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://zhaoyuxuan.xyz/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
     <lastmod>2022-02-21</lastmod>
     <changefreq>daily</changefreq>
@@ -1222,14 +1215,21 @@
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/tags/%E7%AE%97%E6%B3%95/</loc>
+    <loc>http://zhaoyuxuan.xyz/tags/DIY/</loc>
     <lastmod>2022-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/tags/LeetCode/</loc>
+    <loc>http://zhaoyuxuan.xyz/tags/Hexo/</loc>
+    <lastmod>2022-02-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhaoyuxuan.xyz/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2022-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1244,6 +1244,13 @@
   
   <url>
     <loc>http://zhaoyuxuan.xyz/tags/%E9%93%BE%E8%A1%A8/</loc>
+    <lastmod>2022-02-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhaoyuxuan.xyz/tags/LeetCode/</loc>
     <lastmod>2022-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1425,14 +1432,14 @@
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/tags/%E8%BF%9B%E7%A8%8B/</loc>
+    <loc>http://zhaoyuxuan.xyz/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2022-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://zhaoyuxuan.xyz/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <loc>http://zhaoyuxuan.xyz/tags/%E8%BF%9B%E7%A8%8B/</loc>
     <lastmod>2022-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1645,6 +1652,13 @@
   
   <url>
     <loc>http://zhaoyuxuan.xyz/categories/python/</loc>
+    <lastmod>2022-02-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhaoyuxuan.xyz/categories/QT/</loc>
     <lastmod>2022-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
