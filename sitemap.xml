@@ -1166,7 +1166,7 @@
   </url>
   
   <url>
-    <loc>http://blog.zhaoyuxuan.xyz/tags/C-11/</loc>
+    <loc>http://blog.zhaoyuxuan.xyz/tags/C/</loc>
     <lastmod>2022-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1180,14 +1180,14 @@
   </url>
   
   <url>
-    <loc>http://blog.zhaoyuxuan.xyz/tags/C/</loc>
+    <loc>http://blog.zhaoyuxuan.xyz/tags/%E5%86%85%E5%AD%98/</loc>
     <lastmod>2022-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://blog.zhaoyuxuan.xyz/tags/%E5%86%85%E5%AD%98/</loc>
+    <loc>http://blog.zhaoyuxuan.xyz/tags/C-11/</loc>
     <lastmod>2022-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1264,13 +1264,6 @@
   </url>
   
   <url>
-    <loc>http://blog.zhaoyuxuan.xyz/tags/JAVA/</loc>
-    <lastmod>2022-03-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.zhaoyuxuan.xyz/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2022-03-02</lastmod>
     <changefreq>daily</changefreq>
@@ -1286,6 +1279,13 @@
   
   <url>
     <loc>http://blog.zhaoyuxuan.xyz/tags/LeetCode/</loc>
+    <lastmod>2022-03-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.zhaoyuxuan.xyz/tags/JAVA/</loc>
     <lastmod>2022-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1651,14 +1651,14 @@
   </url>
   
   <url>
-    <loc>http://blog.zhaoyuxuan.xyz/categories/JAVA/</loc>
+    <loc>http://blog.zhaoyuxuan.xyz/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2022-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://blog.zhaoyuxuan.xyz/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>http://blog.zhaoyuxuan.xyz/categories/JAVA/</loc>
     <lastmod>2022-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
