@@ -6,7 +6,7 @@
   <link href="http://blog.zhaoyuxuan.xyz/atom.xml" rel="self"/>
   
   <link href="http://blog.zhaoyuxuan.xyz/"/>
-  <updated>2022-03-01T15:15:05.187Z</updated>
+  <updated>2022-03-18T14:52:01.822Z</updated>
   <id>http://blog.zhaoyuxuan.xyz/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【月末总结】前言</title>
+    <link href="http://blog.zhaoyuxuan.xyz/2022/03/18/%E3%80%90%E6%9C%88%E6%9C%AB%E6%80%BB%E7%BB%93%E3%80%91%E5%89%8D%E8%A8%80/"/>
+    <id>http://blog.zhaoyuxuan.xyz/2022/03/18/%E3%80%90%E6%9C%88%E6%9C%AB%E6%80%BB%E7%BB%93%E3%80%91%E5%89%8D%E8%A8%80/</id>
+    <published>2022-03-18T14:49:32.000Z</published>
+    <updated>2022-03-18T14:52:01.822Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>我决定新增月末总结和年终总结环节。</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;我决定新增月末总结和年终总结环节。&lt;/p&gt;
+&lt;/blockquote&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="-月末总结" scheme="http://blog.zhaoyuxuan.xyz/tags/%E6%9C%88%E6%9C%AB%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>【QT】QT中使用Lambda表达式</title>
@@ -486,36 +511,6 @@
     
     
     <category term="-计算机网络" scheme="http://blog.zhaoyuxuan.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PicGo+Gitee搭建图床的注意事项</title>
-    <link href="http://blog.zhaoyuxuan.xyz/2022/01/21/PicGo-Gitee%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
-    <id>http://blog.zhaoyuxuan.xyz/2022/01/21/PicGo-Gitee%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</id>
-    <published>2022-01-21T03:51:00.000Z</published>
-    <updated>2022-01-21T04:08:07.174Z</updated>
-    
-    <content type="html"><![CDATA[<p>刚才想把Gitee图床换成Github来托管，无奈失败了，加上Gitee访问速度更快一些，那就不瞎搞了，随便写一下，具体的搭建过程还请见其他作者的教程。</p><p>我选的是这个插件。</p><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/image-20220121115416330.png"></p><p>owner只包括你的Gitee用户名，<strong>repo只包括你的仓库名</strong>，具体的名字从链接里面看，例如:</p><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/image-20220121120449631.png" alt="image-20220121120449631"></p><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/image-20220121115520221.png" alt="image-20220121115520221"></p><p>我的Typora设置。</p><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/image-20220121120054032.png" alt="image-20220121120054032"></p><p>粘贴图片会自动上传到Gitee中，并且弹出”上传完成的提示”。</p><p><img src="https://gitee.com/Do2eM0N/blogimg/raw/master/image-20220121120152543.png" alt="image-20220121120152543"></p><p>​    </p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;刚才想把Gitee图床换成Github来托管，无奈失败了，加上Gitee访问速度更快一些，那就不瞎搞了，随便写一下，具体的搭建过程还请见其他作者的教程。&lt;/p&gt;
-&lt;p&gt;我选的是这个插件。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/Do2eM0N/</summary>
-      
-    
-    
-    
-    <category term="计算机" scheme="http://blog.zhaoyuxuan.xyz/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-    
-    <category term="-Pic" scheme="http://blog.zhaoyuxuan.xyz/tags/Pic/"/>
-    
-    <category term="-Gitee" scheme="http://blog.zhaoyuxuan.xyz/tags/Gitee/"/>
-    
-    <category term="-图床" scheme="http://blog.zhaoyuxuan.xyz/tags/%E5%9B%BE%E5%BA%8A/"/>
     
   </entry>
   
