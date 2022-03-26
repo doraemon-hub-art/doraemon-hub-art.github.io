@@ -6,7 +6,7 @@
   <link href="http://blog.zhaoyuxuan.xyz/atom.xml" rel="self"/>
   
   <link href="http://blog.zhaoyuxuan.xyz/"/>
-  <updated>2022-03-24T06:40:36.542Z</updated>
+  <updated>2022-03-26T16:06:54.257Z</updated>
   <id>http://blog.zhaoyuxuan.xyz/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://blog.zhaoyuxuan.xyz/2022/03/27/test/"/>
+    <id>http://blog.zhaoyuxuan.xyz/2022/03/27/test/</id>
+    <published>2022-03-26T16:06:54.000Z</published>
+    <updated>2022-03-26T16:06:54.257Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>【QT】多语言翻译</title>
@@ -477,30 +490,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;菜单栏、工具栏、状态栏&quot;&gt;&lt;a href=&quot;#菜单栏、工具栏、状态栏&quot; class=&quot;headerlink&quot; title=&quot;菜单栏、工具栏、状态栏&quot;&gt;&lt;/a&gt;菜单栏、工具栏、状态栏&lt;/h1&gt;&lt;p&gt;主窗口框架(QMainWindow)拥有自己的布局，包括以下组件:&lt;</summary>
-      
-    
-    
-    
-    <category term="QT" scheme="http://blog.zhaoyuxuan.xyz/categories/QT/"/>
-    
-    
-    <category term="-QT" scheme="http://blog.zhaoyuxuan.xyz/tags/QT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【QT】QT打印调试信息</title>
-    <link href="http://blog.zhaoyuxuan.xyz/2022/01/28/%E3%80%90QT%E3%80%91QT%E6%89%93%E5%8D%B0%E8%B0%83%E8%AF%95%E4%BF%A1%E6%81%AF/"/>
-    <id>http://blog.zhaoyuxuan.xyz/2022/01/28/%E3%80%90QT%E3%80%91QT%E6%89%93%E5%8D%B0%E8%B0%83%E8%AF%95%E4%BF%A1%E6%81%AF/</id>
-    <published>2022-01-28T10:43:07.000Z</published>
-    <updated>2022-01-28T10:43:39.313Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//QDebug打印调试信息</span></span><br><span class="line">   <span class="keyword">int</span> num = <span class="number">20</span>;</span><br><span class="line">   qDebug(<span class="string">&quot;十进制%d&quot;</span>,num);</span><br><span class="line">   qDebug(<span class="string">&quot;八进制%o&quot;</span>,num);</span><br><span class="line">   qDebug(<span class="string">&quot;十六进制%x&quot;</span>,num);</span><br><span class="line">   qreal PI = <span class="number">3.14</span>;</span><br><span class="line">   qDebug(<span class="string">&quot;浮点%f&quot;</span>,PI);</span><br><span class="line">   qDebug(<span class="string">&quot;科学计数法%e&quot;</span>,PI);</span><br><span class="line">   qDebug(<span class="string">&quot;123%%&quot;</span>);<span class="comment">//123%</span></span><br><span class="line">   <span class="comment">//另一种输入方式</span></span><br><span class="line">   qDebug()&lt;&lt;PI;</span><br><span class="line">   QString str = <span class="string">&quot;Hello world&quot;</span>;</span><br><span class="line">   qDebug()&lt;&lt;str;</span><br><span class="line">   qDebug().noquote()&lt;&lt;str;<span class="comment">//不带双引号输出</span></span><br><span class="line">   qDebug()&lt;&lt;<span class="string">&quot;hello&quot;</span>&lt;&lt;<span class="string">&quot;world&quot;</span>;<span class="comment">//默认输入，这两个单词中间会有空格</span></span><br><span class="line">   qDebug().nospace()&lt;&lt;<span class="string">&quot;hello&quot;</span>&lt;&lt;<span class="string">&quot;world&quot;</span>;<span class="comment">//去掉空格</span></span><br><span class="line">   <span class="comment">//控制台程序会输入到黑窗口</span></span><br><span class="line">   <span class="comment">//桌面应用程序会输出到-应用程序输出</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;</summary>
       
     
     
