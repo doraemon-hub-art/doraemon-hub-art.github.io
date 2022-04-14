@@ -6,7 +6,7 @@
   <link href="http://blog.zhaoyuxuan.xyz/atom.xml" rel="self"/>
   
   <link href="http://blog.zhaoyuxuan.xyz/"/>
-  <updated>2022-04-14T14:31:21.599Z</updated>
+  <updated>2022-04-14T14:45:43.896Z</updated>
   <id>http://blog.zhaoyuxuan.xyz/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://blog.zhaoyuxuan.xyz/2022/04/14/%E5%8D%9A%E5%AE%A2%E6%90%AC%E5%AE%B6%E9%80%9A%E7%9F%A5/"/>
     <id>http://blog.zhaoyuxuan.xyz/2022/04/14/%E5%8D%9A%E5%AE%A2%E6%90%AC%E5%AE%B6%E9%80%9A%E7%9F%A5/</id>
     <published>2022-04-14T14:07:27.000Z</published>
-    <updated>2022-04-14T14:31:21.599Z</updated>
+    <updated>2022-04-14T14:45:43.896Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>通知</strong></p><blockquote><p>即日起，本站已不再更新，搬家至——<a href="banshengua.top">半生瓜のblog</a>。</p></blockquote><p><strong>回首</strong></p><blockquote><p>这个Hexo博客，使用Butterfly主题，从2021年2月至今为止。</p><p>从开始的买服务器，域名，备案，寻找教程魔改美化，服务器续费，到后来更换域名，再备案，最后搬至Github。</p></blockquote><p><strong>原因</strong></p><blockquote><p>今年(2022年)3月份，我的Gitee图床崩了，开始寻找新的图片存储，最稳定的莫过于自己搭一个，于是我选择了阿里云OSS对象存储，如果要想直接通过链接访问存储桶的中的图片，需要使用自己的域名，否则会直接下载图片</p><p>PS:  (我以为在md文件中也没法显示，其实是可以的，如果不用地址栏直接访问显示图片，其实我觉得根本就不用域名)。</p><p>于是我又买了域名,服务器，开始没想到服务器要干嘛，只是想如果我那台学生机到期了，还能有个挂机器人的地方。</p><p>但是后来我还是开始想弄个新博客了…，选择了Wordpress。</p><p>这应该是我临毕业这几年最后一个折腾的博客了，域名买了3年，服务器的话到明年再找个便宜的买，好像Wodrpress有打包搬家功能。</p></blockquote><p><strong>展望未来</strong></p><blockquote><p>我的第一篇博客是20年11月份在CSDN中的一片，至今，无论质量高低，也有了大概两百篇文章，几乎都是我学习知识的笔记，没有我认为的技术文章。</p><p>我的学习的深度还不够，加油学吧，希望能早点产出我的技术文章。</p><p>也许如果博客能为我的招聘加分的话，那是再好不过的，当然我知道这是建立在技术达标之上。</p><p>好了，不废话了，咱们，更高处相见。</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p><strong>通知</strong></p><blockquote><p>即日起，本站已不再更新，搬家至——<a href="banshengua.top">半生瓜のblog</a>。</p></blockquote><p><strong>回首</strong></p><blockquote><p>这个博客采用Hexo框架，使用Butterfly主题，从2021年2月至今为止。</p><p>从开始的买服务器，域名，备案，寻找教程魔改美化，服务器续费，到后来更换域名，再备案，最后搬至Github。</p></blockquote><p><strong>原因</strong></p><blockquote><p>今年(2022年)3月份，我的Gitee图床崩了，开始寻找新的图片存储，最稳定的莫过于自己搭一个，于是我选择了阿里云OSS对象存储，如果要想直接通过链接访问存储桶的中的图片，需要使用自己的域名，否则会直接下载图片</p><p>PS:  (我以为在md文件中也没法显示，其实是可以的，如果不用地址栏直接访问显示图片，其实我觉得根本就不用域名)。</p><p>于是我又买了域名,服务器，开始没想到服务器要干嘛，只是想如果我那台学生机到期了，还能有个挂机器人的地方。</p><p>但是后来我还是开始想弄个新博客了…，选择了Wordpress。</p><p>这应该是我临毕业这几年最后一个折腾的博客了，域名买了3年，服务器的话到明年再找个便宜的买，好像Wodrpress有打包搬家功能。</p></blockquote><p><strong>展望未来</strong></p><blockquote><p>我的第一篇博客是20年11月份在CSDN中的一片，至今，无论质量高低，也有了大概两百篇文章，几乎都是我学习知识的笔记，没有我认为的技术文章。</p><p>我的学习的深度还不够，加油学吧，希望能早点产出我的技术文章。</p><p>如果博客能为我的校招加分的话，那是再好不过的，当然我知道这是建立在技术达标之上。</p><p>好了，不废话了，咱们，更高处相见。</p></blockquote>]]></content>
     
     
       
